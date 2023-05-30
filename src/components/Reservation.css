@@ -1,0 +1,119 @@
+.reservation-container {
+    width: 100%;
+    height: 50dvh;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.reservation-box {
+    width: 70%;
+    position: absolute;
+    z-index: 10;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 8rem;
+    background-color: var(--background400);
+}
+
+.reservation-box h1 {
+    color: var(--primary);
+    font-size: 2.6rem;
+    padding-bottom: 5rem;
+    font-family: 'simplifica', sans-serif;
+    letter-spacing: 0.4rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.top-box {
+    width: 100%;
+    grid-row: 1/3;
+}
+
+.buttom-box {
+    width: 100%;
+    grid-row: 4/7;
+    background-color: var(--background600);
+}
+
+.reservation-form {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr;
+}
+
+.reservation-form input {
+    font-family: 'oscine', sans-serif;
+    letter-spacing: 0.2rem;
+}
+
+.reservation-form input[name="name"] {
+    grid-column: 1/4;
+    margin-bottom: 2rem;
+}
+
+.reservation-form input[name="phone"] {
+    grid-column: 4/8;
+    margin-bottom: 2rem;
+}
+
+.reservation-form input[name="persons"] {
+    grid-row: 2/2;
+    grid-column: 1/3;
+    margin-bottom: 2rem;
+}
+
+.reservation-form input[name="date"] {
+    grid-row: 2/2;
+    grid-column: 3/5;
+    margin-bottom: 2rem;
+}
+
+.reservation-form input[name="time"] {
+    grid-row: 2/2;
+    grid-column: 5/8;
+    margin-bottom: 2rem;
+}
+
+.reservation-form input {
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgba(170, 170, 170, 0.5);
+    padding: 1.5rem 0;
+    margin-right: 3rem;
+    color: white;
+    font-size: 1.6rem;
+    color-scheme: dark;
+}
+
+.reservation-form input::placeholder {
+    color: white;
+    /* font-size: 2rem; */
+}
+
+.submit-button-container {
+    grid-column: 3/5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-btn {
+    margin-top: 2rem;
+    border: none;
+    outline: none;
+    background: var(--primary);
+    color: white;
+    padding: 2rem 3rem;
+    font-size: 1.6rem;
+    font-family: 'simplifica', sans-serif;
+    letter-spacing: 0.4rem;
+    text-align: center;
+    font-weight: 700;
+}

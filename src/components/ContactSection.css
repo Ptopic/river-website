@@ -1,0 +1,49 @@
+.contact-section-container {
+    width: 100%;
+    padding: 5rem 0 7rem 0;
+    background: var(--background700);
+}
+
+.contact-section-content {
+    width: 100%;
+    padding: 0 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.contact-section-content img {
+    margin: 2rem;
+}
+
+.contact-section-content h1 {
+    font-size: 4.6rem;
+    font-family: 'simplifica', sans-serif;
+    letter-spacing: 0.6rem;
+    font-weight: 700;
+    padding: 1rem 0 4rem 0
+}
+
+.contact-section-content p {
+    font-size: 1.4rem;
+    color: var(--gray500);
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.address a {
+    margin-top: 2rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

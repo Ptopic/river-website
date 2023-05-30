@@ -1,0 +1,94 @@
+.info-container {
+    width: 100%;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    padding: 5rem 15rem;
+}
+
+.info-left {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-column: 1/1;
+    padding: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url("../assets/images/exterior3.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.info-left h1 {
+    font-size: 4.6rem;
+    padding: 2rem;
+}
+
+.info-left p {
+    font-size: 2.4rem;
+}
+
+.info-left a {
+    border: none;
+    outline: none;
+    color: black;
+    background: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    margin: 2rem;
+    font-family: 'simplifica', sans-serif;
+    letter-spacing: 0.4rem;
+    font-weight: 700;
+}
+
+.info-left a:hover {
+    background-color: rgba(190, 190, 190, 1);
+    transition: 0.4s all ease;
+}
+
+.blured-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+    background-color: rgba(1, 1, 1, 0.4);
+    font-family: 'simplifica', sans-serif;
+    letter-spacing: 0.4rem;
+    font-weight: 700;
+}
+
+.info-right {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-column: 2/2;
+    display: flex;
+    padding: 20rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url("../assets/images/pizza2.jpeg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.info-right h1 {
+    font-size: 4.6rem;
+    padding: 2rem;
+}
+
+.info-right p {
+    font-size: 2.4rem;
+}
+
+.info-right a {
+    margin: 2rem 0;
+}

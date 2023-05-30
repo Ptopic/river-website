@@ -1,0 +1,131 @@
+:root {
+  --primary: #e4c590;
+  --primary600: #bea67b;
+  --secondary: '';
+  --background700: #0b0d12;
+  --background600: #090d10;
+  --background500: #0e1317;
+  --background400: #161b20;
+  --background300: #212e3c;
+  --gray500: rgb(200, 200, 200);
+  --success: rgba(0, 255, 0, 0.7);
+  --error: rgba(255, 0, 0, 0.7);
+  --errorText: #f44336;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background500);
+  color: white;
+  font-size: 10px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Fonts */
+
+/* simplifica */
+@font-face {
+  font-family: "simplifica";
+  src: local("simplifica"),
+    url("./assets/fonts/simplifica.ttf") format("truetype");
+}
+
+/* MoniqueScript 1.8,3,3 */
+/* Euphoria */
+@font-face {
+  font-family: "cursive";
+  src: local("MoniqueScript"),
+    url("./assets/fonts/MoniqueScript.ttf") format("truetype");
+}
+
+/* Moon font */
+
+@font-face {
+  font-family: "oscinethin";
+  src: local("oscinethin"),
+    url("./assets/fonts/OscineThin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "oscine";
+  src: local("oscine"),
+    url("./assets/fonts/OscineRegular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "oscinebold";
+  src: local("oscinebold"),
+    url("./assets/fonts/OscineBold.ttf") format("truetype");
+}
+
+
+.pictures {
+  position: relative;
+  padding: 8rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.pictures h2 {
+  text-align: center;
+  color: var(--primary);
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 11rem;
+  font-family: 'cursive', sans-serif;
+}
+
+.pictures h1 {
+  padding: 0rem;
+  font-size: 6rem;
+  font-family: 'simplifica', sans-serif;
+  letter-spacing: 0.4rem;
+  font-weight: 700;
+}
+
+.pin-text {
+  color: var(--background700);
+  font-size: 1.4rem;
+  width: 200px;
+  text-align: center;
+}
+
+.recap-info-container {
+  background-image: url("./assets/images/texture.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.btn {
+  text-align: center;
+  border: none;
+  outline: none;
+  background: var(--primary);
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  text-decoration: none;
+  font-family: 'simplifica', sans-serif;
+  letter-spacing: 0.4rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.btn:hover {
+  background-color: var(--primary600);
+  transition: 0.4s all ease;
+}

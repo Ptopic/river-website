@@ -1,0 +1,15 @@
+.menu-container {
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    background: var(--background600);
+    padding: 2rem;
+    width: 100%;
+}
+
+.top-bar a {
+    color: var(--primary);
+    text-decoration: none;
+}

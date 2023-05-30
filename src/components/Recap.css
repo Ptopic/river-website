@@ -1,0 +1,60 @@
+.recap-container {
+    width: 100%;
+    /* background-image: url("../assets/images/texture.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+}
+
+.recap-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 70%;
+    height: 80%;
+    background-color: var(--background600);
+    padding: 5rem 0 10rem 0;
+}
+
+.recap-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.recap-card img {
+    background: var(--background500);
+    box-sizing: content-box;
+    border-radius: 50%;
+    outline: 1px solid var(--primary);
+    padding: 2rem;
+    width: 70px;
+    margin: 3rem;
+}
+
+.recap-card p {
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: 'simplifica', sans-serif;
+    letter-spacing: 0.4rem;
+    font-weight: 700;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 2/4;
+}
+
+.menu-container .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 4rem; */
+    text-align: center;
+}

@@ -1,0 +1,51 @@
+/* ---------- Navbar ---------- */
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 2rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
+
+.left-navbar {
+    align-self: center;
+    margin-left: 2rem;
+}
+
+.left-navbar img {
+    width: 10rem;
+}
+
+.center-navbar {
+    align-content: center;
+    display: flex;
+    justify-content: center;
+}
+
+.center-navbar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: white;
+    font-family: 'oscine', sans-serif;
+    letter-spacing: 0.2rem;
+}
+
+.center-navbar a:not(:last-child)::after {
+    content: "";
+    margin: 0 3rem;
+}
+
+.right-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
