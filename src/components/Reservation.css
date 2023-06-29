@@ -43,6 +43,8 @@
 .reservation-form {
     display: grid;
     width: 100%;
+    align-items: center;
+    justify-content: center;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr 1fr;
 }
@@ -80,7 +82,7 @@
     margin-bottom: 2rem;
 }
 
-.reservation-form input {
+.reservation-form input:not(input[type="submit"]) {
     background: transparent;
     border: none;
     outline: none;
@@ -98,22 +100,93 @@
 }
 
 .submit-button-container {
-    grid-column: 3/5;
+    grid-column: 1/7;
     display: flex;
-    align-items: center;
+    text-align: center;
     justify-content: center;
 }
 
-.submit-btn {
+.submit-button-container input {
     margin-top: 2rem;
     border: none;
     outline: none;
     background: var(--primary);
-    color: white;
+    color: var(--background300);
     padding: 2rem 3rem;
     font-size: 1.6rem;
     font-family: 'simplifica', sans-serif;
     letter-spacing: 0.4rem;
     text-align: center;
     font-weight: 700;
+}
+
+.error-container {
+    grid-column: 1/7;
+    padding: 1.5rem;
+    margin: 1rem;
+    font-size: 1.4rem;
+    text-align: center;
+    width: 100%;
+    background: var(--error);
+}
+
+/* ---------- Media querys ---------- */
+
+/* Phone */
+
+@media (max-width: 500px) {
+    .reservation-container {
+        /* myb delete */
+        height: 85dvh;
+    }
+
+    .reservation-box {
+        width: 90%;
+        padding: 6rem 4rem;
+    }
+
+    .reservation-form {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .reservation-form input:not(input[type="submit"]) {
+        margin-right: 0;
+    }
+
+    .reservation-form input[name="name"] {
+        grid-row: 1/1;
+        grid-column: 1/1;
+        margin-bottom: 2rem;
+    }
+
+    .reservation-form input[name="phone"] {
+        grid-row: 2/2;
+        grid-column: 1/1;
+        margin-bottom: 2rem;
+    }
+
+    .reservation-form input[name="persons"] {
+        grid-row: 3/3;
+        grid-column: 1/1;
+        margin-bottom: 2rem;
+    }
+
+    .reservation-form input[name="date"] {
+        grid-row: 4/4;
+        grid-column: 1/1;
+        margin-bottom: 2rem;
+    }
+
+    .reservation-form input[name="time"] {
+        grid-row: 5/5;
+        grid-column: 1/1;
+        margin-bottom: 2rem;
+    }
+
+    .submit-button-container {
+        grid-column: 1/1;
+        grid-row: 6/6;
+    }
 }

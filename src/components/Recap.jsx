@@ -13,9 +13,7 @@ import { animateRecap, animateRecapIcons } from '../utils/Animations';
 function Recap({ forwardedRef }) {
 	useEffect(() => {
 		const element = forwardedRef.current;
-
 		animateRecap(element);
-
 		animateRecapIcons();
 	}, []);
 	return (

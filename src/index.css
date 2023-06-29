@@ -115,7 +115,7 @@ html {
   border: none;
   outline: none;
   background: var(--primary);
-  color: white;
+  color: var(--background300);
   padding: 1rem 2rem;
   font-size: 1.6rem;
   text-decoration: none;
@@ -128,4 +128,24 @@ html {
 .btn:hover {
   background-color: var(--primary600);
   transition: 0.4s all ease;
+}
+
+/* ---------- Media querys ---------- */
+
+/* Phone */
+
+@media (max-width: 500px) {
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .pictures {
+    padding: 8rem 0 3rem 0;
+  }
+
+  .pictures h2 {
+    bottom: 6rem;
+  }
 }

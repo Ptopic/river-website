@@ -10,8 +10,11 @@ import img5 from '../assets/images/food9.jpeg';
 import img6 from '../assets/images/pizza.jpeg';
 
 const listOfImages = [img1, img2, img3, img4, img5, img6];
+
+import { galeryImgClick, galeryImgClickClose } from '../utils/Animations';
 import './Pictures.css';
 function Pictures({ forwardedRef }) {
+	const timeline = useRef(null);
 	const modalRef = useRef(null);
 	const [modalOpen, setModalOpen] = useState('');
 	const [curImage, setCurImage] = useState('');
@@ -25,17 +28,25 @@ function Pictures({ forwardedRef }) {
 		setCurImage('');
 		setModalOpen(false);
 	};
+
+	useEffect(() => {
+		if (modalOpen) {
+			galeryImgClick(modalRef, timeline);
+		}
+	}, [modalOpen]);
 	return (
 		<>
 			{modalOpen ? (
-				<div className="image-modal-overlay" ref={modalRef}>
-					<div className="button-container-overlay">
-						<button onClick={() => exitModal()}>
-							<IoIosClose size={36} />
-						</button>
-					</div>
-					<div className="image-modal">
-						<img src={listOfImages[curImage]} alt="" />
+				<div ref={modalRef}>
+					<div className="image-modal-overlay">
+						<div className="button-container-overlay">
+							<button onClick={() => exitModal()}>
+								<IoIosClose size={42} />
+							</button>
+						</div>
+						<div className="image-modal">
+							<img src={listOfImages[curImage]} alt="" />
+						</div>
 					</div>
 				</div>
 			) : null}

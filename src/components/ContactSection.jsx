@@ -24,7 +24,7 @@ function ContactSection({ forwardedRef }) {
 						}
 						className="btn"
 					>
-						OPEN IN GOOGLE MAPS
+						GOOGLE MAPS
 					</a>
 				</div>
 				<div className="menu">

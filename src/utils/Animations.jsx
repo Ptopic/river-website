@@ -1,5 +1,6 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { forwardRef } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,6 +15,24 @@ export const NavbarAnimationOnScroll = (element) => {
 		{
 			background: '#0b0d12',
 			color: 'black',
+			duration: 0.1,
+			scrollTrigger: {
+				trigger: element.querySelector('.recap-container'),
+				start: '-500px',
+				end: 'bottom top',
+				scrub: true,
+				toggleActions: 'play none none reverse',
+			},
+		}
+	);
+};
+
+export const NavbarMobileAnimationOnScroll = (element) => {
+	gsap.to(
+		// Scroll animation
+		element.querySelector('.navbar-mobile'),
+		{
+			background: '#0b0d12',
 			duration: 0.1,
 			scrollTrigger: {
 				trigger: element.querySelector('.recap-container'),
@@ -420,6 +439,200 @@ export const animateGallery = (forwardedRef, timeline) => {
 				{
 					opacity: 1,
 					x: 0,
+				}
+			);
+	}, forwardedRef);
+	return () => {
+		timeline.kill();
+	};
+};
+
+export const galeryImgClick = (forwardedRef, timeline) => {
+	gsap.context(() => {
+		timeline.current = gsap
+			.timeline()
+			.timeScale(1.5)
+			.fromTo(
+				'.image-modal-overlay',
+				{
+					opacity: 0,
+				},
+				{
+					opacity: 1,
+				}
+			)
+			.fromTo(
+				'.image-modal',
+				{
+					opacity: 0,
+					y: -150,
+				},
+				{
+					opacity: 1,
+					y: 0,
+					duration: 1,
+				}
+			);
+	}, forwardedRef);
+	return () => {
+		timeline.kill();
+	};
+};
+
+export const galeryImgClickClose = (forwardedRef, timeline) => {
+	console.log(forwardedRef);
+	gsap.context(() => {
+		timeline.current = gsap
+			.timeline()
+			.timeScale(1.5)
+			.fromTo(
+				'.image-modal',
+				{
+					opacity: 1,
+					y: 0,
+				},
+				{
+					opacity: 0,
+					y: -150,
+					duration: 1,
+				}
+			)
+			.fromTo(
+				'.image-modal-overlay',
+				{
+					opacity: 1,
+				},
+				{
+					opacity: 0,
+				}
+			);
+	}, forwardedRef);
+	return () => {
+		timeline.kill();
+	};
+};
+
+export const animateMap = (forwardedRef, timeline) => {
+	const element = forwardedRef.current;
+	console.log(element);
+	gsap.fromTo(
+		// Scroll animation
+		element,
+		{
+			opacity: 0,
+		},
+		{
+			opacity: 1,
+			duration: 1.4,
+			scrollTrigger: {
+				trigger: element,
+				start: 'top center',
+				end: 'buttom buttom',
+				once: true,
+			},
+		}
+	);
+};
+
+export const animateReservations = (forwardedRef, timeline) => {
+	const element = forwardedRef.current;
+	console.log(element);
+	gsap.context(() => {
+		timeline.current = gsap
+			.timeline({
+				scrollTrigger: {
+					trigger: element,
+					start: 'top center',
+					end: 'buttom buttom',
+					once: true,
+				},
+			})
+			.fromTo(
+				'.reservation-box',
+				{
+					opacity: 0,
+					x: -50,
+				},
+				{
+					opacity: 1,
+					x: 0,
+				}
+			)
+			.fromTo(
+				'.reservation-box h1',
+				{
+					opacity: 0,
+					x: 50,
+				},
+				{
+					opacity: 1,
+					x: 0,
+				}
+			)
+			.fromTo(
+				'.input-name',
+				{
+					opacity: 0,
+					y: -50,
+				},
+				{
+					opacity: 1,
+					y: 0,
+				}
+			)
+			.fromTo(
+				'.input-phone',
+				{
+					opacity: 0,
+					y: -50,
+				},
+				{
+					opacity: 1,
+					y: 0,
+				}
+			)
+			.fromTo(
+				'.input-persons',
+				{
+					opacity: 0,
+					y: 50,
+				},
+				{
+					opacity: 1,
+					y: 0,
+				}
+			)
+			.fromTo(
+				'.input-date',
+				{
+					opacity: 0,
+					y: 50,
+				},
+				{
+					opacity: 1,
+					y: 0,
+				}
+			)
+			.fromTo(
+				'.input-time',
+				{
+					opacity: 0,
+					y: 50,
+				},
+				{
+					opacity: 1,
+					y: 0,
+				}
+			)
+			.fromTo(
+				'.submit-button-container',
+				{
+					opacity: 0,
+					y: 50,
+				},
+				{
+					opacity: 1,
+					y: 0,
 				}
 			);
 	}, forwardedRef);

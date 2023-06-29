@@ -29,12 +29,17 @@
 - [x] Add react router for navbar routes
 - [x] Recap section
 - [x] Our story section
-- [ ] Make menu page
-- [ ] Add onscroll animations and regular animations
+- [ ] Make menu page using mysql database
+- [x] Add onscroll animations and regular animations
 - [ ] Make page fully responsive
 - [ ] Make reservation form usable using backend nodemailer
 - [ ] Add formik validation for reservation form
 - [ ] Add 404 error page
+
+<br>
+Maybe later
+<br>
+
 - [ ] Recenzije section
 - [ ] Maybe specialities section
 

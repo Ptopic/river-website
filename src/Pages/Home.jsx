@@ -20,6 +20,8 @@ import {
 	animateStory,
 	animateOurDishesSection,
 	animateGallery,
+	animateMap,
+	animateReservations,
 } from '../utils/Animations';
 
 function Home() {
@@ -34,11 +36,15 @@ function Home() {
 	const storyRef = useRef(null);
 	const ourDishesRef = useRef(null);
 	const galleryRef = useRef(null);
+	const mapRef = useRef(null);
+	const reservationRef = useRef(null);
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		animateStory(storyRef, timeline);
 		animateOurDishesSection(ourDishesRef, timeline);
 		animateGallery(galleryRef, timeline);
+		animateMap(mapRef);
+		animateReservations(reservationRef, timeline);
 	}, []);
 	return (
 		<div ref={ref}>
@@ -57,8 +63,8 @@ function Home() {
 			</section>
 			<Pictures forwardedRef={galleryRef} />
 			{/* <Reviews /> */}
-			<MapContainer location={location} zoomLevel={18} />
-			<Reservation />
+			<MapContainer location={location} zoomLevel={18} forwardedRef={mapRef} />
+			<Reservation forwardedRef={reservationRef} />
 			<Footer />
 		</div>
 	);

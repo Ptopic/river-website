@@ -28,9 +28,13 @@
 .contact-section-content p {
     font-size: 1.4rem;
     color: var(--gray500);
+    font-family: 'oscine', sans-serif;
+    letter-spacing: 0.2rem;
 }
 
 .address {
+    margin-top: 5px;
+    transform: scale(0.9);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,4 +50,47 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+/* ---------- Media querys ---------- */
+
+/* Phone */
+
+@media (max-width: 500px) {
+    .contact-section-content {
+        padding: 0 2rem;
+        text-align: center;
+    }
+
+    .contact-section-content img {
+        margin: 2rem;
+    }
+
+    .contact-section-content h1 {
+        font-size: 3rem;
+        padding: 1rem 0 3rem 0
+    }
+
+    .contact-section-content p {
+        font-size: 1.4rem;
+        display: none;
+    }
+
+    .address a {
+        margin-top: 0;
+        width: 80%;
+    }
+
+    .menu {
+        width: 50%;
+    }
+
+    .menu a {
+        width: 80%;
+    }
+
+    .menu h1 {
+        display: inline-block;
+        max-width: min-content;
+    }
 }

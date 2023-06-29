@@ -1,6 +1,6 @@
 .info-container {
     width: 100%;
-    display: flex;
+    display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 5rem 15rem;
 }
@@ -28,6 +28,8 @@
 
 .info-left p {
     font-size: 2.4rem;
+    font-family: 'oscine', sans-serif;
+    letter-spacing: 0.2rem;
 }
 
 .info-left a {
@@ -87,8 +89,32 @@
 
 .info-right p {
     font-size: 2.4rem;
+    font-family: 'oscine', sans-serif;
+    letter-spacing: 0.2rem;
 }
 
 .info-right a {
     margin: 2rem 0;
+}
+
+/* ---------- Media querys ---------- */
+
+/* Phone */
+
+@media (max-width: 500px) {
+    .info-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 0;
+    }
+
+    .info-left {
+        grid-column: 1/1;
+        grid-row: 1/1;
+    }
+
+    .info-right {
+        grid-column: 1/1;
+        grid-row: 2/2;
+    }
 }

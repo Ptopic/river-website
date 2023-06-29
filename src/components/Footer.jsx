@@ -21,29 +21,17 @@ function Footer() {
 					<h1>Contacts</h1>
 					<div className="contacts-info">
 						<div className="footer-center location">
-							<RiMapPinLine
-								color="#e4c590"
-								size={26}
-								style={{ marginRight: '2rem' }}
-							/>
+							<RiMapPinLine color="#e4c590" size={26} />
 							Ul. kralja Zvonimira 46, 21210, Solin
 						</div>
 
 						<div className="footer-center phone">
-							<HiOutlinePhone
-								color="#e4c590"
-								size={26}
-								style={{ marginRight: '2rem' }}
-							/>
+							<HiOutlinePhone color="#e4c590" size={26} />
 							+385 091 792 1657
 						</div>
 
 						<div className="footer-center email">
-							<MdOutlineAlternateEmail
-								color="#e4c590"
-								size={26}
-								style={{ marginRight: '2rem' }}
-							/>
+							<MdOutlineAlternateEmail color="#e4c590" size={26} />
 							antetopic355@gmail.com
 						</div>
 					</div>
@@ -51,19 +39,19 @@ function Footer() {
 				<div className="center">
 					<img src={logoImg} alt="" />
 					<div className="logos">
-						<a href="https://www.google.com">
+						<a href="https://www.facebook.com/p/Konoba-Pizzeria-River-100054423162174/">
 							<GrFacebookOption color="white" size={42} />
 						</a>
 
-						<a href="">
+						<a href="https://www.instagram.com/river_pizzeria_restoran/">
 							<FaInstagram color="white" size={42} />
 						</a>
 
-						<a href="">
+						<a href="https://www.tripadvisor.com/Restaurant_Review-g1203167-d3410911-Reviews-Konoba_Pizzeria_River-Solin_Split_Dalmatia_County_Dalmatia.html">
 							<FaTripadvisor color="white" size={42} />
 						</a>
 
-						<a href="">
+						<a href="mailto:antetopic355@gmail.com">
 							<TbMail color="white" size={42} />
 						</a>
 					</div>

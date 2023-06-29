@@ -1,0 +1,15 @@
+.map-container {
+    height: 70dvh;
+    width: 100%;
+    padding: 5rem 0rem
+}
+
+/* ---------- Media querys ---------- */
+
+/* Phone */
+
+@media (max-width: 500px) {
+    .map-container {
+        height: 50dvh;
+    }
+}

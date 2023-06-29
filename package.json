@@ -4,19 +4,21 @@
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
-		"start": "vite --port 3000",
+		"start": "vite --port 3000 --host 192.168.1.200",
 		"build": "vite build",
 		"lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
 		"preview": "vite preview"
 	},
 	"dependencies": {
+		"formik": "^2.4.0",
 		"google-map-react": "^2.2.1",
 		"gsap": "^3.11.5",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-icons": "^4.8.0",
 		"react-router-dom": "^6.11.2",
-		"react-swipeable": "^7.0.0"
+		"react-swipeable": "^7.0.0",
+		"yup": "^1.2.0"
 	},
 	"devDependencies": {
 		"@types/react": "^18.0.28",
