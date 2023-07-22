@@ -17,7 +17,7 @@ import DropDown from '../components/DropDown';
 
 // Data
 import { pizzaData } from '../data/pizzaData';
-import { hranaDataEng } from '../data/hranaEng';
+import { pizzaDataEng } from '../data/pizzaDataEng';
 function Pizza() {
 	const TECAJ_KONVERZIJE = 7.5345;
 
@@ -32,7 +32,7 @@ function Pizza() {
 
 	useEffect(() => {
 		setData(pizzaData);
-		setDataEng(hranaDataEng);
+		setDataEng(pizzaDataEng);
 	}, []);
 
 	// If lanugage changes errase data
@@ -114,7 +114,7 @@ function Pizza() {
 					) : (
 						<div className="menu-categories-container">
 							<div className="menu-categories">
-								{hranaDataEng.map((el) => {
+								{pizzaDataEng.map((el) => {
 									return (
 										<button key={el['id']} onClick={() => setCurrentData(el)}>
 											{el['name']}
@@ -166,17 +166,20 @@ function Pizza() {
 											jumbo={data.content}
 											open={open}
 											setOpen={setOpen}
+											language={'hrv'}
 										/>
 									);
 							  })
-							: hranaDataEng.map((data, id) => {
+							: pizzaDataEng.map((data, id) => {
 									return (
 										<DropDown
 											id={id}
 											name={data.name}
 											data={data.content}
+											jumbo={data.content}
 											open={open}
 											setOpen={setOpen}
+											language={'eng'}
 										/>
 									);
 							  })}

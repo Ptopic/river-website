@@ -262,7 +262,7 @@
         z-index: 200;
     }
 
-    .dropdown h1 {
+    .dropdown-div {
         font-family: "oscine";
         text-align: start;
         background: none;
@@ -273,7 +273,9 @@
         border-bottom: 1px solid rgba(228, 197, 144, 0.5);
         text-decoration: none;
         color: white;
-        font-size: 2rem;
+        font-size: 1.2rem;
+        grid-template-columns: 40% 1fr 1fr;
+        align-items: center;
     }
 
     .dropdown-content {
@@ -288,7 +290,7 @@
     }
 
     .item-container {
-        padding: 3rem 2rem;
+        padding: 3rem 0.5rem;
         /* border-top: 1px solid rgba(228, 197, 144, 0.5); */
         display: none;
         align-items: center;
@@ -296,12 +298,14 @@
     }
 
     .item-info h2 {
+        margin-right: 1rem;
         font-size: 2rem;
         font-family: "oscine";
     }
 
 
     .item-info p {
+        margin-right: 1rem;
         font-size: 1.6rem;
         font-family: "oscine";
     }
@@ -327,6 +331,22 @@
         font-weight: 700;
     }
 
+    .item-price-pizza {
+        display: inline;
+        text-align: center;
+        background: var(--primary);
+        color: var(--background300);
+        padding: 1rem 1rem;
+        width: 100px;
+        text-align: center;
+        /* word-wrap: break-word; */
+        text-decoration: none;
+        font-family: 'simplifica', sans-serif;
+        letter-spacing: 0.4rem;
+        text-align: center;
+        font-weight: 700;
+    }
+
     .item-price p {
         font-family: "oscine";
         font-weight: 800;
@@ -334,6 +354,16 @@
     }
 
     .item-price p2 {
+        font-size: 1.4rem;
+    }
+
+    .item-price-pizza p {
+        font-family: "oscine";
+        font-weight: 800;
+        font-size: 1.6rem;
+    }
+
+    .item-price-pizza p2 {
         font-size: 1.4rem;
     }
 

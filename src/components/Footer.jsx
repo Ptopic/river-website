@@ -27,7 +27,7 @@ function Footer() {
 
 						<div className="footer-center phone">
 							<HiOutlinePhone color="#e4c590" size={26} />
-							+385 091 792 1657
+							+385 021 260 081
 						</div>
 
 						<div className="footer-center email">

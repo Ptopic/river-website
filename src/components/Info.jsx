@@ -46,7 +46,7 @@ function Info() {
 			>
 				<div className="blured-content">
 					<h1>Need a table?</h1>
-					<p>+385 091 792 1657</p>
+					<p>+385 021 260 081</p>
 					<a href="#reservations" className="btn info">
 						BOOK A TABLE
 					</a>
