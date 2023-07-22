@@ -7,6 +7,8 @@ import './index.css';
 import Home from './Pages/Home.jsx';
 import Menu from './Pages/Menu';
 import Vine from './Pages/Vine';
+import Drinks from './Pages/Drinks';
+import Pizza from './Pages/Pizza';
 import ErrorPage from './Pages/ErrorPage';
 const router = createBrowserRouter([
 	{
@@ -22,6 +24,16 @@ const router = createBrowserRouter([
 	{
 		path: 'vine',
 		element: <Vine />,
+		errorElement: <ErrorPage />,
+	},
+	{
+		path: 'drinks',
+		element: <Drinks />,
+		errorElement: <ErrorPage />,
+	},
+	{
+		path: 'pizza',
+		element: <Pizza />,
 		errorElement: <ErrorPage />,
 	},
 ]);

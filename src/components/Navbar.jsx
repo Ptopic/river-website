@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import logoImg from '../assets/images/novilogowhite.png';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoClose } from 'react-icons/io5';
+import { motion as m, useScroll, useTransform } from 'framer-motion';
 // Gsap
 import {
 	NavbarAnimationOnScroll,

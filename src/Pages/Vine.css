@@ -1,0 +1,95 @@
+.vine-container-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vine-container-content h2 {
+    color: var(--primary);
+    font-family: 'Cursive2', sans-serif;
+    padding: 5rem 0 0 0;
+    font-size: 12em;
+    font-weight: 300;
+}
+
+.vine-container-content h3 {
+    color: var(--primary);
+    font-family: 'Cursive2', sans-serif;
+    font-size: 6rem;
+    padding-top: 5rem;
+    font-weight: 300;
+}
+
+.vine-categories-container {
+    width: 80%;
+}
+
+.vine-categories {}
+
+.vine-category {
+    padding: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    color: var(--primary);
+    font-family: "oscine";
+    font-size: 2.6rem;
+    padding: 1rem 0 2rem 0;
+}
+
+.vine-content h4 {
+    font-family: "oscine";
+    font-size: 2.4rem;
+}
+
+.vine-content p {
+    font-family: "oscine";
+    font-size: 1.6rem;
+}
+
+.vine-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vine-price div {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--primary);
+    color: var(--background300);
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    text-decoration: none;
+    font-family: 'simplifica', sans-serif;
+    letter-spacing: 0.4rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* ---------- Media querys ---------- */
+
+/* Phone */
+
+@media (max-width: 500px) {
+    .vine-categories-container {
+        width: 90%;
+    }
+
+    .vine-container-content h2 {
+        text-align: center;
+    }
+
+    .vine-container-content .foreign {
+        width: 90%;
+        margin-top: 2rem;
+        font-size: 8rem;
+        text-align: center;
+    }
+}

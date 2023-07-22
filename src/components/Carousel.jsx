@@ -5,7 +5,7 @@ import image1 from '../assets/images/interior.jpeg';
 import image2 from '../assets/images/exterior.jpeg';
 import divider from '../assets/images/divider2.png';
 import { useSwipeable } from 'react-swipeable';
-
+import { motion as m, useScroll, useTransform } from 'framer-motion';
 import { animateOverlay } from '../utils/Animations';
 
 import '../components/Carousel.css';
@@ -18,7 +18,7 @@ function Carousel() {
 
 	useEffect(() => {
 		// Play overlay animation
-		animateOverlay(overlayRef, timeline);
+		// animateOverlay(overlayRef, timeline);
 	}, []);
 
 	const handleNext = () => {
@@ -45,24 +45,108 @@ function Carousel() {
 		onSwipedLeft: () => handleNext(),
 		onSwipedRight: () => handlePrev(),
 	});
+
+	const variants = {
+		hidden: {
+			y: '-5vh',
+			opacity: 0,
+		},
+		visible: {
+			y: '0',
+			opacity: 1,
+		},
+		exit: {
+			y: '100vh',
+			opacity: 0,
+		},
+	};
+
+	const variantsButton = {
+		hidden: {
+			opacity: 0,
+		},
+		visible: {
+			opacity: 1,
+		},
+		exit: {
+			opacity: 0,
+		},
+	};
 	return (
-		<div
-			{...handlers}
-			className="carousel-wrapper"
-			id="home"
-			// onMouseEnter={() => setPaused(true)}
-			// onMouseLeave={() => setPaused(false)}
-		>
+		<div {...handlers} className="carousel-wrapper" id="home">
 			<div className="overlay-text" ref={overlayRef}>
-				<p className="welcome">Welcome to Our Restaurant</p>
-				<h1 className="overlay-name">Konoba-pizzeria River</h1>
+				<m.p
+					className="welcome"
+					variants={variants}
+					initial="hidden"
+					animate="visible"
+					transition={{
+						duration: 1.2,
+						type: 'tween',
+					}}
+					exit="exit"
+				>
+					Welcome to Our Restaurant
+				</m.p>
+				<m.h1
+					variants={variants}
+					initial="hidden"
+					animate="visible"
+					exit="exit"
+					transition={{
+						duration: 1.2,
+						type: 'tween',
+						delay: 0.4,
+					}}
+					className="overlay-name"
+				>
+					Konoba-pizzeria River
+				</m.h1>
 
-				<img src={divider} alt="" className="divider" />
-				<p className="overlay-food">Mediterenian food</p>
+				<m.img
+					src={divider}
+					alt=""
+					className="divider"
+					variants={variants}
+					initial="hidden"
+					animate="visible"
+					exit="exit"
+					transition={{
+						duration: 1.2,
+						type: 'tween',
+						delay: 0.6,
+					}}
+				/>
+				<m.p
+					className="overlay-food"
+					variants={variants}
+					initial="hidden"
+					animate="visible"
+					exit="exit"
+					transition={{
+						duration: 1.2,
+						type: 'tween',
+						delay: 1,
+					}}
+				>
+					Mediterenian food
+				</m.p>
 
-				<a href="/menu" className="overlay-btn">
+				<m.a
+					href="/menu"
+					className="overlay-btn"
+					variants={variantsButton}
+					initial="hidden"
+					animate="visible"
+					exit="exit"
+					transition={{
+						duration: 1.2,
+						type: 'tween',
+						delay: 1.5,
+					}}
+				>
 					MENU
-				</a>
+				</m.a>
 			</div>
 			<div
 				className="carousel-collection"

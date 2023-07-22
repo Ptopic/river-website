@@ -640,3 +640,38 @@ export const animateReservations = (forwardedRef, timeline) => {
 		timeline.kill();
 	};
 };
+
+export const menuFlyIn = (el) => {
+	gsap.fromTo(
+		el,
+		{
+			opacity: 0,
+			y: -150,
+		},
+		{
+			y: 0,
+			opacity: 1,
+			scrollTrigger: {
+				trigger: el,
+				start: 'top center',
+				end: 'bottom center',
+				once: true,
+			},
+		}
+	);
+};
+
+export const animateMenuItems = (el) => {
+	gsap.fromTo(
+		el,
+		{
+			opacity: 0,
+			y: -50,
+		},
+		{
+			duration: 0.6,
+			y: 0,
+			opacity: 1,
+		}
+	);
+};

@@ -24,6 +24,10 @@ html {
   color: white;
   font-size: 10px;
   scroll-behavior: smooth;
+}
+
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -42,6 +46,12 @@ html {
   font-family: "cursive";
   src: local("MoniqueScript"),
     url("./assets/fonts/MoniqueScript.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Cursive2";
+  src: local("MoniqueScript"),
+    url("./assets/fonts/Cursive2.ttf") format("truetype");
 }
 
 /* Moon font */

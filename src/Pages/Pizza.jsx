@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import Cookies from 'js-cookie';
 import { motion as m, AnimatePresence } from 'framer-motion';
 
 import './Menu.css';
@@ -17,9 +16,9 @@ import engFlag from '../assets/images/eng.jpg';
 import DropDown from '../components/DropDown';
 
 // Data
-import { hranaData } from '../data/hrana';
+import { pizzaData } from '../data/pizzaData';
 import { hranaDataEng } from '../data/hranaEng';
-function Menu() {
+function Pizza() {
 	const TECAJ_KONVERZIJE = 7.5345;
 
 	const menuRef = useRef(null);
@@ -32,7 +31,7 @@ function Menu() {
 	const [open, setOpen] = useState(null);
 
 	useEffect(() => {
-		setData(hranaData);
+		setData(pizzaData);
 		setDataEng(hranaDataEng);
 	}, []);
 
@@ -40,7 +39,6 @@ function Menu() {
 	useEffect(() => {
 		setCurrentData('');
 		setOpen(null);
-		Cookies.set('languageCookie', String(language), { expires: 7 });
 	}, [language]);
 	return (
 		<>
@@ -104,7 +102,7 @@ function Menu() {
 					{language === 'hrv' ? (
 						<div className="menu-categories-container">
 							<div className="menu-categories">
-								{hranaData.map((el) => {
+								{pizzaData.map((el) => {
 									return (
 										<button key={el['id']} onClick={() => setCurrentData(el)}>
 											{el['name']}
@@ -159,12 +157,13 @@ function Menu() {
 				<AnimatePresence>
 					<div className="dropdown-list" ref={menuRef}>
 						{language === 'hrv'
-							? hranaData.map((data, id) => {
+							? pizzaData.map((data, id) => {
 									return (
 										<DropDown
 											id={id}
 											name={data.name}
 											data={data.content}
+											jumbo={data.content}
 											open={open}
 											setOpen={setOpen}
 										/>
@@ -188,4 +187,4 @@ function Menu() {
 	);
 }
 
-export default Menu;
+export default Pizza;

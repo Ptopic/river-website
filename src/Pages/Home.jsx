@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
-
+import { motion as m, useScroll, useTransform } from 'framer-motion';
 import '../index.css';
 
 // Components

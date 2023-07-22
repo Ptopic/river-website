@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import Cookies from 'js-cookie';
 import { motion as m, AnimatePresence } from 'framer-motion';
 
 import './Menu.css';
@@ -17,9 +16,9 @@ import engFlag from '../assets/images/eng.jpg';
 import DropDown from '../components/DropDown';
 
 // Data
-import { hranaData } from '../data/hrana';
-import { hranaDataEng } from '../data/hranaEng';
-function Menu() {
+import { drinksData } from '../data/drinks';
+import { drinksDataEng } from '../data/drinksEng';
+function Drinks() {
 	const TECAJ_KONVERZIJE = 7.5345;
 
 	const menuRef = useRef(null);
@@ -32,15 +31,14 @@ function Menu() {
 	const [open, setOpen] = useState(null);
 
 	useEffect(() => {
-		setData(hranaData);
-		setDataEng(hranaDataEng);
+		setData(drinksData);
+		setDataEng(drinksDataEng);
 	}, []);
 
 	// If lanugage changes errase data
 	useEffect(() => {
 		setCurrentData('');
 		setOpen(null);
-		Cookies.set('languageCookie', String(language), { expires: 7 });
 	}, [language]);
 	return (
 		<>
@@ -104,7 +102,7 @@ function Menu() {
 					{language === 'hrv' ? (
 						<div className="menu-categories-container">
 							<div className="menu-categories">
-								{hranaData.map((el) => {
+								{drinksData.map((el) => {
 									return (
 										<button key={el['id']} onClick={() => setCurrentData(el)}>
 											{el['name']}
@@ -116,7 +114,7 @@ function Menu() {
 					) : (
 						<div className="menu-categories-container">
 							<div className="menu-categories">
-								{hranaDataEng.map((el) => {
+								{drinksDataEng.map((el) => {
 									return (
 										<button key={el['id']} onClick={() => setCurrentData(el)}>
 											{el['name']}
@@ -159,7 +157,7 @@ function Menu() {
 				<AnimatePresence>
 					<div className="dropdown-list" ref={menuRef}>
 						{language === 'hrv'
-							? hranaData.map((data, id) => {
+							? drinksData.map((data, id) => {
 									return (
 										<DropDown
 											id={id}
@@ -170,7 +168,7 @@ function Menu() {
 										/>
 									);
 							  })
-							: hranaDataEng.map((data, id) => {
+							: drinksDataEng.map((data, id) => {
 									return (
 										<DropDown
 											id={id}
@@ -188,4 +186,4 @@ function Menu() {
 	);
 }
 
-export default Menu;
+export default Drinks;
