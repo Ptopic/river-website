@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-
+import { motion as m } from 'framer-motion';
 // Icons
 
 import appetizersIcon from '../assets/icons/appetizers.png';
@@ -11,40 +11,129 @@ import '../components/Recap.css';
 
 import { animateRecap, animateRecapIcons } from '../utils/Animations';
 function Recap({ forwardedRef }) {
-	useEffect(() => {
-		const element = forwardedRef.current;
-		animateRecap(element);
-		animateRecapIcons();
-	}, []);
+	// useEffect(() => {
+	// 	const element = forwardedRef.current;
+	// 	animateRecap(element);
+	// 	animateRecapIcons();
+	// }, []);
 	return (
 		<div className="recap-container" ref={forwardedRef}>
-			<div className="recap-content">
-				<div className="recap-card">
+			<m.div
+				className="recap-content"
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: true }}
+				variants={{
+					visible: { opacity: 1 },
+					hidden: { opacity: 0 },
+				}}
+				transition={{
+					type: 'spring',
+					stiffness: 660,
+					damping: 150,
+					delay: 0.2,
+				}}
+			>
+				<m.div
+					className="recap-card"
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+					variants={{
+						visible: { y: 0, opacity: 1 },
+						hidden: { y: -100, opacity: 0 },
+					}}
+					transition={{
+						type: 'spring',
+						stiffness: 660,
+						damping: 150,
+						delay: 0.4,
+					}}
+				>
 					<img src={appetizersIcon} alt="" />
 					<p>APPETIZERS</p>
-				</div>
+				</m.div>
 
-				<div className="recap-card">
+				<m.div
+					className="recap-card"
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+					variants={{
+						visible: { y: 0, opacity: 1 },
+						hidden: { y: -100, opacity: 0 },
+					}}
+					transition={{
+						type: 'spring',
+						stiffness: 660,
+						damping: 150,
+						delay: 0.8,
+					}}
+				>
 					<img src={mainMealsIconSvg} alt="" />
 					<p>MAIN MEALS</p>
-				</div>
-
-				<div className="recap-card">
+				</m.div>
+				<m.div
+					className="recap-card"
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+					variants={{
+						visible: { y: 0, opacity: 1 },
+						hidden: { y: -100, opacity: 0 },
+					}}
+					transition={{
+						type: 'spring',
+						stiffness: 660,
+						damping: 150,
+						delay: 1.2,
+					}}
+				>
 					<img src={desertsIcon} alt="" />
 					<p>DESERTS</p>
-				</div>
+				</m.div>
 
-				<div className="recap-card">
+				<m.div
+					className="recap-card"
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+					variants={{
+						visible: { y: 0, opacity: 1 },
+						hidden: { y: -100, opacity: 0 },
+					}}
+					transition={{
+						type: 'spring',
+						stiffness: 660,
+						damping: 150,
+						delay: 1.6,
+					}}
+				>
 					<img src={drinksIcon} alt="" />
 					<p>DRINKS</p>
-				</div>
+				</m.div>
 
-				<div className="menu-container">
+				<m.div
+					className="menu-container"
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+					variants={{
+						visible: { y: 0, opacity: 1 },
+						hidden: { y: -100, opacity: 0 },
+					}}
+					transition={{
+						type: 'spring',
+						stiffness: 660,
+						damping: 150,
+						delay: 2,
+					}}
+				>
 					<a href="/menu" className="btn">
 						MENU
 					</a>
-				</div>
-			</div>
+				</m.div>
+			</m.div>
 		</div>
 	);
 }

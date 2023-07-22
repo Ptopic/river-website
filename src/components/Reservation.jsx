@@ -1,9 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { motion as m } from 'framer-motion';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import './Reservation.css';
 
 function Reservation({ forwardedRef }) {
+	const opacityAnimation = {
+		visible: { opacity: 1 },
+		hidden: { opacity: 0 },
+	};
+
+	const downAnimation = {
+		visible: { y: 0, opacity: 1 },
+		hidden: { y: -50, opacity: 0 },
+	};
 	const initialValuse = {
 		name: '',
 		phone: '',
@@ -44,11 +54,38 @@ function Reservation({ forwardedRef }) {
 		// }
 	};
 	return (
-		<div className="reservation-container" id="reservations" ref={forwardedRef}>
+		<m.div
+			className="reservation-container"
+			id="reservations"
+			ref={forwardedRef}
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ once: true }}
+			variants={opacityAnimation}
+			transition={{
+				type: 'spring',
+				stiffness: 660,
+				damping: 100,
+				delay: 0.2,
+			}}
+		>
 			<div className="top-box"></div>
 			<div className="buttom-box"></div>
 			<div className="reservation-box">
-				<h1>Make a reservation</h1>
+				<m.h1
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+					variants={downAnimation}
+					transition={{
+						type: 'spring',
+						stiffness: 660,
+						damping: 100,
+						delay: 0.6,
+					}}
+				>
+					Make a reservation
+				</m.h1>
 				<Formik
 					initialValues={initialValuse}
 					enableReinitialize={true}
@@ -57,43 +94,105 @@ function Reservation({ forwardedRef }) {
 				>
 					{(formik) => (
 						<form className="reservation-form" onSubmit={formik.handleSubmit}>
-							<input
+							<m.input
 								type="text"
 								name="name"
 								placeholder="Full name *"
 								className="input-name"
 								{...formik.getFieldProps('name')}
+								initial="hidden"
+								whileInView="visible"
+								viewport={{ once: true }}
+								variants={downAnimation}
+								transition={{
+									type: 'spring',
+									stiffness: 660,
+									damping: 100,
+									delay: 1,
+								}}
 							/>
-							<input
+							<m.input
 								type="phone"
 								name="phone"
 								placeholder="Phone number *"
 								className="input-phone"
 								{...formik.getFieldProps('phone')}
+								initial="hidden"
+								whileInView="visible"
+								viewport={{ once: true }}
+								variants={downAnimation}
+								transition={{
+									type: 'spring',
+									stiffness: 660,
+									damping: 100,
+									delay: 1.4,
+								}}
 							/>
-							<input
+							<m.input
 								type="text"
 								name="persons"
 								placeholder="Number of persons *"
 								className="input-persons"
 								{...formik.getFieldProps('persons')}
+								initial="hidden"
+								whileInView="visible"
+								viewport={{ once: true }}
+								variants={downAnimation}
+								transition={{
+									type: 'spring',
+									stiffness: 660,
+									damping: 100,
+									delay: 1.8,
+								}}
 							/>
-							<input
+							<m.input
 								type="date"
 								name="date"
 								placeholder="Date"
 								className="input-date"
 								{...formik.getFieldProps('date')}
+								initial="hidden"
+								whileInView="visible"
+								viewport={{ once: true }}
+								variants={downAnimation}
+								transition={{
+									type: 'spring',
+									stiffness: 660,
+									damping: 100,
+									delay: 2.2,
+								}}
 							/>
-							<input
+							<m.input
 								type="time"
 								name="time"
 								placeholder="Time"
 								className="input-time"
 								{...formik.getFieldProps('time')}
+								initial="hidden"
+								whileInView="visible"
+								viewport={{ once: true }}
+								variants={downAnimation}
+								transition={{
+									type: 'spring',
+									stiffness: 660,
+									damping: 100,
+									delay: 2.6,
+								}}
 							/>
 
-							<div className="submit-button-container">
+							<m.div
+								className="submit-button-container"
+								initial="hidden"
+								whileInView="visible"
+								viewport={{ once: true }}
+								variants={downAnimation}
+								transition={{
+									type: 'spring',
+									stiffness: 660,
+									damping: 100,
+									delay: 3,
+								}}
+							>
 								<input
 									// onClick={() =>
 									// 	onSubmitHandler(formik.values, formik.formikActions)
@@ -102,7 +201,7 @@ function Reservation({ forwardedRef }) {
 									className="submit-btn"
 									value={'BOOK A TABLE'}
 								/>
-							</div>
+							</m.div>
 
 							{/* {formik.errors.name ||
 							formik.errors.phone ||
@@ -117,7 +216,7 @@ function Reservation({ forwardedRef }) {
 					)}
 				</Formik>
 			</div>
-		</div>
+		</m.div>
 	);
 }
 

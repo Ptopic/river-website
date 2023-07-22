@@ -1,24 +1,54 @@
 import React, { useState, useEffect, useRef } from 'react';
-
+import { motion as m } from 'framer-motion';
 import { animateInfo } from '../utils/Animations';
 import '../components/Info.css';
 import '../index.css';
 
 function Info({ forwardedRef }) {
 	const timeline = useRef(null);
-	useEffect(() => {
-		animateInfo(forwardedRef, timeline);
-	}, []);
+	// useEffect(() => {
+	// 	animateInfo(forwardedRef, timeline);
+	// }, []);
 	return (
 		<div className="info-container">
-			<div className="info-left">
+			<m.div
+				className="info-left"
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: true }}
+				variants={{
+					visible: { x: 0, opacity: 1 },
+					hidden: { x: -50, opacity: 0 },
+				}}
+				transition={{
+					type: 'spring',
+					stiffness: 660,
+					damping: 150,
+					delay: 0.2,
+				}}
+			>
 				<div className="blured-content">
 					<h1>Working Hours</h1>
 					<p>Mon - Sun: 10:00 - 24:00</p>
 					<a href="#footer">CONTACT US</a>
 				</div>
-			</div>
-			<div className="info-right">
+			</m.div>
+			<m.div
+				className="info-right"
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: true }}
+				variants={{
+					visible: { x: 0, opacity: 1 },
+					hidden: { x: 50, opacity: 0 },
+				}}
+				transition={{
+					type: 'spring',
+					stiffness: 660,
+					damping: 150,
+					delay: 0.2,
+				}}
+			>
 				<div className="blured-content">
 					<h1>Need a table?</h1>
 					<p>+385 091 792 1657</p>
@@ -26,7 +56,7 @@ function Info({ forwardedRef }) {
 						BOOK A TABLE
 					</a>
 				</div>
-			</div>
+			</m.div>
 		</div>
 	);
 }

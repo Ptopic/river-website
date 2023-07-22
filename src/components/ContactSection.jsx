@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { motion as m } from 'framer-motion';
 
 import { animateContactSection } from '../utils/Animations';
 import locationPinIcon from '../assets/icons/pin.svg';
@@ -7,13 +8,28 @@ import dishIcon from '../assets/icons/dish.svg';
 import '../components/ContactSection.css';
 function ContactSection({ forwardedRef }) {
 	const timeline = useRef(null);
-	useEffect(() => {
-		animateContactSection(forwardedRef, timeline);
-	}, []);
+	// useEffect(() => {
+	// 	animateContactSection(forwardedRef, timeline);
+	// }, []);
 	return (
 		<div className="contact-section-container">
 			<div className="contact-section-content">
-				<div className="address">
+				<m.div
+					className="address"
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+					variants={{
+						visible: { x: 0, opacity: 1 },
+						hidden: { x: -50, opacity: 0 },
+					}}
+					transition={{
+						type: 'spring',
+						stiffness: 660,
+						damping: 150,
+						delay: 0.2,
+					}}
+				>
 					<img src={locationPinIcon} alt="" width={'64px'} />
 					<h1>OUR LOCATION</h1>
 					<p>Ul. kralja Zvonimira 46</p>
@@ -26,14 +42,29 @@ function ContactSection({ forwardedRef }) {
 					>
 						GOOGLE MAPS
 					</a>
-				</div>
-				<div className="menu">
+				</m.div>
+				<m.div
+					className="menu"
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+					variants={{
+						visible: { x: 0, opacity: 1 },
+						hidden: { x: 50, opacity: 0 },
+					}}
+					transition={{
+						type: 'spring',
+						stiffness: 660,
+						damping: 150,
+						delay: 0.2,
+					}}
+				>
 					<img src={dishIcon} alt="" width={'64px'} />
 					<h1>OUR MENU</h1>
 					<a href={'/menu'} className="btn">
 						MENU
 					</a>
-				</div>
+				</m.div>
 			</div>
 		</div>
 	);

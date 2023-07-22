@@ -5,7 +5,7 @@ import image1 from '../assets/images/interior.jpeg';
 import image2 from '../assets/images/exterior.jpeg';
 import divider from '../assets/images/divider2.png';
 import { useSwipeable } from 'react-swipeable';
-import { motion as m, useScroll, useTransform } from 'framer-motion';
+import { motion as m } from 'framer-motion';
 import { animateOverlay } from '../utils/Animations';
 
 import '../components/Carousel.css';
@@ -46,57 +46,40 @@ function Carousel() {
 		onSwipedRight: () => handlePrev(),
 	});
 
-	const variants = {
-		hidden: {
-			y: '-5vh',
-			opacity: 0,
-		},
-		visible: {
-			y: '0',
-			opacity: 1,
-		},
-		exit: {
-			y: '100vh',
-			opacity: 0,
-		},
-	};
-
-	const variantsButton = {
-		hidden: {
-			opacity: 0,
-		},
-		visible: {
-			opacity: 1,
-		},
-		exit: {
-			opacity: 0,
-		},
-	};
 	return (
 		<div {...handlers} className="carousel-wrapper" id="home">
 			<div className="overlay-text" ref={overlayRef}>
 				<m.p
 					className="welcome"
-					variants={variants}
 					initial="hidden"
-					animate="visible"
-					transition={{
-						duration: 1.2,
-						type: 'tween',
+					whileInView="visible"
+					viewport={{ once: true }}
+					variants={{
+						visible: { scale: 1 },
+						hidden: { scale: 0 },
 					}}
-					exit="exit"
+					transition={{
+						type: 'spring',
+						stiffness: 660,
+						damping: 150,
+						delay: 0.2,
+					}}
 				>
 					Welcome to Our Restaurant
 				</m.p>
 				<m.h1
-					variants={variants}
 					initial="hidden"
-					animate="visible"
-					exit="exit"
+					whileInView="visible"
+					viewport={{ once: true }}
+					variants={{
+						visible: { scale: 1 },
+						hidden: { scale: 0 },
+					}}
 					transition={{
-						duration: 1.2,
-						type: 'tween',
-						delay: 0.4,
+						type: 'spring',
+						stiffness: 660,
+						damping: 150,
+						delay: 0.6,
 					}}
 					className="overlay-name"
 				>
@@ -107,26 +90,34 @@ function Carousel() {
 					src={divider}
 					alt=""
 					className="divider"
-					variants={variants}
 					initial="hidden"
-					animate="visible"
-					exit="exit"
+					whileInView="visible"
+					viewport={{ once: true }}
+					variants={{
+						visible: { scale: 1 },
+						hidden: { scale: 0 },
+					}}
 					transition={{
-						duration: 1.2,
-						type: 'tween',
-						delay: 0.6,
+						type: 'spring',
+						stiffness: 660,
+						damping: 150,
+						delay: 1,
 					}}
 				/>
 				<m.p
 					className="overlay-food"
-					variants={variants}
 					initial="hidden"
-					animate="visible"
-					exit="exit"
+					whileInView="visible"
+					viewport={{ once: true }}
+					variants={{
+						visible: { scale: 1 },
+						hidden: { scale: 0 },
+					}}
 					transition={{
-						duration: 1.2,
-						type: 'tween',
-						delay: 1,
+						type: 'spring',
+						stiffness: 660,
+						damping: 150,
+						delay: 1.4,
 					}}
 				>
 					Mediterenian food
@@ -135,14 +126,18 @@ function Carousel() {
 				<m.a
 					href="/menu"
 					className="overlay-btn"
-					variants={variantsButton}
 					initial="hidden"
-					animate="visible"
-					exit="exit"
+					whileInView="visible"
+					viewport={{ once: true }}
+					variants={{
+						visible: { scale: 1 },
+						hidden: { scale: 0 },
+					}}
 					transition={{
-						duration: 1.2,
-						type: 'tween',
-						delay: 1.5,
+						type: 'spring',
+						stiffness: 460,
+						damping: 50,
+						delay: 0.4,
 					}}
 				>
 					MENU

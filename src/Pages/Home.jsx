@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
-import { motion as m, useScroll, useTransform } from 'framer-motion';
+import { motion as m } from 'framer-motion';
 import '../index.css';
 
 // Components
@@ -40,12 +40,22 @@ function Home() {
 	const reservationRef = useRef(null);
 
 	useLayoutEffect(() => {
-		animateStory(storyRef, timeline);
-		animateOurDishesSection(ourDishesRef, timeline);
-		animateGallery(galleryRef, timeline);
-		animateMap(mapRef);
-		animateReservations(reservationRef, timeline);
+		// animateStory(storyRef, timeline);
+		// animateOurDishesSection(ourDishesRef, timeline);
+		// animateGallery(galleryRef, timeline);
+		// animateMap(mapRef);
+		// animateReservations(reservationRef, timeline);
 	}, []);
+
+	const leftAnimation = {
+		visible: { x: 0, opacity: 1 },
+		hidden: { x: 0, opacity: 0 },
+	};
+
+	const rightAnimation = {
+		visible: { x: 0, opacity: 1 },
+		hidden: { x: 50, opacity: 0 },
+	};
 	return (
 		<div ref={ref}>
 			<Navbar forwardedRef={ref} />
@@ -57,10 +67,23 @@ function Home() {
 			</div>
 			<ContactSection forwardedRef={ref} />
 			<Story forwardedRef={storyRef} />
-			<section className="pictures" ref={ourDishesRef}>
+			<m.section
+				className="pictures"
+				ref={ourDishesRef}
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: true }}
+				variants={leftAnimation}
+				transition={{
+					type: 'spring',
+					stiffness: 460,
+					damping: 150,
+					delay: 0.2,
+				}}
+			>
 				<h2>Our</h2>
 				<h1>Dishes</h1>
-			</section>
+			</m.section>
 			<Pictures forwardedRef={galleryRef} />
 			{/* <Reviews /> */}
 			<MapContainer location={location} zoomLevel={18} forwardedRef={mapRef} />

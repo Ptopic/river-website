@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { BiSearchAlt } from 'react-icons/bi';
 import { IoIosClose } from 'react-icons/io';
+import { motion as m } from 'framer-motion';
 // Images
 import img1 from '../assets/images/food2.jpeg';
 import img2 from '../assets/images/food3.jpeg';
@@ -18,6 +19,16 @@ function Pictures({ forwardedRef }) {
 	const modalRef = useRef(null);
 	const [modalOpen, setModalOpen] = useState('');
 	const [curImage, setCurImage] = useState('');
+
+	const leftAnimation = {
+		visible: { x: 0, opacity: 1 },
+		hidden: { x: -50, opacity: 0 },
+	};
+
+	const rightAnimation = {
+		visible: { x: 0, opacity: 1 },
+		hidden: { x: 50, opacity: 0 },
+	};
 
 	const imageClick = (imgId) => {
 		setCurImage(imgId);
@@ -51,59 +62,137 @@ function Pictures({ forwardedRef }) {
 				</div>
 			) : null}
 			<div className="pictures-container" id="galery" ref={forwardedRef}>
-				<div className="img1 img" onClick={() => imageClick(0)}>
+				<m.div
+					className="img1 img"
+					onClick={() => imageClick(0)}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+					variants={leftAnimation}
+					transition={{
+						type: 'spring',
+						stiffness: 660,
+						damping: 100,
+						delay: 0.2,
+					}}
+				>
 					<img src={img1} alt="img1" />
 					<div className="overlay">
 						<div className="border">
 							<BiSearchAlt size={80} />
 						</div>
 					</div>
-				</div>
+				</m.div>
 
-				<div className="img2 img" onClick={() => imageClick(1)}>
+				<m.div
+					className="img2 img"
+					onClick={() => imageClick(1)}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+					variants={leftAnimation}
+					transition={{
+						type: 'spring',
+						stiffness: 660,
+						damping: 100,
+						delay: 0.6,
+					}}
+				>
 					<img src={img2} alt="img2" />
 					<div className="overlay">
 						<div className="border">
 							<BiSearchAlt size={80} />
 						</div>
 					</div>
-				</div>
+				</m.div>
 
-				<div className="img3 img" onClick={() => imageClick(2)}>
+				<m.div
+					className="img3 img"
+					onClick={() => imageClick(2)}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+					variants={rightAnimation}
+					transition={{
+						type: 'spring',
+						stiffness: 660,
+						damping: 100,
+						delay: 1,
+					}}
+				>
 					<img src={img3} alt="img3" />
 					<div className="overlay">
 						<div className="border">
 							<BiSearchAlt size={80} />
 						</div>
 					</div>
-				</div>
+				</m.div>
 
-				<div className="img4 img" onClick={() => imageClick(3)}>
+				<m.div
+					className="img4 img"
+					onClick={() => imageClick(3)}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+					variants={leftAnimation}
+					transition={{
+						type: 'spring',
+						stiffness: 660,
+						damping: 100,
+						delay: 1.4,
+					}}
+				>
 					<img src={img4} alt="img4" />
 					<div className="overlay">
 						<div className="border">
 							<BiSearchAlt size={80} />
 						</div>
 					</div>
-				</div>
+				</m.div>
 
-				<div className="img5 img" onClick={() => imageClick(4)}>
+				<m.div
+					className="img5 img"
+					onClick={() => imageClick(4)}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+					variants={rightAnimation}
+					transition={{
+						type: 'spring',
+						stiffness: 660,
+						damping: 100,
+						delay: 1.8,
+					}}
+				>
 					<img src={img5} alt="img5" />
 					<div className="overlay">
 						<div className="border">
 							<BiSearchAlt size={80} />
 						</div>
 					</div>
-				</div>
+				</m.div>
 
-				<div className="img6 img" onClick={() => imageClick(5)}>
+				<m.div
+					className="img6 img"
+					onClick={() => imageClick(5)}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+					variants={leftAnimation}
+					transition={{
+						type: 'spring',
+						stiffness: 660,
+						damping: 100,
+						delay: 2.2,
+					}}
+				>
 					<img src={img6} alt="img6" />
 					<div className="overlay">
 						<div className="border">
 							<BiSearchAlt size={80} />
 						</div>
 					</div>
-				</div>
+				</m.div>
 			</div>
 		</>
 	);
