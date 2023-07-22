@@ -8,16 +8,9 @@ import mainMealsIconSvg from '../assets/icons/burgersvg.svg';
 import desertsIcon from '../assets/icons/deserts.png';
 import drinksIcon from '../assets/icons/drinks.png';
 import '../components/Recap.css';
-
-import { animateRecap, animateRecapIcons } from '../utils/Animations';
-function Recap({ forwardedRef }) {
-	// useEffect(() => {
-	// 	const element = forwardedRef.current;
-	// 	animateRecap(element);
-	// 	animateRecapIcons();
-	// }, []);
+function Recap() {
 	return (
-		<div className="recap-container" ref={forwardedRef}>
+		<div className="recap-container">
 			<m.div
 				className="recap-content"
 				initial="hidden"

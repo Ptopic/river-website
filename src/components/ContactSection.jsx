@@ -1,16 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion as m } from 'framer-motion';
 
-import { animateContactSection } from '../utils/Animations';
 import locationPinIcon from '../assets/icons/pin.svg';
 import dishIcon from '../assets/icons/dish.svg';
 
 import '../components/ContactSection.css';
-function ContactSection({ forwardedRef }) {
-	const timeline = useRef(null);
-	// useEffect(() => {
-	// 	animateContactSection(forwardedRef, timeline);
-	// }, []);
+function ContactSection() {
 	return (
 		<div className="contact-section-container">
 			<div className="contact-section-content">

@@ -4,18 +4,17 @@ import LocationPin from './LocationPin';
 import { motion as m } from 'framer-motion';
 
 import '../components/MapContainer.css';
-function MapContainer({ location, zoomLevel, forwardedRef }) {
+function MapContainer({ location, zoomLevel }) {
 	// 43.535730841818115, 16.489338663433166
 	const url = import.meta.env.VITE_API;
 	console.log(url);
 	const leftAnimation = {
 		visible: { x: 0, opacity: 1 },
 		hidden: { x: -250, opacity: 0 },
-	};	
+	};
 	return (
 		<m.div
 			className="map-container"
-			ref={forwardedRef}
 			initial="hidden"
 			whileInView="visible"
 			viewport={{ once: true }}

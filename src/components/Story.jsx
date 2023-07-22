@@ -1,6 +1,5 @@
 import React, { useState, useLayoutEffect, useRef } from 'react';
 import { motion as m } from 'framer-motion';
-import { animateStory } from '../utils/Animations';
 
 import '../components/Story.css';
 
@@ -9,7 +8,7 @@ import '../components/Story.css';
 import img1 from '../assets/images/oven.jpeg';
 import img2 from '../assets/images/oven2.jpeg';
 
-function Story({ forwardedRef }) {
+function Story() {
 	const leftAnimation = {
 		visible: { x: 0, opacity: 1 },
 		hidden: { x: -50, opacity: 0 },
@@ -20,7 +19,7 @@ function Story({ forwardedRef }) {
 		hidden: { x: 50, opacity: 0 },
 	};
 	return (
-		<div ref={forwardedRef}>
+		<div>
 			<div className="story-container">
 				<div className="left-story">
 					<m.h1

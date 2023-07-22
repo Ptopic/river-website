@@ -16,14 +16,6 @@ import MapContainer from '../components/MapContainer';
 import Reservation from '../components/Reservation';
 import Pictures from '../components/Pictures';
 
-import {
-	animateStory,
-	animateOurDishesSection,
-	animateGallery,
-	animateMap,
-	animateReservations,
-} from '../utils/Animations';
-
 function Home() {
 	const location = {
 		address: 'Ul. kralja Zvonimira 46, 21210, Solin',
@@ -32,41 +24,28 @@ function Home() {
 	};
 	const ref = useRef(null);
 
-	const timeline = useRef(null);
 	const storyRef = useRef(null);
 	const ourDishesRef = useRef(null);
 	const galleryRef = useRef(null);
 	const mapRef = useRef(null);
 	const reservationRef = useRef(null);
 
-	useLayoutEffect(() => {
-		// animateStory(storyRef, timeline);
-		// animateOurDishesSection(ourDishesRef, timeline);
-		// animateGallery(galleryRef, timeline);
-		// animateMap(mapRef);
-		// animateReservations(reservationRef, timeline);
-	}, []);
-
 	const leftAnimation = {
 		visible: { x: 0, opacity: 1 },
 		hidden: { x: 0, opacity: 0 },
 	};
 
-	const rightAnimation = {
-		visible: { x: 0, opacity: 1 },
-		hidden: { x: 50, opacity: 0 },
-	};
 	return (
 		<div ref={ref}>
 			<Navbar forwardedRef={ref} />
 			<Carousel />
 			<div className="recap-info-container">
-				<Recap forwardedRef={ref} />
+				<Recap />
 
-				<Info forwardedRef={ref} />
+				<Info />
 			</div>
-			<ContactSection forwardedRef={ref} />
-			<Story forwardedRef={storyRef} />
+			<ContactSection />
+			<Story />
 			<m.section
 				className="pictures"
 				ref={ourDishesRef}
@@ -86,7 +65,7 @@ function Home() {
 			</m.section>
 			<Pictures forwardedRef={galleryRef} />
 			{/* <Reviews /> */}
-			<MapContainer location={location} zoomLevel={18} forwardedRef={mapRef} />
+			<MapContainer location={location} zoomLevel={18} />
 			<Reservation forwardedRef={reservationRef} />
 			<Footer />
 		</div>

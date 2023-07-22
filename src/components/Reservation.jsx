@@ -4,7 +4,7 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import './Reservation.css';
 
-function Reservation({ forwardedRef }) {
+function Reservation() {
 	const opacityAnimation = {
 		visible: { opacity: 1 },
 		hidden: { opacity: 0 },
@@ -57,7 +57,6 @@ function Reservation({ forwardedRef }) {
 		<m.div
 			className="reservation-container"
 			id="reservations"
-			ref={forwardedRef}
 			initial="hidden"
 			whileInView="visible"
 			viewport={{ once: true }}

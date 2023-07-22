@@ -1,14 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion as m } from 'framer-motion';
-import { animateInfo } from '../utils/Animations';
 import '../components/Info.css';
 import '../index.css';
 
-function Info({ forwardedRef }) {
-	const timeline = useRef(null);
-	// useEffect(() => {
-	// 	animateInfo(forwardedRef, timeline);
-	// }, []);
+function Info() {
 	return (
 		<div className="info-container">
 			<m.div
