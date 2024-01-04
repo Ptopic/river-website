@@ -6,6 +6,11 @@ import { FaInstagram, FaTripadvisor } from 'react-icons/fa';
 import { GrFacebookOption } from 'react-icons/gr';
 import { TbMail } from 'react-icons/tb';
 
+// Images
+import esif from '../assets/images/esif.jpg';
+import eu from '../assets/images/eu.jpg';
+import hamag from '../assets/images/hamag.jpg';
+
 // Contacts icons
 import { RiMapPinLine } from 'react-icons/ri';
 import { HiOutlinePhone } from 'react-icons/hi';
@@ -54,6 +59,11 @@ function Footer() {
 						<a href="mailto:antetopic355@gmail.com">
 							<TbMail color="white" size={42} />
 						</a>
+					</div>
+					<div className="images">
+						<img src={esif} alt="" />
+						<img src={eu} alt="" />
+						<img src={hamag} alt="" />
 					</div>
 				</div>
 				<div className="right">

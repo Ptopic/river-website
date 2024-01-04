@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion as m } from 'framer-motion';
+import { Link } from 'react-router-dom';
 // Icons
 
 import appetizersIcon from '../assets/icons/appetizers.png';
@@ -122,9 +123,9 @@ function Recap() {
 						delay: 2,
 					}}
 				>
-					<a href="/menu" className="btn">
+					<Link to={'/menu'} className="btn">
 						MENU
-					</a>
+					</Link>
 				</m.div>
 			</m.div>
 		</div>

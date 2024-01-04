@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion as m } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import '../components/Info.css';
 import '../index.css';
 

@@ -202,7 +202,7 @@ function Vine() {
 								<h3>Rose</h3>
 								<div className="vine-category">
 									<div className="vine-content">
-										<h4>Neko vino idk</h4>
+										<h4>Rose Benkovac</h4>
 										<p>1,00 l</p>
 									</div>
 

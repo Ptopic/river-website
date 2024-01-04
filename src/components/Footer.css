@@ -63,6 +63,18 @@
     padding-bottom: 4rem;
 }
 
+.center .images {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.center .images img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+    padding: 1rem;
+}
+
 .logos {
     display: flex;
     align-items: center;

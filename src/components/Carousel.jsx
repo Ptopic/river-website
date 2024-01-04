@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-
+import { Link } from 'react-router-dom';
 // Images
 import image1 from '../assets/images/interior.jpeg';
 import image2 from '../assets/images/exterior.jpeg';
@@ -123,9 +123,7 @@ function Carousel() {
 					Mediterenian food
 				</m.p>
 
-				<m.a
-					href="/menu"
-					className="overlay-btn"
+				<m.div
 					initial="hidden"
 					whileInView="visible"
 					viewport={{ once: true }}
@@ -140,8 +138,10 @@ function Carousel() {
 						delay: 0.4,
 					}}
 				>
-					MENU
-				</m.a>
+					<Link to="/menu" className="overlay-btn">
+						MENU
+					</Link>
+				</m.div>
 			</div>
 			<div
 				className="carousel-collection"
