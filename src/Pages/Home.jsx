@@ -8,6 +8,7 @@ import '../index.css';
 import Navbar from '../components/Navbar';
 import Carousel from '../components/Carousel';
 import Footer from '../components/Footer';
+import Featured from '../components/Featured/Featured';
 import Recap from '../components/Recap';
 import Info from '../components/Info';
 import ContactSection from '../components/ContactSection';
@@ -40,6 +41,9 @@ function Home() {
 		<div ref={ref}>
 			<Navbar forwardedRef={ref} />
 			<Carousel />
+			<div className="recap-info-container">
+				<Featured />
+			</div>
 			<div className="recap-info-container">
 				<Recap />
 
