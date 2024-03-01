@@ -81,7 +81,7 @@ function Navbar({ forwardedRef }) {
 					</div>
 
 					<div className="nav-link">
-						<a href="#reservations">RESERVATIONS</a>
+						<a href="#info-container">RESERVATIONS</a>
 					</div>
 					<div className="nav-link">
 						<Link to={'/menu'}>MENU</Link>
@@ -93,7 +93,7 @@ function Navbar({ forwardedRef }) {
 						<a href="#footer">CONTACT</a>
 					</div>
 
-					<a href="#reservations" className="btn">
+					<a href="#info-container" className="btn">
 						BOOK A TABLE
 					</a>
 				</div>
