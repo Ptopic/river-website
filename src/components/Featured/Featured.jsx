@@ -9,14 +9,14 @@ import { Link } from 'react-router-dom';
 
 function Slider() {
 	const [activeIndex, setActiveIndex] = useState(0);
-	const [paused, setPaused] = useState(false);
+	const [paused, setPaused] = useState(true);
 
 	const handleNext = () => {
-		setActiveIndex((prevIndex) => (prevIndex + 1) % 2);
+		setActiveIndex((prevIndex) => (prevIndex + 1) % 1);
 	};
 
 	const handlePrev = () => {
-		setActiveIndex((prevIndex) => (prevIndex - 1 + 2) % 2);
+		setActiveIndex((prevIndex) => (prevIndex - 1 + 1) % 1);
 	};
 
 	useEffect(() => {
@@ -45,19 +45,19 @@ function Slider() {
 				<div className="featured-item">
 					<div className="featured-item-left">
 						<img
-							src="https://res.cloudinary.com/dcxwnj5jj/image/upload/v1707348307/bypjjq6zrv0zwcd2cgoh.jpg"
+							src="https://res.cloudinary.com/dwfhdq2vf/image/upload/v1709323003/ywtkyohuwqwem2z7cg6y.jpg"
 							alt=""
 						/>
 					</div>
 				</div>
-				<div className="featured-item">
+				{/* <div className="featured-item">
 					<div className="featured-item-left">
 						<img
 							src="https://res.cloudinary.com/dcxwnj5jj/image/upload/v1707348308/ootttr5tslqsmryhlrgr.jpg"
 							alt=""
 						/>
 					</div>
-				</div>
+				</div> */}
 			</div>
 
 			<div className="featured-indicators">
@@ -66,14 +66,14 @@ function Slider() {
 					{activeIndex == 0 ? (
 						<div>
 							<div className="dot fill" onClick={() => setActiveIndex(0)}></div>
-							<div className="dot" onClick={() => setActiveIndex(1)}></div>
+							{/* <div className="dot" onClick={() => setActiveIndex(1)}></div> */}
 						</div>
-					) : (
-						<div>
-							<div className="dot" onClick={() => setActiveIndex(0)}></div>
-							<div className="dot fill" onClick={() => setActiveIndex(1)}></div>
-						</div>
-					)}
+					) : null}
+
+					{/* <div>
+						<div className="dot" onClick={() => setActiveIndex(0)}></div>
+						<div className="dot fill" onClick={() => setActiveIndex(1)}></div>
+					</div> */}
 				</div>
 				<AiOutlineRight
 					size={26}

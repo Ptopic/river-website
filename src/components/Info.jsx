@@ -6,7 +6,7 @@ import '../index.css';
 
 function Info() {
 	return (
-		<div className="info-container">
+		<div className="info-container" id="info-container">
 			<m.div
 				className="info-left"
 				initial="hidden"
@@ -26,7 +26,7 @@ function Info() {
 				<div className="blured-content">
 					<h1>Working Hours</h1>
 					<p>Mon - Sun: 10:00 - 24:00</p>
-					<a href="#footer">CONTACT US</a>
+					<a href="tel:+385 021 260 081">CONTACT US</a>
 				</div>
 			</m.div>
 			<m.div
@@ -48,7 +48,7 @@ function Info() {
 				<div className="blured-content">
 					<h1>Need a table?</h1>
 					<p>+385 021 260 081</p>
-					<a href="#reservations" className="btn info">
+					<a href="tel:+385 021 260 081" className="btn info">
 						BOOK A TABLE
 					</a>
 				</div>

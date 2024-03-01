@@ -71,7 +71,7 @@ function Home() {
 			<Pictures forwardedRef={galleryRef} />
 			{/* <Reviews /> */}
 			<MapContainer location={location} zoomLevel={18} />
-			<Reservation forwardedRef={reservationRef} />
+			{/* <Reservation forwardedRef={reservationRef} /> */}
 			<Footer />
 		</div>
 	);
