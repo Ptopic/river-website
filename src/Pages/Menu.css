@@ -247,7 +247,7 @@
     /* dropdown css */
 
     .dropdown-list {
-        overflow: hidden;
+        overflow-x: hidden;
         display: flex;
         flex-direction: column;
         position: relative;

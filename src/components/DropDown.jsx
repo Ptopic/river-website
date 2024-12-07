@@ -9,6 +9,7 @@ import { animateMenuItems } from '../utils/Animations';
 function DropDown({ id, name, data, open, setOpen, jumbo, language }) {
 	const timeline = useRef(null);
 	const dropdownRef = useRef(null);
+	const headerRef = useRef(null);
 	const TECAJ_KONVERZIJE = 7.5345;
 	useEffect(() => {
 		console.log(data[0]);
@@ -18,12 +19,20 @@ function DropDown({ id, name, data, open, setOpen, jumbo, language }) {
 		if (open === id) return setOpen(null);
 		setOpen(null);
 		setOpen(id);
-		// // Scroll dropdown into view
-		// dropdownRef.current.scrollIntoView({ behavior: 'smooth' });
-		// Fire animation of menu items
+
+		timeline.current = gsap.timeline({
+			onComplete: () => {
+				// Scroll header into view when animation completes
+				headerRef.current.scrollIntoView({
+					behavior: 'smooth',
+					block: 'start',
+				});
+			},
+		});
+
 		const elements = gsap.utils.toArray('.item-container');
 		elements.forEach((el) => {
-			animateMenuItems(el);
+			timeline.current.add(animateMenuItems(el));
 		});
 	};
 	return (
@@ -46,7 +55,11 @@ function DropDown({ id, name, data, open, setOpen, jumbo, language }) {
 			}}
 		>
 			<div className="click-layer"></div>
-			<div className="dropdown-div" style={{ display: jumbo ? 'grid' : '' }}>
+			<div
+				ref={headerRef}
+				className="dropdown-div"
+				style={{ display: jumbo ? 'grid' : '' }}
+			>
 				<h1>{name}</h1>
 				<>
 					{jumbo && (
