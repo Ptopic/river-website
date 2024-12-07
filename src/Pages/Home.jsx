@@ -1,22 +1,18 @@
-import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
 import { motion as m } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useRef } from 'react';
 import '../index.css';
 
 // Components
 
-import Navbar from '../components/Navbar';
 import Carousel from '../components/Carousel';
-import Footer from '../components/Footer';
-import Featured from '../components/Featured/Featured';
-import Recap from '../components/Recap';
-import Info from '../components/Info';
 import ContactSection from '../components/ContactSection';
-import Story from '../components/Story';
-import Reviews from '../components/Reviews';
+import Footer from '../components/Footer';
+import Info from '../components/Info';
 import MapContainer from '../components/MapContainer';
-import Reservation from '../components/Reservation';
+import Navbar from '../components/Navbar';
 import Pictures from '../components/Pictures';
+import Recap from '../components/Recap';
+import Story from '../components/Story';
 
 function Home() {
 	const location = {
@@ -41,9 +37,9 @@ function Home() {
 		<div ref={ref}>
 			<Navbar forwardedRef={ref} />
 			<Carousel />
-			<div className="recap-info-container">
+			{/* <div className="recap-info-container">
 				<Featured />
-			</div>
+			</div> */}
 			<div className="recap-info-container">
 				<Recap />
 
