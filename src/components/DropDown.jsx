@@ -1,8 +1,7 @@
-import React, { useEffect, useState, useRef } from 'react';
 import { motion as m } from 'framer-motion';
+import React, { useEffect, useRef } from 'react';
 // Gsap
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 // Animations
 import { animateMenuItems } from '../utils/Animations';
@@ -16,21 +15,21 @@ function DropDown({ id, name, data, open, setOpen, jumbo, language }) {
 	}, []);
 
 	const openMenu = () => {
-		if (open != null) {
-			setOpen(null);
-		} else {
-			setOpen(id);
-			// Fire animation of menu items
-			const elements = gsap.utils.toArray('.item-container');
-			elements.forEach((el) => {
-				animateMenuItems(el);
-			});
-		}
+		if (open === id) return setOpen(null);
+		setOpen(null);
+		setOpen(id);
+		// // Scroll dropdown into view
+		// dropdownRef.current.scrollIntoView({ behavior: 'smooth' });
+		// Fire animation of menu items
+		const elements = gsap.utils.toArray('.item-container');
+		elements.forEach((el) => {
+			animateMenuItems(el);
+		});
 	};
 	return (
 		<m.div
 			className={'dropdown'}
-			// onClick={() => openMenu()}
+			onClick={() => openMenu()}
 			ref={dropdownRef}
 			initial="hidden"
 			animate="visible"
@@ -46,7 +45,7 @@ function DropDown({ id, name, data, open, setOpen, jumbo, language }) {
 				delay: 0.4,
 			}}
 		>
-			<div className="click-layer" onClick={() => openMenu()}></div>
+			<div className="click-layer"></div>
 			<div className="dropdown-div" style={{ display: jumbo ? 'grid' : '' }}>
 				<h1>{name}</h1>
 				<>
