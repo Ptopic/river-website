@@ -60,6 +60,7 @@
     .contact-section-content {
         padding: 0 2rem;
         text-align: center;
+        flex-direction: column;
     }
 
     .contact-section-content img {
