@@ -5,30 +5,29 @@ export const hranaData = [
 		content: [
 			{
 				name: 'Pršut',
-				price: '8.60',
+				price: '10.00',
 				kol: '0.1 kg',
 			},
 			{
 				name: 'Sir',
-				price: '8.60',
+				price: '10.00',
 				kol: '0.1 kg',
 			},
 			{
 				name: 'Pašteta od tune',
-				price: '4.50',
-			},
-			{
-				name: 'Inćuni slani',
-				price: '1.70',
-				kol: 'filet',
+				price: '5.00',
 			},
 			{
 				name: 'Salata od hobotnice',
-				price: '11.50',
+				price: '12.50',
 			},
 			{
 				name: 'Rajčice s mozzarellom',
-				price: '8.50',
+				price: '10.00',
+			},
+			{
+				name: 'Hladna plata River',
+				price: '25.00',
 			},
 		],
 	},
@@ -42,16 +41,16 @@ export const hranaData = [
 			},
 			{
 				name: 'Juha od kozica',
-				price: '5.00',
+				price: '6.00',
 			},
 			{
 				name: 'Juha od gljiva',
-				price: '4.20',
+				price: '5.00',
 			},
 
 			{
 				name: 'Juha od rajčica',
-				price: '4.20',
+				price: '5.00',
 			},
 		],
 	},
@@ -61,20 +60,31 @@ export const hranaData = [
 		content: [
 			{
 				name: 'Špageti Bolognese',
-				price: '9.00',
+				price: '9.50',
 			},
 			{
 				name: 'Špageti Carbonara',
-				price: '9.00',
+				price: '10.50',
 			},
 			{
 				name: 'Zelena manistra River',
-				price: '12.50',
-				kol: '(kozice, povrče, vrhnje)',
+				price: '13.50',
+				kol: '(Kozice, povrče, vrhnje)',
 			},
 			{
-				name: 'Pohani sir',
-				price: '9.00',
+				name: 'Pljukanci River',
+				price: '14.00',
+				kol: '(Pršut, tartufi)',
+			},
+			{
+				name: 'Pljukanci sa piletinom',
+				price: '13.00',
+				kol: '(Piletina, vrhnje)',
+			},
+			{
+				name: 'Pljukanci sa kozicama',
+				price: '13.50',
+				kol: '(Kozice, šalša)',
 			},
 		],
 	},
@@ -84,12 +94,12 @@ export const hranaData = [
 		content: [
 			{
 				name: 'River',
-				price: '11.00',
+				price: '12.00',
 				kol: '(Pršut, vrhnje, 4 vrste sira)',
 			},
 			{
 				name: 'Sa kozicama',
-				price: '12.00',
+				price: '13.50',
 			},
 		],
 	},
@@ -99,19 +109,19 @@ export const hranaData = [
 		content: [
 			{
 				name: 'Sa povrčem',
-				price: '9.00',
+				price: '10.00',
 			},
 			{
 				name: 'Crni',
-				price: '11.50',
+				price: '13.00',
 			},
 			{
 				name: 'Sa kozicama',
-				price: '12.00',
+				price: '13.50',
 			},
 			{
 				name: 'Teleći',
-				price: '10.00',
+				price: '11.00',
 			},
 		],
 	},
@@ -121,12 +131,12 @@ export const hranaData = [
 		content: [
 			{
 				name: 'Mesna plata River za 2 osobe',
-				price: '46.00',
+				price: '49.00',
 				kol: '(Teleći kotlet x2, ražnjić od piletine x2, medaljoni od bifteka x2, punjeni ramstek, pomfrit, đuveđ riža, ajvar, kapula)',
 			},
 			{
 				name: 'Miješano meso',
-				price: '16.50',
+				price: '17.00',
 				kol: '(teleći kotlet, 2 ćevapa, kobasica, pileći zabatak, svinjski vrat, ajvar, kapula)',
 			},
 			{
@@ -136,87 +146,87 @@ export const hranaData = [
 			},
 			{
 				name: 'Junjeći kotlet',
-				price: '19.50',
+				price: '20.0',
 				kol: '(Ajvar, kapula)',
 			},
 			{
 				name: 'Ćevapi',
-				price: '10.50',
+				price: '13.00',
 				kol: '(Ajvar, kapula)',
 			},
 			{
 				name: 'Naravni odrezak',
-				price: '17.00',
-				kol: '(Ajvar, kapula)',
-			},
-			{
-				name: 'Punjeni naravni odrezak',
 				price: '18.00',
 				kol: '(Ajvar, kapula)',
 			},
 			{
+				name: 'Punjeni naravni odrezak',
+				price: '19.00',
+				kol: '(Ajvar, kapula)',
+			},
+			{
 				name: 'Punjeni lungić s pršutom i sirom',
-				price: '13.50',
+				price: '14.50',
 				kol: '(Maslac, senf)',
 			},
 			{
 				name: 'Punjena pljeskavica',
-				price: '12.00',
+				price: '14.00',
 				kol: '(Maslac, senf)',
 			},
 			{
 				name: 'Bifter',
-				price: '29.00',
+				price: '30.00',
 				kol: '(Maslac, senf)',
 			},
 			{
 				name: 'Biftek punjeni',
-				price: '30.00',
+				price: '31.00',
 				kol: '(Pršut, sir, maslac, senf)',
 			},
 			{
 				name: 'Biftek u umaku od zel. papra',
-				price: '30.00',
+				price: '31.00',
 				kol: '',
 			},
 			{
 				name: 'Biftek u umaku od gljiva',
-				price: '30.00',
+				price: '31.00',
 				kol: '',
 			},
 			{
 				name: 'Ramstek',
-				price: '20.00',
+				price: '22.00',
 				kol: '(Maslac, senf)',
 			},
 			{
 				name: 'Ramstek punjeni',
-				price: '21.00',
+				price: '23.00',
 				kol: '(Pršut, sir, maslac, senf)',
 			},
 			{
 				name: 'Ramstek u umaku od zel. papra',
-				price: '21.50',
+				price: '23.00',
 				kol: '',
 			},
 			{
 				name: 'Ramstek u umaku od gljiva',
-				price: '22.00',
+				price: '23.00',
 				kol: '',
 			},
 			{
 				name: 'Piletina',
-				price: '10.50',
+				price: '12.00',
 				kol: '(Ajvar, kapula)',
 			},
 			{
 				name: 'Piletina punjena',
-				price: '11.50',
+				price: '13.00',
 				kol: '(Ajvar, kapula)',
 			},
 			{
 				name: 'Piletina u gorgonzoli',
-				price: '11.50',
+				price: '13.00',
 				kol: '',
 			},
 		],
@@ -227,27 +237,27 @@ export const hranaData = [
 		content: [
 			{
 				name: 'Pašticada s domaćim njokima',
-				price: '13.00',
+				price: '16.00',
 				kol: '',
 			},
 			{
 				name: 'Bečki odrezak',
-				price: '17.50',
-				kol: '(Tartar)',
-			},
-			{
-				name: 'Zagrebački odrezak',
 				price: '19.00',
 				kol: '(Tartar)',
 			},
 			{
+				name: 'Zagrebački odrezak',
+				price: '20.00',
+				kol: '(Tartar)',
+			},
+			{
 				name: 'Pileći bečki',
-				price: '12.50',
+				price: '14.00',
 				kol: '(Tartar)',
 			},
 			{
 				name: 'Pileći zagrebački',
-				price: '13.00',
+				price: '15.00',
 				kol: '(Tartar)',
 			},
 		],
@@ -258,22 +268,22 @@ export const hranaData = [
 		content: [
 			{
 				name: 'Lazanje River',
-				price: '12.00',
+				price: '13.50',
 				kol: '(Kozice, povrće)',
 			},
 			{
 				name: 'Lazanje mesne',
-				price: '10.50',
+				price: '11.50',
 				kol: '',
 			},
 			{
 				name: 'Lazanje 4 vrste sira',
-				price: '10.50',
+				price: '12.50',
 				kol: '',
 			},
 			{
 				name: 'Lazanje sa povrčem',
-				price: '10.50',
+				price: '11.50',
 				kol: '',
 			},
 		],
@@ -284,17 +294,17 @@ export const hranaData = [
 		content: [
 			{
 				name: 'Tuna',
-				price: '67.00',
+				price: '69.00',
 				kol: '1kg',
 			},
 			{
 				name: 'Lignje pržene',
-				price: '14.00',
+				price: '15.00',
 				kol: 'porc.',
 			},
 			{
 				name: 'Pastrva',
-				price: '32.00',
+				price: '34.00',
 				kol: '1kg',
 			},
 			{
@@ -315,42 +325,42 @@ export const hranaData = [
 		content: [
 			{
 				name: 'Palačinke s čokoladom',
-				price: '4.00',
+				price: '5.00',
 				kol: '',
 			},
 			{
 				name: 'Palačinke s mermeladom',
-				price: '3.50',
+				price: '5.00',
 				kol: '',
 			},
 			{
 				name: 'Palačinke s orasima',
-				price: '4.50',
-				kol: '',
-			},
-			{
-				name: 'Palačinke River',
-				price: '5.00',
-				kol: '(Sladoled od vanilije, preljev od višanja)',
-			},
-			{
-				name: 'Semifredo',
-				price: '4.50',
-				kol: '',
-			},
-			{
-				name: 'Cherry Yubile',
-				price: '4.50',
-				kol: '(Slodel od vanilije, preljev od višanja, listići badema)',
-			},
-			{
-				name: 'Lava kolač',
 				price: '5.50',
 				kol: '',
 			},
 			{
-				name: 'Pohani sladoled',
+				name: 'Palačinke River',
 				price: '6.00',
+				kol: '(Sladoled od vanilije, preljev od višanja)',
+			},
+			{
+				name: 'Semifredo',
+				price: '6.00',
+				kol: '',
+			},
+			{
+				name: 'Cherry Yubile',
+				price: '6.00',
+				kol: '(Slodel od vanilije, preljev od višanja, listići badema)',
+			},
+			{
+				name: 'Lava kolač',
+				price: '6.50',
+				kol: '',
+			},
+			{
+				name: 'Pohani sladoled',
+				price: '7.00',
 				kol: '',
 			},
 		],
