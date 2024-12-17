@@ -1,16 +1,16 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import Cookies from 'js-cookie';
-import { motion as m, AnimatePresence } from 'framer-motion';
+import React, { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import './Menu.css';
-import '../index.css';
-import { IoChevronBackCircleOutline } from 'react-icons/io5';
 import { FcCheckmark } from 'react-icons/fc';
 import { IoIosClose } from 'react-icons/io';
+import { IoChevronBackCircleOutline } from 'react-icons/io5';
+import '../index.css';
+import './Menu.css';
 
-import croFlag from '../assets/images/hr.png';
 import engFlag from '../assets/images/eng.jpg';
+import croFlag from '../assets/images/hr.png';
 
 // Components
 
@@ -93,7 +93,7 @@ function Menu() {
 					<div className="center-nav-container">
 						<Link to="/menu">Food</Link>
 
-						<Link to="/vine">Vine</Link>
+						{/* <Link to="/vine">Vine</Link> */}
 
 						<Link to="/drinks">Drinks</Link>
 						<Link to="/pizza">Pizza</Link>
