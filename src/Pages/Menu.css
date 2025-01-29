@@ -71,6 +71,15 @@
     border-radius: 50%;
 }
 
+.menu-top-bar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2500;
+    background: var(--background600);
+}
+
 .top-bar {
     background: var(--background600);
     padding: 2rem;
@@ -99,6 +108,10 @@
     text-decoration: none;
 }
 
+.center-nav {
+    width: 100%;
+}
+
 .center-nav-container {
     display: flex;
     flex-direction: row;
@@ -106,6 +119,7 @@
     height: 100%;
     /* padding: 2rem; */
     /* padding-left: 2rem; */
+    background: var(--background600);
     align-items: center;
     justify-self: center;
 }
@@ -132,6 +146,8 @@
     width: 100%;
     display: flex;
     padding: 6rem 25rem;
+    height: calc(100dvh - 160px);
+    margin-top: 160px;
 }
 
 .menu-categories-container {
@@ -216,6 +232,8 @@
     display: none;
 }
 
+
+
 /* ---------- Media querys ---------- */
 
 /* Phone */
@@ -247,6 +265,16 @@
     /* dropdown css */
 
     .dropdown-list {
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 2000;
+        width: 100%;
+        top: 140px;
+    }
+
+    .pizza-dropdown-list {
         overflow-x: hidden;
         display: flex;
         flex-direction: column;

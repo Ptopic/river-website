@@ -1,15 +1,15 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { AnimatePresence } from 'framer-motion';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion as m, AnimatePresence } from 'framer-motion';
 
-import './Menu.css';
-import '../index.css';
-import { IoChevronBackCircleOutline } from 'react-icons/io5';
 import { FcCheckmark } from 'react-icons/fc';
 import { IoIosClose } from 'react-icons/io';
+import { IoChevronBackCircleOutline } from 'react-icons/io5';
+import '../index.css';
+import './Menu.css';
 
-import croFlag from '../assets/images/hr.png';
 import engFlag from '../assets/images/eng.jpg';
+import croFlag from '../assets/images/hr.png';
 
 // Components
 
@@ -71,33 +71,31 @@ function Drinks() {
 				</div>
 			) : null}
 			<div className="menu-container">
-				<div className="top-bar">
-					<Link to={'/'}>
-						<IoChevronBackCircleOutline size={46} />
-					</Link>
+				<div className="menu-top-bar">
+					<div className="top-bar">
+						<Link to={'/'}>
+							<IoChevronBackCircleOutline size={46} />
+						</Link>
 
-					{language === 'hrv' ? (
-						<button className="hrv" onClick={() => setModalOpen(true)}>
-							<img src={croFlag} alt="" />
-						</button>
-					) : (
-						<button className="eng" onClick={() => setModalOpen(true)}>
-							<img src={engFlag} alt="" />
-						</button>
-					)}
-				</div>
+						{language === 'hrv' ? (
+							<button className="hrv" onClick={() => setModalOpen(true)}>
+								<img src={croFlag} alt="" />
+							</button>
+						) : (
+							<button className="eng" onClick={() => setModalOpen(true)}>
+								<img src={engFlag} alt="" />
+							</button>
+						)}
+					</div>
 
-				<div className="center-nav">
-					<div className="center-nav-container">
-						<Link to="/menu">Food</Link>
-
-						<Link to="/vine">Vine</Link>
-
-						<Link to="/drinks">Drinks</Link>
-						<Link to="/pizza">Pizza</Link>
+					<div className="center-nav">
+						<div className="center-nav-container">
+							<Link to="/menu">Food</Link>
+							<Link to="/drinks">Drinks</Link>
+							<Link to="/pizza">Pizza</Link>
+						</div>
 					</div>
 				</div>
-
 				<div className="menu-container-content">
 					{language === 'hrv' ? (
 						<div className="menu-categories-container">

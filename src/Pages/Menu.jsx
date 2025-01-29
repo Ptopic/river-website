@@ -73,30 +73,32 @@ function Menu() {
 				</div>
 			) : null}
 			<div className="menu-container">
-				<div className="top-bar">
-					<Link to={'/'}>
-						<IoChevronBackCircleOutline size={46} />
-					</Link>
+				<div className="menu-top-bar">
+					<div className="top-bar">
+						<Link to={'/'}>
+							<IoChevronBackCircleOutline size={46} />
+						</Link>
 
-					{language === 'hrv' ? (
-						<button className="hrv" onClick={() => setModalOpen(true)}>
-							<img src={croFlag} alt="" />
-						</button>
-					) : (
-						<button className="eng" onClick={() => setModalOpen(true)}>
-							<img src={engFlag} alt="" />
-						</button>
-					)}
-				</div>
+						{language === 'hrv' ? (
+							<button className="hrv" onClick={() => setModalOpen(true)}>
+								<img src={croFlag} alt="" />
+							</button>
+						) : (
+							<button className="eng" onClick={() => setModalOpen(true)}>
+								<img src={engFlag} alt="" />
+							</button>
+						)}
+					</div>
 
-				<div className="center-nav">
-					<div className="center-nav-container">
-						<Link to="/menu">Food</Link>
+					<div className="center-nav">
+						<div className="center-nav-container">
+							<Link to="/menu">Food</Link>
 
-						{/* <Link to="/vine">Vine</Link> */}
+							{/* <Link to="/vine">Vine</Link> */}
 
-						<Link to="/drinks">Drinks</Link>
-						<Link to="/pizza">Pizza</Link>
+							<Link to="/drinks">Drinks</Link>
+							<Link to="/pizza">Pizza</Link>
+						</div>
 					</div>
 				</div>
 
