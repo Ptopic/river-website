@@ -3,16 +3,18 @@ import React, { useRef } from 'react';
 import '../index.css';
 
 // Components
-
 import Carousel from '../components/Carousel';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 import Info from '../components/Info';
 import MapContainer from '../components/MapContainer';
 import Navbar from '../components/Navbar';
+import PictureDisplay from '../components/PictureDisplay';
 import Pictures from '../components/Pictures';
 import Recap from '../components/Recap';
 import Story from '../components/Story';
+
+import displayImg from '../assets/images/valentinovo3.jpeg';
 
 function Home() {
 	const location = {
@@ -41,6 +43,8 @@ function Home() {
 				<Featured />
 			</div> */}
 			<div className="recap-info-container">
+				<PictureDisplay img={displayImg} />
+
 				<Recap />
 
 				<Info />
