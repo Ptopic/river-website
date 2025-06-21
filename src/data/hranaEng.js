@@ -5,29 +5,25 @@ export const hranaDataEng = [
 		content: [
 			{
 				name: 'Smoked ham',
-				price: '11.00',
+				price: '14.00',
 				kol: '0.1 kg',
 			},
 			{
 				name: 'Cheese',
-				price: '11.00',
+				price: '14.00',
 				kol: '0.1 kg',
 			},
 			{
 				name: 'Tuna pate',
-				price: '6.00',
+				price: '7.00',
 			},
 			{
 				name: 'Octopus salad',
-				price: '13.00',
-			},
-			{
-				name: 'Tomatoes with mozzarella',
-				price: '10.00',
+				price: '15.00',
 			},
 			{
 				name: 'Cold plate River',
-				price: '26.00',
+				price: '28.00',
 			},
 		],
 	},
@@ -37,20 +33,20 @@ export const hranaDataEng = [
 		content: [
 			{
 				name: 'Beef soup',
-				price: '4.00',
+				price: '4.50',
 			},
 			{
 				name: 'Prawn soup',
-				price: '6.50',
+				price: '7.00',
 			},
 			{
 				name: 'Mushroom soup',
-				price: '5.50',
+				price: '6.00',
 			},
 
 			{
 				name: 'Tomato soup',
-				price: '5.50',
+				price: '6.00',
 			},
 		],
 	},
@@ -60,30 +56,30 @@ export const hranaDataEng = [
 		content: [
 			{
 				name: 'Spaghetti Bolognese',
-				price: '11.00',
+				price: '12.00',
 			},
 			{
 				name: 'Spaghetti Carbonara',
-				price: '11.50',
+				price: '12.50',
 			},
 			{
 				name: 'Green pasta River',
-				price: '14.50',
+				price: '16.50',
 				kol: '(Shrimp, vegetables, cream)',
 			},
 			{
 				name: 'The spitts River',
-				price: '15.00',
+				price: '17.00',
 				kol: '(Prosciutto, truffles)',
 			},
 			{
 				name: 'The spitts with chicken',
-				price: '14.00',
+				price: '16.00',
 				kol: '(Chicken, sour cream)',
 			},
 			{
 				name: 'The spitts with prawns',
-				price: '14.50',
+				price: '16.50',
 				kol: '(Prawns, tomato sauce)',
 			},
 		],
@@ -94,12 +90,12 @@ export const hranaDataEng = [
 		content: [
 			{
 				name: 'River',
-				price: '13.00',
+				price: '15.00',
 				kol: '(Smoked ham, cream, 4 kinds of cheese)',
 			},
 			{
 				name: 'With prawns',
-				price: '14.50',
+				price: '16.50',
 			},
 		],
 	},
@@ -109,19 +105,19 @@ export const hranaDataEng = [
 		content: [
 			{
 				name: 'With vegetables',
-				price: '11.00',
-			},
-			{
-				name: 'Black',
 				price: '13.00',
 			},
 			{
+				name: 'Black',
+				price: '15.00',
+			},
+			{
 				name: 'With prawns',
-				price: '14.50',
+				price: '16.50',
 			},
 			{
 				name: 'Veal',
-				price: '12.00',
+				price: '14.00',
 			},
 		],
 	},
@@ -131,107 +127,107 @@ export const hranaDataEng = [
 		content: [
 			{
 				name: 'Meat plate River for 2 person',
-				price: '55.00',
+				price: '60.00',
 				kol: '(Veal cutlet x2, skewers of chicken x2, medallions of beef steak x2, stuffed sirloin steak, French fries, stew of rice, chutney, onion)',
 			},
 			{
 				name: 'Mixed meat',
-				price: '19.00',
+				price: '21.00',
 				kol: '(Veal cutlet, 2 chevapi, sausage, chicken thigh, pork neck, chutney, onion)',
 			},
 			{
 				name: 'Veal cutlet 1kg',
-				price: '55.00',
+				price: '60.00',
 				kol: '(Chutney, onion)',
 			},
 			{
 				name: 'Lamb cutlet',
-				price: '21.00',
+				price: '23.00',
 				kol: '(Chutney, onion)',
 			},
 			{
 				name: 'Chevapi',
-				price: '15.00',
+				price: '16.00',
 				kol: '(Chutney, onion)',
 			},
 			{
 				name: 'Veal steak',
-				price: '20.00',
+				price: '22.00',
 				kol: '(Chutney, onion)',
 			},
 			{
 				name: 'Stuffed veal steak River',
-				price: '21.00',
+				price: '23.00',
 				kol: '(In roasting sauce)',
 			},
 			{
 				name: 'Stuffed veal steak',
-				price: '21.00',
+				price: '23.00',
 				kol: '(Chutney, onion)',
 			},
 			{
 				name: 'Stuffed pork tenderloin with prusciutto and cheese',
-				price: '17.00',
+				price: '18.00',
 				kol: '(Butter, mustard)',
 			},
 			{
 				name: 'Stuffed hamburger meat',
-				price: '16.00',
+				price: '17.00',
 				kol: '(Butter, mustard)',
 			},
 			{
 				name: 'Beefsteak',
-				price: '35.00',
+				price: '37.00',
 				kol: '(Butter, mustard)',
 			},
 			{
 				name: 'Stuffed beefsteak',
-				price: '37.00',
+				price: '39.00',
 				kol: '(Pršut, sir, maslac, senf)',
 			},
 			{
 				name: 'Beefsteak in green pepper sauce',
-				price: '36.00',
+				price: '38.00',
 				kol: '',
 			},
 			{
 				name: 'Beefsteak with mushroom sauce',
-				price: '36.00',
+				price: '38.00',
 				kol: '',
 			},
 			{
 				name: 'Sirloin steak',
-				price: '24.00',
+				price: '26.00',
 				kol: '(Butter, mustard)',
 			},
 			{
 				name: 'Stuffed sirloin steak',
-				price: '25.00',
+				price: '27.00',
 				kol: '(Dalmatian smoken ham, cheese, butter, mustard)',
 			},
 			{
 				name: 'Sirloin steak in green pepper sauce',
-				price: '25.00',
+				price: '27.00',
 				kol: '',
 			},
 			{
 				name: 'Sirloin steak in green pepper sauce',
-				price: '25.00',
+				price: '27.00',
 				kol: '',
 			},
 			{
 				name: 'Chicken',
-				price: '13.50',
-				kol: '(Chutney, onion)',
-			},
-			{
-				name: 'Stuffed chicken',
 				price: '15.00',
 				kol: '(Chutney, onion)',
 			},
 			{
+				name: 'Stuffed chicken',
+				price: '17.00',
+				kol: '(Chutney, onion)',
+			},
+			{
 				name: 'Chicken in gorgonzola',
-				price: '14.50',
+				price: '16.50',
 				kol: '',
 			},
 		],
@@ -242,27 +238,27 @@ export const hranaDataEng = [
 		content: [
 			{
 				name: 'Stew with dumplings',
-				price: '19.00',
+				price: '20.00',
 				kol: '',
 			},
 			{
 				name: 'Wiener schnitzel',
-				price: '21.00',
+				price: '23.00',
 				kol: '(Tartar sauce)',
 			},
 			{
 				name: 'Zagreb steak',
-				price: '22.00',
+				price: '24.00',
 				kol: '(Tartar sauce)',
 			},
 			{
 				name: 'Chicken Wiener',
-				price: '15.00',
+				price: '16.00',
 				kol: '(Tartar sauce)',
 			},
 			{
 				name: 'Chicken Cordon Bleu',
-				price: '16.00',
+				price: '17.50',
 				kol: '(Tartar sauce)',
 			},
 		],
@@ -273,22 +269,22 @@ export const hranaDataEng = [
 		content: [
 			{
 				name: 'Lasagne River',
-				price: '14.50',
+				price: '16.50',
 				kol: '(Prawns, vegetables)',
 			},
 			{
 				name: 'Meat lasagne',
-				price: '12.50',
+				price: '14.00',
 				kol: '',
 			},
 			{
 				name: 'Lasagne 4 kinds of cheese',
-				price: '13.00',
+				price: '15.00',
 				kol: '',
 			},
 			{
 				name: 'Lasagne with vegetables',
-				price: '12.00',
+				price: '14.00',
 				kol: '',
 			},
 		],
@@ -299,27 +295,27 @@ export const hranaDataEng = [
 		content: [
 			{
 				name: 'Tuna',
-				price: '75.00',
+				price: '80.00',
 				kol: '1kg',
 			},
 			{
 				name: 'Fried calamari',
-				price: '17.00',
+				price: '19.00',
 				kol: 'porc.',
 			},
 			{
 				name: 'Trout',
-				price: '36.00',
+				price: '40.00',
 				kol: '1kg',
 			},
 			{
 				name: 'Sea bass fillet',
-				price: '19.00',
+				price: '21.00',
 				kol: '',
 			},
 			{
 				name: 'Salmon fillet',
-				price: '23.00',
+				price: '25.00',
 				kol: '',
 			},
 		],
