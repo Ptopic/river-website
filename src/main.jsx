@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
 import './index.css';
 
 // Pages
 import Home from './Pages/Home.jsx';
-import Menu from './Pages/Menu';
+// import Menu from './Pages/Menu';
 import Vine from './Pages/Vine';
 import Drinks from './Pages/Drinks';
 import Pizza from './Pages/Pizza';
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
 	},
 	{
 		path: 'menu',
-		element: <Menu />,
+		element: <Navigate to="/" replace />,
 		errorElement: <ErrorPage />,
 	},
 	{

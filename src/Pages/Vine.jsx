@@ -66,7 +66,7 @@ function Vine() {
 
 				<div className="center-nav">
 					<div className="center-nav-container">
-						<Link to="/menu">Food</Link>
+						{/* <Link to="/menu">Food</Link> */}
 
 						<Link to="/vine">Vine</Link>
 

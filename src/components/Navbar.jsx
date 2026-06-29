@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import logoImg from '../assets/images/novilogowhite.png';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoClose } from 'react-icons/io5';
@@ -43,9 +42,9 @@ function Navbar({ forwardedRef }) {
 					<div className="nav-link">
 						<a href="#info-container">RESERVATIONS</a>
 					</div>
-					<div className="nav-link">
+					{/* <div className="nav-link">
 						<Link to={'/menu'}>MENU</Link>
-					</div>
+					</div> */}
 					<div className="nav-link">
 						<a href="#galery">GALLERY</a>
 					</div>
@@ -83,9 +82,9 @@ function Navbar({ forwardedRef }) {
 					<div className="nav-link">
 						<a href="#info-container">RESERVATIONS</a>
 					</div>
-					<div className="nav-link">
+					{/* <div className="nav-link">
 						<Link to={'/menu'}>MENU</Link>
-					</div>
+					</div> */}
 					<div className="nav-link">
 						<a href="#galery">GALLERY</a>
 					</div>

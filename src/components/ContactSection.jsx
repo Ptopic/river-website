@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion as m } from 'framer-motion';
-import { Link } from 'react-router-dom';
 
 import locationPinIcon from '../assets/icons/pin.svg';
-import dishIcon from '../assets/icons/dish.svg';
+// import dishIcon from '../assets/icons/dish.svg';
 
 import '../components/ContactSection.css';
 function ContactSection() {
@@ -39,7 +38,7 @@ function ContactSection() {
 						GOOGLE MAPS
 					</a>
 				</m.div>
-				<m.div
+				{/* <m.div
 					className="menu"
 					initial="hidden"
 					whileInView="visible"
@@ -60,7 +59,7 @@ function ContactSection() {
 					<Link to={'/menu'} className="btn">
 						MENU
 					</Link>
-				</m.div>
+				</m.div> */}
 			</div>
 		</div>
 	);

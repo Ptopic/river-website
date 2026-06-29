@@ -89,7 +89,7 @@ function Pizza() {
 
 				<div className="center-nav">
 					<div className="center-nav-container">
-						<Link to="/menu">Food</Link>
+						{/* <Link to="/menu">Food</Link> */}
 						<Link to="/drinks">Drinks</Link>
 						<Link to="/pizza">Pizza</Link>
 					</div>
