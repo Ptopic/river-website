@@ -1,0 +1,54 @@
+---
+import BlockRenderer from '~/components/BlockRenderer.astro';
+import { getBlockPreview } from '~/lib/content/wordpress';
+import '~/styles/global.css';
+
+export const prerender = false;
+
+const { hash } = Astro.params;
+const token = Astro.url.searchParams.get('t') ?? '';
+
+if (!hash || !/^[a-f0-9]{32}$/.test(hash) || !token) {
+  return new Response('Preview not found', { status: 404 });
+}
+
+const block = await getBlockPreview(hash, token);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1728" />
+    <title>River Block Preview</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        background: var(--background500);
+        overflow: hidden;
+      }
+
+      body {
+        width: 1728px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <BlockRenderer blocks={[block]} />
+    <script>
+      const report = () => {
+        window.parent?.postMessage(
+          { type: 'river:preview-height', height: document.documentElement.scrollHeight },
+          '*'
+        );
+      };
+      window.addEventListener('load', report);
+      if ('ResizeObserver' in window) {
+        new ResizeObserver(report).observe(document.body);
+      }
+      window.setTimeout(report, 100);
+      window.setTimeout(report, 500);
+    </script>
+  </body>
+</html>

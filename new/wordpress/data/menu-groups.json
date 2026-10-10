@@ -1,0 +1,508 @@
+{
+  "groups": [
+    {
+      "slug": "menu",
+      "title": "Food",
+      "languages": [
+        {
+          "code": "hr",
+          "label": "HR",
+          "categories": [
+            { "title": "Brunch River", "items": [
+              { "name": "River jaja", "description": "(tostirani kruh, poširana jaja, crispy panceta, rajčice, umak holandez)", "priceEur": "14.00" },
+              { "name": "Solinski gušti", "description": "(pršut, sir, solinski uštipci, pašteta od pastrve, skuta, med od kadulje)", "priceEur": "15.00" },
+              { "name": "Wok s kozicama i povrćem", "priceEur": "21.00" },
+              { "name": "Wok s piletinom i povrćem", "description": "(piletina, povrće, sweet chilli, soya)", "priceEur": "19.00" },
+              { "name": "Jaja po izboru", "description": "(kajgana ili omlet)", "priceEur": "10.00" }
+            ]},
+            { "title": "Uvodna jela", "items": [
+              { "name": "River Štorija", "description": "(panceta, pršut, selekcija sireva, riblja pašteta, marinirane kozice, masline, ribareva vinska brusketa sa šalšom, inćunima i kaparima) za dvije osobe", "priceEur": "40.00" },
+              { "name": "Izbor hrvatskih premium sireva", "description": "(sirana Gligora, sir Težački, sir Žigljen, sir s tartufima, džem od smokve, džem od mandarine) 150g", "priceEur": "26.00" },
+              { "name": "Dalmatinski pršut 100g", "priceEur": "15.00" },
+              { "name": "Morska rapsodija", "description": "(salata hobotnica, marinirane kozice, riblja pašteta, inćuni)", "priceEur": "21.90" },
+              { "name": "Goveđi carpaccio s tartufima", "description": "(rikula, grana padano, tartufi, acheto balsamico)", "priceEur": "19.90" }
+            ]},
+            { "title": "Juhe", "items": [
+              { "name": "Goveđa juha", "priceEur": "6.00" },
+              { "name": "Juha od rajčica", "priceEur": "7.00" },
+              { "name": "Dnevna juha", "priceEur": "7.00" }
+            ]},
+            { "title": "Topla predjela", "items": [
+              { "name": "Zelena manistra River", "description": "(kozice, povrće, vrhnje)", "priceEur": "18.00" },
+              { "name": "Pljukanci River", "description": "(pršut, tartufi)", "priceEur": "22.00" },
+              { "name": "Pljukanci s piletinom", "description": "(piletina, vrhnje)", "priceEur": "18.00" },
+              { "name": "Pljukanci s kozicama", "description": "(kozice, dalmatinska šalša)", "priceEur": "18.50" },
+              { "name": "Rižoto s povrćem", "priceEur": "16.00" },
+              { "name": "Crni rižoto", "priceEur": "19.00" },
+              { "name": "Rižoto s kozicama", "description": "(dalmatinska šporka šalša)", "priceEur": "19.00" },
+              { "name": "Teleći rižoto", "priceEur": "19.00" }
+            ]},
+            { "title": "Dječji izbor", "items": [
+              { "name": "Špageti Bolognese", "priceEur": "14.00" },
+              { "name": "Špageti Carbonara", "priceEur": "14.00" }
+            ]},
+            { "title": "Jela s roštilja", "items": [
+              { "name": "Mesna plata River za dvije osobe", "description": "(teleći kotlet 2x, medaljoni od bifteka 2x, punjeni ramstek, punjeni lungić, pomfrit, povrće žar, ajvar, kapula)", "priceEur": "70.00" },
+              { "name": "Miješano meso", "description": "(teleći kotlet, 2 ćevapa, pileći zabatak, svinjski vrat, kobasica, ajvar, kapula)", "priceEur": "23.00" },
+              { "name": "Teleći kotlet 1kg", "description": "(povrće julienne, maslac)", "priceEur": "80.00" },
+              { "name": "Janjeći kotleti", "description": "(povrće julienne, maslac)", "priceEur": "29.00" },
+              { "name": "Punjeni naravni odrezak", "description": "(pršut, sir, povrće julienne)", "priceEur": "26.00" },
+              { "name": "Punjeni lungić s pršutom i sirom", "description": "(začinski maslac, povrće julienne)", "priceEur": "21.00" },
+              { "name": "Biftek žar", "description": "(začinsko maslo, povrće julienne)", "priceEur": "40.00" },
+              { "name": "Ramstek", "priceEur": "29.00" },
+              { "name": "Ramstek punjeni", "description": "(pršut, sir, začinsko maslo, povrće julienne)", "priceEur": "30.00" },
+              { "name": "Ćevapi", "description": "(ajvar, kapula)", "priceEur": "17.00" }
+            ]},
+            { "title": "Jela po narudžbi", "items": [
+              { "name": "Pašticada s domaćim njokima", "priceEur": "22.00" },
+              { "name": "Bečki odrezak", "priceEur": "26.00" },
+              { "name": "Zagrebački odrezak", "priceEur": "28.00" },
+              { "name": "Pileći bečki", "priceEur": "18.00" },
+              { "name": "Pileći zagrebački", "priceEur": "19.00" },
+              { "name": "Piletina u gorgonzoli", "priceEur": "19.00" },
+              { "name": "Punjena piletina", "description": "(povrće julienne)", "priceEur": "18.50" },
+              { "name": "Piletina", "description": "(povrće julienne)", "priceEur": "16.50" }
+            ]},
+            { "title": "Jela iz krušne peći", "items": [
+              { "name": "Lazanje River", "description": "(kozice, povrće, bijeli umak)", "priceEur": "19.00" },
+              { "name": "Lazanje mesne", "priceEur": "16.00" }
+            ]},
+            { "title": "Riblja jela", "items": [
+              { "name": "Lignje u čupu", "description": "(kolutići lignje, slani krumpir, češnjak, vino)", "priceEur": "30.00" },
+              { "name": "Tuna 250g", "quantity": "250g", "priceEur": "30.00", "anchorPriceEur": "26.00" },
+              { "name": "Lignje pržene", "description": "(tartar umak)", "priceEur": "22.00" },
+              { "name": "Lignje žar", "priceEur": "26.00" },
+              { "name": "Pastrva sa žara", "description": "(krumpir salata)", "priceEur": "25.00" },
+              { "name": "Lubin filet", "priceEur": "30.00", "anchorPriceEur": "26.00" },
+              { "name": "Grdobina s tartufima", "description": "(domaća tjestenina, crni tartuf, tartufata, grana padano)", "priceEur": "38.00" },
+              { "name": "Hobotnica grill", "description": "(slani krumpir, dalmatinska šporka šalša)", "priceEur": "40.00" }
+            ]},
+            { "title": "Prilozi", "items": [
+              { "name": "Pomfrit", "priceEur": "6.00" },
+              { "name": "Riža", "priceEur": "6.00" },
+              { "name": "Povrće sa žara", "priceEur": "9.00" },
+              { "name": "Blitva", "priceEur": "6.50" },
+              { "name": "Umaci", "description": "(kečap, majoneza, senf, tartar, ajvar)", "priceEur": "1.00" },
+              { "name": "Slani krumpir", "priceEur": "6.00" },
+              { "name": "Kruh", "priceEur": "2.00" },
+              { "name": "Masline", "priceEur": "4.00" },
+              { "name": "Umak od zelenog papra", "priceEur": "4.00" },
+              { "name": "Pizza kruh", "priceEur": "3.50" },
+              { "name": "Pizza kruh sa češnjakom", "priceEur": "5.00" }
+            ]},
+            { "title": "Salate", "items": [
+              { "name": "Mix sezonska salata", "priceEur": "6.00" },
+              { "name": "Zelena salata", "priceEur": "6.00" },
+              { "name": "Rikula", "priceEur": "6.50" },
+              { "name": "Kupus", "priceEur": "6.00" },
+              { "name": "Rajčice", "priceEur": "6.00" },
+              { "name": "Krastavci", "priceEur": "6.00" },
+              { "name": "Cherry rajčice", "priceEur": "7.00" }
+            ]},
+            { "title": "Velike salate", "items": [
+              { "name": "Grčka salata", "priceEur": "14.00" },
+              { "name": "River salata", "description": "(rikula, cherry rajčice, slani sir, piletina na rezance)", "priceEur": "15.00" },
+              { "name": "Salata Jadro", "description": "(kruške, gorgonzola, orasi, borovnice, mix zelenih salata)", "priceEur": "16.00" }
+            ]},
+            { "title": "Zdravi kutak", "items": [
+              { "name": "Veganske raviole s bundevom", "description": "(crveni umak, shiitake gljive, lisičarke gljive)", "priceEur": "21.00" },
+              { "name": "Brusketa avokado - rajčica - bosiljak", "description": "(kapari, pikantni sir, pesto bosiljak)", "priceEur": "14.50" }
+            ]},
+            { "title": "Deserti", "items": [
+              { "name": "Palačinke - čokolada / marmelada", "priceEur": "5.00" },
+              { "name": "Palačinke s orasima", "priceEur": "6.00" },
+              { "name": "Palačinke River", "description": "(sladoled od vanilije, preljev od višanja)", "priceEur": "8.00", "anchorPriceEur": "6.50" },
+              { "name": "Semifreddo", "priceEur": "6.00" },
+              { "name": "Monoporcija", "description": "(mousse bijela čokolada, limun ili smokva)", "priceEur": "9.00" },
+              { "name": "Lava cake", "description": "(čokoladni souffle, sladoled vanilija)", "priceEur": "7.00" }
+            ]}
+          ]
+        },
+        {
+          "code": "en",
+          "label": "EN",
+          "categories": [
+            { "title": "River brunch", "items": [
+              { "name": "River eggs", "description": "(toasted bread, poached eggs, crispy pancetta, tomatoes, hollandaise sauce)", "priceEur": "14.00" },
+              { "name": "Tastes of Solin", "description": "(prosciutto, cheese, Solin fritters, trout pâté, curd cheese, sage honey)", "priceEur": "15.00" },
+              { "name": "Shrimp and Vegetables wok", "priceEur": "21.00" },
+              { "name": "Chicken and vegetable wok", "description": "(chicken, vegetables, sweet chilli, soy sauce)", "priceEur": "19.00" },
+              { "name": "Eggs of your choice", "description": "(scrambled eggs or omelet)", "priceEur": "10.00" }
+            ]},
+            { "title": "Starters", "items": [
+              { "name": "River's Story", "description": "(pancetta, prosciutto, cheese selection, fish pâté, marinated prawns, olives, fisherman's wine bruschetta with salsa, anchovies and capers) for two people", "priceEur": "40.00" },
+              { "name": "Selection of Croatian premium cheeses", "description": "(Gligora dairy, Težački cheese, Žigljen cheese, truffle cheese, fig jam, mandarin jam) 150g", "priceEur": "26.00" },
+              { "name": "Dalmatian prosciutto 100g", "priceEur": "15.00" },
+              { "name": "Sea Rhapsody", "description": "(octopus salad, marinated prawns, fish pâté, anchovies)", "priceEur": "21.90" },
+              { "name": "Beef carpaccio with truffles", "description": "(arugula, Grana Padano, truffles, aceto balsamico)", "priceEur": "19.90" }
+            ]},
+            { "title": "Soups", "items": [
+              { "name": "Beef soup", "priceEur": "6.00" },
+              { "name": "Tomato soup", "priceEur": "7.00" },
+              { "name": "Soup of the day", "priceEur": "7.00" }
+            ]},
+            { "title": "Warm Appetizers", "items": [
+              { "name": "Green pasta River", "description": "(prawns, vegetables, cream)", "priceEur": "18.00" },
+              { "name": "River pljukanci pasta", "description": "(prosciutto, truffles)", "priceEur": "22.00" },
+              { "name": "Pljukanci pasta with chicken", "description": "(chicken, cream)", "priceEur": "18.00" },
+              { "name": "Pljukanci pasta with prawns", "description": "(prawns, Dalmatian salsa)", "priceEur": "18.50" },
+              { "name": "Vegetable risotto", "priceEur": "16.00" },
+              { "name": "Black risotto", "priceEur": "19.00" },
+              { "name": "Risotto with prawns", "description": "(Dalmatian šporka šalša)", "priceEur": "19.00" },
+              { "name": "Veal risotto", "priceEur": "19.00" }
+            ]},
+            { "title": "Children's Choice", "items": [
+              { "name": "Spaghetti Bolognese", "priceEur": "14.00" },
+              { "name": "Spaghetti Carbonara", "priceEur": "14.00" }
+            ]},
+            { "title": "Grilled dishes", "items": [
+              { "name": "River meat platter for two people", "description": "(2 veal chops, 2 beef tenderloin medallions, stuffed rump steak, stuffed pork tenderloin, French fries, grilled vegetables, ajvar and onion)", "priceEur": "70.00" },
+              { "name": "Mixed meat", "description": "(veal chop, 2 ćevapi, chicken thigh, pork neck, sausage, ajvar, onion)", "priceEur": "23.00" },
+              { "name": "Veal chop 1kg", "description": "(julienne vegetables, butter)", "priceEur": "80.00" },
+              { "name": "Lamb chops", "description": "(julienne vegetables, butter)", "priceEur": "29.00" },
+              { "name": "Stuffed natural cutlet", "description": "(prosciutto, cheese, julienne vegetables)", "priceEur": "26.00" },
+              { "name": "Stuffed pork tenderloin with prosciutto and cheese", "description": "(herb butter, julienne vegetables)", "priceEur": "21.00" },
+              { "name": "Grilled beefsteak", "description": "(herb butter, julienne vegetables)", "priceEur": "40.00" },
+              { "name": "Rump steak", "priceEur": "29.00" },
+              { "name": "Stuffed rump steak", "description": "(prosciutto, cheese, herb butter, julienne vegetables)", "priceEur": "30.00" },
+              { "name": "Ćevapi", "description": "(ajvar, onion)", "priceEur": "17.00" }
+            ]},
+            { "title": "Dishes to order", "items": [
+              { "name": "Pašticada with homemade gnocchi", "priceEur": "22.00" },
+              { "name": "Viennese schnitzel", "priceEur": "26.00" },
+              { "name": "Zagreb-style schnitzel", "priceEur": "28.00" },
+              { "name": "Chicken Viennese schnitzel", "priceEur": "18.00" },
+              { "name": "Chicken Zagreb-style schnitzel", "priceEur": "19.00" },
+              { "name": "Chicken in gorgonzola sauce", "priceEur": "19.00" },
+              { "name": "Stuffed chicken", "description": "(julienne vegetables)", "priceEur": "18.50" },
+              { "name": "Chicken", "description": "(julienne vegetables)", "priceEur": "16.50" }
+            ]},
+            { "title": "Dishes from the bread oven", "items": [
+              { "name": "River lasagna", "description": "(prawns, vegetables, white sauce)", "priceEur": "19.00" },
+              { "name": "Meat lasagna", "priceEur": "16.00" }
+            ]},
+            { "title": "Fish dishes", "items": [
+              { "name": "Squid in a pot", "description": "(squid rings, salted potatoes, garlic, wine)", "priceEur": "30.00" },
+              { "name": "Tuna 250g", "quantity": "250g", "priceEur": "30.00", "anchorPriceEur": "26.00" },
+              { "name": "Fried squid", "description": "(tartar sauce)", "priceEur": "22.00" },
+              { "name": "Grilled calamari", "priceEur": "26.00" },
+              { "name": "Grilled trout", "description": "(potato salad)", "priceEur": "25.00" },
+              { "name": "Sea bass fillet", "priceEur": "30.00", "anchorPriceEur": "26.00" },
+              { "name": "Monkfish with truffles", "description": "(homemade pasta, black truffle, truffle sauce, Grana Padano)", "priceEur": "38.00" },
+              { "name": "Grilled octopus", "description": "(salted potatoes, Dalmatian šporka šalša)", "priceEur": "40.00" }
+            ]},
+            { "title": "Side dishes", "items": [
+              { "name": "French fries", "priceEur": "6.00" },
+              { "name": "Rice", "priceEur": "6.00" },
+              { "name": "Grilled vegetables", "priceEur": "9.00" },
+              { "name": "Swiss chard", "priceEur": "6.50" },
+              { "name": "Sauces", "description": "(ketchup, mayonnaise, mustard, tartar sauce, ajvar)", "priceEur": "1.00" },
+              { "name": "Salted potatoes", "priceEur": "6.00" },
+              { "name": "Bread", "priceEur": "2.00" },
+              { "name": "Olives", "priceEur": "4.00" },
+              { "name": "Green pepper sauce", "priceEur": "4.00" },
+              { "name": "Pizza bread", "priceEur": "3.50" },
+              { "name": "Garlic pizza bread", "priceEur": "5.00" }
+            ]},
+            { "title": "Salads", "items": [
+              { "name": "Mixed seasonal salad", "priceEur": "6.00" },
+              { "name": "Green salad", "priceEur": "6.00" },
+              { "name": "Arugula", "priceEur": "6.50" },
+              { "name": "Cabbage", "priceEur": "6.00" },
+              { "name": "Tomatoes", "priceEur": "6.00" },
+              { "name": "Cucumbers", "priceEur": "6.00" },
+              { "name": "Cherry tomatoes", "priceEur": "7.00" }
+            ]},
+            { "title": "Large salads", "items": [
+              { "name": "Greek salad", "priceEur": "14.00" },
+              { "name": "River salad", "description": "(arugula, cherry tomatoes, salty cheese, sliced chicken)", "priceEur": "15.00" },
+              { "name": "Jadro salad", "description": "(pears, gorgonzola, walnuts, blueberries, mixed green salads)", "priceEur": "16.00" }
+            ]},
+            { "title": "Healthy corner", "items": [
+              { "name": "Vegan ravioli with pumpkin", "description": "(red sauce, shiitake mushrooms, chanterelle mushrooms)", "priceEur": "21.00" },
+              { "name": "Bruschetta avocado - tomato - basil", "description": "(capers, spicy cheese, basil pesto)", "priceEur": "14.50" }
+            ]},
+            { "title": "Desserts", "items": [
+              { "name": "Pancakes - chocolate / jam", "priceEur": "5.00" },
+              { "name": "Pancakes with walnuts", "priceEur": "6.00" },
+              { "name": "River pancakes", "description": "(vanilla ice cream, sour cherry topping)", "priceEur": "8.00", "anchorPriceEur": "6.50" },
+              { "name": "Semifreddo", "priceEur": "6.00" },
+              { "name": "Monoportion", "description": "(white chocolate mousse, lemon or fig)", "priceEur": "9.00" },
+              { "name": "Lava cake", "description": "(chocolate soufflé, vanilla ice cream)", "priceEur": "7.00" }
+            ]}
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "drinks",
+      "title": "Drinks",
+      "languages": [
+        {
+          "code": "hr",
+          "label": "HR",
+          "categories": [
+            { "title": "Topli napitci", "items": [
+              { "name": "Kava", "quantity": "šal.", "priceEur": "2.70" },
+              { "name": "Kava mlijeko ili šlag", "quantity": "šal.", "priceEur": "3.20" },
+              { "name": "Kava mlijeko ili šlag velika", "quantity": "šal.", "priceEur": "3.20" },
+              { "name": "Cappuccino", "quantity": "šal.", "priceEur": "3.40" },
+              { "name": "Bijela kava", "quantity": "šal.", "priceEur": "3.40" },
+              { "name": "Čaj", "quantity": "šal.", "priceEur": "2.70" },
+              { "name": "Americano", "quantity": "šal.", "priceEur": "3.40" }
+            ]},
+            { "title": "Prirodni Sokovi", "items": [
+              { "name": "Naranča", "quantity": "0,20 l", "priceEur": "3.80" },
+              { "name": "Jabuka", "quantity": "0,20 l", "priceEur": "3.80" },
+              { "name": "Ribizla", "quantity": "0,20 l", "priceEur": "3.80" },
+              { "name": "Gusti", "quantity": "0,20 l", "priceEur": "3.80" },
+              { "name": "Prirodna limunada", "priceEur": "5.00" },
+              { "name": "Prirodna narančada", "priceEur": "6.00" },
+              { "name": "Ledeni čaj", "quantity": "0,20 l", "priceEur": "3.80" },
+              { "name": "Juicy vita", "quantity": "0,20 l", "priceEur": "3.60" }
+            ]},
+            { "title": "Gazirani Sokovi", "items": [
+              { "name": "Špeci", "quantity": "0,33 l", "priceEur": "3.80" },
+              { "name": "Pepsi, Mirinda, 7up", "quantity": "0,25 l", "priceEur": "3.80" },
+              { "name": "Tonic", "quantity": "0,25 l", "priceEur": "3.80" },
+              { "name": "Bitter lemon", "quantity": "0,25 l", "priceEur": "3.80" },
+              { "name": "Cocta", "quantity": "0,25 l", "priceEur": "4.00" },
+              { "name": "Orangina", "quantity": "0,25 l", "priceEur": "4.00" }
+            ]},
+            { "title": "Mineralna Voda", "items": [
+              { "name": "Mineralna voda", "quantity": "0,25 l", "priceEur": "2.70" },
+              { "name": "Mineralna voda", "quantity": "0,50 l", "priceEur": "3.90" },
+              { "name": "Mineralna voda", "quantity": "1,00 l", "priceEur": "5.20" },
+              { "name": "Mineralna senzacija", "quantity": "0,25 l", "priceEur": "3.60" },
+              { "name": "Prirodna voda", "quantity": "0,25 l", "priceEur": "2.80" },
+              { "name": "Prirodna voda", "quantity": "1,00 l", "priceEur": "4.90" }
+            ]},
+            { "title": "Pivo", "items": [
+              { "name": "Karlovačko", "quantity": "0,33 l", "priceEur": "3.80" },
+              { "name": "Karlovačko crno", "quantity": "0,50 l", "priceEur": "4.60" },
+              { "name": "Karlovačko Radler", "quantity": "0,50 l", "priceEur": "4.60" },
+              { "name": "Točeno pivo (Karlovačko)", "quantity": "0,30 l", "priceEur": "3.80" },
+              { "name": "Točeno pivo (Karlovačko)", "quantity": "0,50 l", "priceEur": "5.00" },
+              { "name": "Točeno pivo (Heineken)", "quantity": "0,25 l", "priceEur": "4.10" },
+              { "name": "Točeno pivo (Heineken)", "quantity": "0,50 l", "priceEur": "5.60" },
+              { "name": "Heineken", "quantity": "0,33 l", "priceEur": "4.30" },
+              { "name": "Heineken bezalkoholni", "quantity": "0,33 l", "priceEur": "4.30" },
+              { "name": "Stari lisac (Cider)", "quantity": "0,50 l", "priceEur": "4.10" },
+              { "name": "Krombacher Weizen", "quantity": "0,50 l", "priceEur": "5.80" },
+              { "name": "Krušovice", "quantity": "0,50 l", "priceEur": "4.60" },
+              { "name": "Union radler Isotonic (0% alcohol)", "quantity": "0,50 l", "priceEur": "4.60" },
+              { "name": "Birra Moretti", "quantity": "0,33 l", "priceEur": "4.10" }
+            ]},
+            { "title": "Aperitivi", "items": [
+              { "name": "Rakija / Brandy", "quantity": "0,03 l", "priceEur": "3.40" },
+              { "name": "Pelinkovac antique", "quantity": "0,03 l", "priceEur": "4.10" },
+              { "name": "Stock", "quantity": "0,03 l", "priceEur": "4.10" },
+              { "name": "Amaro", "quantity": "0,03 l", "priceEur": "3.60" },
+              { "name": "Vodka", "quantity": "0,03 l", "priceEur": "4.10" },
+              { "name": "Gin", "quantity": "0,03 l", "priceEur": "4.10" },
+              { "name": "Orahovac, Brandy", "quantity": "0,03 l", "priceEur": "3.60" },
+              { "name": "Aperol", "quantity": "0,03 l", "priceEur": "7.50" }
+            ]},
+            { "title": "Strana Alkoholna Pića", "items": [
+              { "name": "Johnnie Walker Black label", "quantity": "0,03 l", "priceEur": "4.80" },
+              { "name": "Johnnie Walker", "quantity": "0,03 l", "priceEur": "4.30" },
+              { "name": "Jack Daniel's", "quantity": "0,03 l", "priceEur": "4.80" },
+              { "name": "Chivas", "quantity": "0,03 l", "priceEur": "5.80" },
+              { "name": "Jagermeister", "quantity": "0,03 l", "priceEur": "4.40" },
+              { "name": "Campari", "quantity": "0,03 l", "priceEur": "4.40" },
+              { "name": "Martell", "quantity": "0,03 l", "priceEur": "4.90" },
+              { "name": "Ballantines", "quantity": "0,03 l", "priceEur": "4.40" },
+              { "name": "Teranino", "quantity": "0,03 l", "priceEur": "3.80" }
+            ]}
+          ]
+        },
+        {
+          "code": "en",
+          "label": "EN",
+          "categories": [
+            { "title": "Warm beverages", "items": [
+              { "name": "Coffee", "quantity": "cup", "priceEur": "2.70" },
+              { "name": "Coffee milk or cream", "quantity": "cup", "priceEur": "3.20" },
+              { "name": "Coffee milk or cream big", "quantity": "cup", "priceEur": "3.20" },
+              { "name": "Cappuccino", "quantity": "cup", "priceEur": "3.40" },
+              { "name": "White coffee", "quantity": "cup", "priceEur": "3.40" },
+              { "name": "Tea", "quantity": "cup", "priceEur": "2.70" },
+              { "name": "Americano", "quantity": "cup", "priceEur": "3.40" }
+            ]},
+            { "title": "Natural Juice", "items": [
+              { "name": "Orange", "quantity": "0.20 l", "priceEur": "3.80" },
+              { "name": "Apple", "quantity": "0.20 l", "priceEur": "3.80" },
+              { "name": "Currant", "quantity": "0.20 l", "priceEur": "3.80" },
+              { "name": "Gusti", "quantity": "0.20 l", "priceEur": "3.80" },
+              { "name": "Natural squeeze lemon", "priceEur": "5.00" },
+              { "name": "Natural squeeze orange", "priceEur": "6.00" },
+              { "name": "Ice tea", "quantity": "0.20 l", "priceEur": "3.80" },
+              { "name": "Juicy vita", "quantity": "0.20 l", "priceEur": "3.60" }
+            ]},
+            { "title": "Sodas", "items": [
+              { "name": "Špeci", "quantity": "0.33 l", "priceEur": "3.80" },
+              { "name": "Pepsi, Mirinda, 7up", "quantity": "0.25 l", "priceEur": "3.80" },
+              { "name": "Tonic", "quantity": "0.25 l", "priceEur": "3.80" },
+              { "name": "Bitter lemon", "quantity": "0.25 l", "priceEur": "3.80" },
+              { "name": "Cocta", "quantity": "0.25 l", "priceEur": "4.00" },
+              { "name": "Orangina", "quantity": "0.25 l", "priceEur": "4.00" }
+            ]},
+            { "title": "Mineral Water", "items": [
+              { "name": "Mineral water", "quantity": "0.25 l", "priceEur": "2.70" },
+              { "name": "Mineral water", "quantity": "0.50 l", "priceEur": "3.90" },
+              { "name": "Mineral water", "quantity": "1.00 l", "priceEur": "5.20" },
+              { "name": "Mineral water with flavour", "quantity": "0.25 l", "priceEur": "3.60" },
+              { "name": "Natural water", "quantity": "0.25 l", "priceEur": "2.80" },
+              { "name": "Mineral water", "quantity": "1.00 l", "priceEur": "4.90" }
+            ]},
+            { "title": "Beer", "items": [
+              { "name": "Karlovačko", "quantity": "0.33 l", "priceEur": "3.80" },
+              { "name": "Karlovačko dark", "quantity": "0.50 l", "priceEur": "4.60" },
+              { "name": "Karlovačko Radler", "quantity": "0.50 l", "priceEur": "4.60" },
+              { "name": "Draught beer (Karlovačko)", "quantity": "0.30 l", "priceEur": "3.80" },
+              { "name": "Draught beer (Karlovačko)", "quantity": "0.50 l", "priceEur": "5.00" },
+              { "name": "Draught beer (Heineken)", "quantity": "0.25 l", "priceEur": "4.10" },
+              { "name": "Draught beer (Heineken)", "quantity": "0.50 l", "priceEur": "5.60" },
+              { "name": "Heineken", "quantity": "0.33 l", "priceEur": "4.30" },
+              { "name": "Heineken nonalcoholic", "quantity": "0.33 l", "priceEur": "4.30" },
+              { "name": "Stari lisac (Cider)", "quantity": "0.50 l", "priceEur": "4.10" },
+              { "name": "Krombacher Weizen", "quantity": "0.50 l", "priceEur": "5.80" },
+              { "name": "Krušovice", "quantity": "0.50 l", "priceEur": "4.60" },
+              { "name": "Union radler Isotonic (0% alcohol)", "quantity": "0.50 l", "priceEur": "4.60" },
+              { "name": "Birra Moretti", "quantity": "0.33 l", "priceEur": "4.10" }
+            ]},
+            { "title": "Aperitives", "items": [
+              { "name": "Rakija / Brandy", "quantity": "0.03 l", "priceEur": "3.40" },
+              { "name": "Pelinkovac antique", "quantity": "0.03 l", "priceEur": "4.10" },
+              { "name": "Stock", "quantity": "0.03 l", "priceEur": "4.10" },
+              { "name": "Amaro", "quantity": "0.03 l", "priceEur": "3.60" },
+              { "name": "Vodka", "quantity": "0.03 l", "priceEur": "4.10" },
+              { "name": "Gin", "quantity": "0.03 l", "priceEur": "4.10" },
+              { "name": "Orahovac, Brandy", "quantity": "0.03 l", "priceEur": "3.60" },
+              { "name": "Aperol", "quantity": "0.03 l", "priceEur": "7.50" }
+            ]},
+            { "title": "Foreign Alcoholic Drinks", "items": [
+              { "name": "Johnnie Walker Black label", "quantity": "0.03 l", "priceEur": "4.80" },
+              { "name": "Johnnie Walker", "quantity": "0.03 l", "priceEur": "4.30" },
+              { "name": "Jack Daniel's", "quantity": "0.03 l", "priceEur": "4.80" },
+              { "name": "Chivas", "quantity": "0.03 l", "priceEur": "5.80" },
+              { "name": "Jagermeister", "quantity": "0.03 l", "priceEur": "4.40" },
+              { "name": "Campari", "quantity": "0.03 l", "priceEur": "4.40" },
+              { "name": "Martell", "quantity": "0.03 l", "priceEur": "4.90" },
+              { "name": "Ballantines", "quantity": "0.03 l", "priceEur": "4.40" },
+              { "name": "Teranino", "quantity": "0.03 l", "priceEur": "3.80" }
+            ]}
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "pizza",
+      "title": "Pizza",
+      "languages": [
+        { "code": "hr", "label": "HR", "categories": [
+          { "title": "Pizza", "items": [
+            { "name": "Margherita", "description": "(pelat, sir)", "priceEur": "11.50", "jumboPriceEur": "18.50" },
+            { "name": "Miješana", "description": "(pelat, sir, šunka, gljive)", "priceEur": "12.00", "jumboPriceEur": "19.50" },
+            { "name": "Šunka", "description": "(pelat, sir, šunka)", "priceEur": "12.00", "jumboPriceEur": "19.50" },
+            { "name": "Seljačka", "description": "(pelat, sir, panceta, kapula, jaje, feferoni)", "priceEur": "13.00", "jumboPriceEur": "21.50" },
+            { "name": "Salama", "description": "(pelat, sir, zimska salama)", "priceEur": "13.00", "jumboPriceEur": "21.50" },
+            { "name": "River", "description": "(pelat, sir, mozzarella, pršut, rikula, parmezan)", "priceEur": "13.00", "jumboPriceEur": "21.50" },
+            { "name": "4 vrste sira", "description": "(pelat, 4 vrste sira)", "priceEur": "13.00", "jumboPriceEur": "21.50" },
+            { "name": "Kozice", "description": "(pelat, sir, kozice)", "priceEur": "14.00", "jumboPriceEur": "22.00" },
+            { "name": "Crna", "description": "(sir, temeljac od crnog rižota, cherry rajčice)", "priceEur": "14.00", "jumboPriceEur": "22.00" },
+            { "name": "Vegetariana", "description": "(pelat, sir, povrće)", "priceEur": "13.00", "jumboPriceEur": "21.50" },
+            { "name": "Tunjevina", "description": "(pelat, sir, tunjevina, kapula)", "priceEur": "13.00", "jumboPriceEur": "21.50" },
+            { "name": "Revija", "description": "(pelat, panceta, kukuruz, gljive)", "priceEur": "13.00", "jumboPriceEur": "21.50" },
+            { "name": "Calzone", "description": "(pizza iznenađenja)", "priceEur": "13.50", "jumboPriceEur": "22.00" },
+            { "name": "Popovska", "description": "(pelat, sir, kozice, tuna, kapula)", "priceEur": "14.00", "jumboPriceEur": "23.00" },
+            { "name": "Funghi", "description": "(pelat, sir, gljive)", "priceEur": "12.00", "jumboPriceEur": "19.50" },
+            { "name": "Italijana", "description": "(pelat, mozzarella, povrće)", "priceEur": "14.00", "jumboPriceEur": "22.00" }
+          ]}
+        ]},
+        { "code": "en", "label": "EN", "categories": [
+          { "title": "Pizza", "items": [
+            { "name": "Margherita", "description": "(tomato, cheese)", "priceEur": "11.50", "jumboPriceEur": "18.50" },
+            { "name": "Mixed", "description": "(tomato, cheese, ham, mushrooms)", "priceEur": "12.00", "jumboPriceEur": "19.50" },
+            { "name": "Ham", "description": "(tomato, cheese, ham)", "priceEur": "12.00", "jumboPriceEur": "19.50" },
+            { "name": "Country", "description": "(tomato, cheese, bacon, onion, egg, pepperoni)", "priceEur": "13.00", "jumboPriceEur": "21.50" },
+            { "name": "Salami", "description": "(tomato, cheese, salami)", "priceEur": "13.00", "jumboPriceEur": "21.50" },
+            { "name": "River", "description": "(tomato, cheese, mozzarella, smoked ham, rucola, parmesan)", "priceEur": "13.00", "jumboPriceEur": "21.50" },
+            { "name": "4 Kinds of Cheese", "description": "(tomato, 4 kinds of cheese)", "priceEur": "13.00", "jumboPriceEur": "21.50" },
+            { "name": "Prawns", "description": "(tomato, cheese, prawns)", "priceEur": "14.00", "jumboPriceEur": "22.00" },
+            { "name": "Black", "description": "(cheese, the foundation of the black risotto, cherry tomatoes)", "priceEur": "14.00", "jumboPriceEur": "22.00" },
+            { "name": "Vegetariana", "description": "(tomato, cheese, vegetables)", "priceEur": "13.00", "jumboPriceEur": "21.50" },
+            { "name": "Tuna", "description": "(tomato, cheese, tuna, onion)", "priceEur": "13.00", "jumboPriceEur": "21.50" },
+            { "name": "Revija", "description": "(tomato, bacon, corn, mushrooms)", "priceEur": "13.00", "jumboPriceEur": "21.50" },
+            { "name": "Calzone", "description": "(surprises pizza)", "priceEur": "13.50", "jumboPriceEur": "22.00" },
+            { "name": "Priest's", "description": "(tomato, cheese, prawns, tuna, onion)", "priceEur": "14.00", "jumboPriceEur": "23.00" },
+            { "name": "Funghi", "description": "(tomato, cheese, mushrooms)", "priceEur": "12.00", "jumboPriceEur": "19.50" },
+            { "name": "Italiana", "description": "(tomato, mozzarella, vegetables)", "priceEur": "14.00", "jumboPriceEur": "22.00" }
+          ]}
+        ]}
+      ]
+    },
+    {
+      "slug": "wine",
+      "title": "Wine",
+      "languages": [
+        { "code": "hr", "label": "HR", "categories": [
+          { "title": "Bijela vina", "items": [
+            { "name": "Vino Kuće", "quantity": "1,00 l", "priceEur": "26.00" },
+            { "name": "Graševina", "quantity": "1,00 l", "priceEur": "26.00" },
+            { "name": "Malvazija", "quantity": "1,00 l", "priceEur": "26.00" }
+          ]},
+          { "title": "Crna vina", "items": [
+            { "name": "Plavac", "quantity": "1,00 l", "priceEur": "26.00" },
+            { "name": "Merlot", "quantity": "1,00 l", "priceEur": "27.00" }
+          ]},
+          { "title": "Rose vino", "items": [
+            { "name": "Rose", "quantity": "1,00 l", "priceEur": "37.00" }
+          ]},
+          { "title": "Vrhunska vina u boci - Bijela vina", "items": [
+            { "name": "Pošip Čara", "quantity": "0,75 l", "priceEur": "50.00" },
+            { "name": "Malvazija Kabola", "quantity": "0,75 l", "priceEur": "55.00" },
+            { "name": "Pinot Sivi", "quantity": "0,75 l", "priceEur": "45.00" },
+            { "name": "Malvazija Deklić", "quantity": "0,75 l", "priceEur": "35.00" }
+          ]},
+          { "title": "Vrhunska vina u boci - Crna vina", "items": [
+            { "name": "Korlat Cabernet", "quantity": "0,75 l", "priceEur": "55.00" },
+            { "name": "Plavac Tomić", "quantity": "0,75 l", "priceEur": "45.00" },
+            { "name": "Dingač", "quantity": "0,75 l", "priceEur": "55.00" }
+          ]},
+          { "title": "Vrhunska vina u boci - Rose vino", "items": [
+            { "name": "Rose", "quantity": "0,75 l", "priceEur": "45.00" }
+          ]}
+        ]},
+        { "code": "en", "label": "EN", "categories": [
+          { "title": "White wine", "items": [
+            { "name": "House wine", "quantity": "1.00 l", "priceEur": "26.00" },
+            { "name": "Graševina", "quantity": "1.00 l", "priceEur": "26.00" },
+            { "name": "Malvazija", "quantity": "1.00 l", "priceEur": "26.00" }
+          ]},
+          { "title": "Red wine", "items": [
+            { "name": "Plavac", "quantity": "1.00 l", "priceEur": "26.00" },
+            { "name": "Merlot", "quantity": "1.00 l", "priceEur": "27.00" }
+          ]},
+          { "title": "Rose wine", "items": [
+            { "name": "Rose", "quantity": "1.00 l", "priceEur": "37.00" }
+          ]},
+          { "title": "Quality Wine In A Bottle - White wine", "items": [
+            { "name": "Pošip Čara", "quantity": "0.75 l", "priceEur": "50.00" },
+            { "name": "Malvazija Kabola", "quantity": "0.75 l", "priceEur": "55.00" },
+            { "name": "Pinot Sivi", "quantity": "0.75 l", "priceEur": "45.00" },
+            { "name": "Malvazija Deklić", "quantity": "0.75 l", "priceEur": "35.00" }
+          ]},
+          { "title": "Quality Wine In A Bottle - Red wine", "items": [
+            { "name": "Korlat Cabernet", "quantity": "0.75 l", "priceEur": "55.00" },
+            { "name": "Plavac Tomić", "quantity": "0.75 l", "priceEur": "45.00" },
+            { "name": "Dingač", "quantity": "0.75 l", "priceEur": "55.00" }
+          ]},
+          { "title": "Quality Wine In A Bottle - Rose wine", "items": [
+            { "name": "Rose", "quantity": "0.75 l", "priceEur": "45.00" }
+          ]}
+        ]}
+      ]
+    }
+  ]
+}

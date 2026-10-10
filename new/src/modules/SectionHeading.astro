@@ -1,0 +1,8 @@
+---
+import type { SectionHeadingBlock } from '~/lib/types/blocks';
+const { eyebrow, heading } = Astro.props as SectionHeadingBlock;
+---
+<section class="pictures">
+  <h2>{eyebrow || 'Our'}</h2>
+  <h1>{heading || 'Dishes'}</h1>
+</section>

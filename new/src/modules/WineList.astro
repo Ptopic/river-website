@@ -1,0 +1,87 @@
+---
+import type { WineListBlock } from '~/lib/types/blocks';
+import croFlag from '~/assets/images/hr.png';
+import engFlag from '~/assets/images/eng.jpg';
+
+type WineLanguage = 'hr' | 'en';
+type WineListProps = WineListBlock & {
+  initialLanguage?: WineLanguage;
+};
+
+const { title, languages, initialLanguage = 'hr' } = Astro.props as WineListProps;
+const euro = (price?: string) => String(price ?? '').replace('.', ',');
+const anchorLine = (price?: string, date?: string) => {
+  if (!price) return '';
+  return `${euro(price)} €${date ? ` (${date})` : ''}`;
+};
+const selectedLanguage = initialLanguage === 'en' ? 'en' : 'hr';
+const selected = languages.find((language) => language.code === selectedLanguage) ?? languages.find((language) => language.code === 'hr') ?? languages[0];
+const menuNav = [
+  { hr: 'Hrana', en: 'Food', hrefHr: '/hrana', hrefEn: '/menu' },
+  { hr: 'Piće', en: 'Drinks', hrefHr: '/pice', hrefEn: '/drinks' },
+  { hr: 'Pizza', en: 'Pizza', hrefHr: '/pizza', hrefEn: '/pizza-en' },
+  { hr: 'Vino', en: 'Wine', hrefHr: '/vino', hrefEn: '/wine' }
+];
+---
+
+<div class="menu-container" data-module="fade" data-module-y="24" data-module-stagger="0.08">
+  <div class="menu-top-bar" data-fade>
+  <div class="top-bar">
+    <a href="/" aria-label="Back" class="menu-back-link">
+      <svg viewBox="0 0 512 512" width="46" height="46" aria-hidden="true">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-miterlimit="10"
+          stroke-width="32"
+          d="M256 64C150 64 64 150 64 256s86 192 192 192 192-86 192-192S362 64 256 64z"
+        />
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="32"
+          d="M296 352l-96-96 96-96"
+        />
+      </svg>
+    </a>
+    <button class={selectedLanguage === 'hr' ? 'hrv' : 'eng'} type="button">
+      <img src={selectedLanguage === 'hr' ? croFlag.src : engFlag.src} alt="" />
+    </button>
+  </div>
+
+  <div class="center-nav">
+    <div class="center-nav-container">
+      {menuNav.map((item) => <a href={selectedLanguage === 'hr' ? item.hrefHr : item.hrefEn}>{selectedLanguage === 'hr' ? item.hr : item.en}</a>)}
+    </div>
+  </div>
+  </div>
+  <div class="vine-container-content" data-fade>
+    <h2>{title}</h2>
+    <div class="vine-categories-container">
+      <div class="vine-categories">
+        {selected.categories.map((category) => (
+          <>
+            <h3>{category.title}</h3>
+            {category.items.map((item) => (
+              <div class="vine-category">
+                <div class="vine-content">
+                  <h4>{item.name}</h4>
+                  {item.quantity ? <p>{item.quantity}</p> : null}
+                  {item.description ? <p>{item.description}</p> : null}
+                </div>
+                <div class="vine-price">
+                  <div>
+                    <strong>{euro(item.priceEur)}€</strong>
+                    {item.anchorPriceEur ? <small>Sidrena cijena:<br />{anchorLine(item.anchorPriceEur, item.anchorPriceDate)}</small> : null}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>

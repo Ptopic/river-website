@@ -1,0 +1,161 @@
+---
+import type { MenuPageBlock } from '~/lib/types/blocks';
+import croFlag from '~/assets/images/hr.png';
+import engFlag from '~/assets/images/eng.jpg';
+
+type MenuLanguage = 'hr' | 'en';
+type MenuPageProps = MenuPageBlock & {
+  initialLanguage?: MenuLanguage;
+};
+
+const { activeMenu, languages, initialLanguage = 'hr' } = Astro.props as MenuPageProps;
+const selectedLanguage = initialLanguage === 'en' ? 'en' : 'hr';
+const selected = languages.find((language) => language.code === selectedLanguage) ?? languages.find((language) => language.code === 'hr') ?? languages[0];
+const euro = (price?: string) => String(price ?? '').replace('.', ',');
+const anchorLine = (price?: string, date?: string) => {
+  if (!price) return '';
+  return `${euro(price)} €${date ? ` (${date})` : ''}`;
+};
+const payload = JSON.stringify({
+  hr: languages.find((language) => language.code === 'hr')?.categories ?? [],
+  en: languages.find((language) => language.code === 'en')?.categories ?? []
+});
+const isPizza = activeMenu === 'pizza';
+const menuNav = [
+  { hr: 'Hrana', en: 'Food', hrefHr: '/hrana', hrefEn: '/menu' },
+  { hr: 'Piće', en: 'Drinks', hrefHr: '/pice', hrefEn: '/drinks' },
+  { hr: 'Pizza', en: 'Pizza', hrefHr: '/pizza', hrefEn: '/pizza-en' },
+  { hr: 'Vino', en: 'Wine', hrefHr: '/vino', hrefEn: '/wine' }
+];
+---
+
+<div class="language-modal-container astro-hidden" data-language-modal>
+  <div class="language-modal-content">
+    <button class="astro-language-close" type="button" aria-label="Close language picker">
+      <svg viewBox="0 0 512 512" width="46" height="46" aria-hidden="true">
+        <path
+          fill="currentColor"
+          d="M278.6 256l68.2-68.2c6.2-6.2 6.2-16.4 0-22.6-6.2-6.2-16.4-6.2-22.6 0L256 233.4l-68.2-68.2c-6.2-6.2-16.4-6.2-22.6 0-3.1 3.1-4.7 7.2-4.7 11.3 0 4.1 1.6 8.2 4.7 11.3l68.2 68.2-68.2 68.2c-3.1 3.1-4.7 7.2-4.7 11.3 0 4.1 1.6 8.2 4.7 11.3 6.2 6.2 16.4 6.2 22.6 0l68.2-68.2 68.2 68.2c6.2 6.2 16.4 6.2 22.6 0 6.2-6.2 6.2-16.4 0-22.6L278.6 256z"
+        />
+      </svg>
+    </button>
+    <h1>Change language:</h1>
+    <div class="language">
+      <div class="hrv astro-language-option" data-language="hr">
+        <img src={croFlag.src} alt="" class="hrv" />
+        <p>HR</p>
+        <span class:list={['checkmark', selectedLanguage !== 'hr' && 'astro-hidden']} data-check="hr">
+          <svg viewBox="0 0 48 48" width="26" height="26" aria-hidden="true">
+            <polygon fill="#43A047" points="40.6,12.1 17,35.7 7.4,26.1 4.6,29 17,41.3 43.4,14.9" />
+          </svg>
+        </span>
+      </div>
+      <div class="eng astro-language-option" data-language="en">
+        <img src={engFlag.src} alt="" />
+        <p>EN</p>
+        <span class:list={['checkmark', selectedLanguage !== 'en' && 'astro-hidden']} data-check="en">
+          <svg viewBox="0 0 48 48" width="26" height="26" aria-hidden="true">
+            <polygon fill="#43A047" points="40.6,12.1 17,35.7 7.4,26.1 4.6,29 17,41.3 43.4,14.9" />
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="menu-container" data-menu-page data-menu-payload={payload} data-active-menu={activeMenu} data-initial-language={selectedLanguage} data-module="menuPage fade" data-module-y="24" data-module-stagger="0.08">
+  <div class="menu-top-bar" data-fade>
+    <div class="top-bar">
+      <a href="/" aria-label="Back" class="menu-back-link">
+        <svg viewBox="0 0 512 512" width="46" height="46" aria-hidden="true">
+          <path
+            fill="none"
+            stroke="currentColor"
+            stroke-miterlimit="10"
+            stroke-width="32"
+            d="M256 64C150 64 64 150 64 256s86 192 192 192 192-86 192-192S362 64 256 64z"
+          />
+          <path
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="32"
+            d="M296 352l-96-96 96-96"
+          />
+        </svg>
+      </a>
+      <button class:list={[selectedLanguage === 'hr' ? 'hrv' : 'eng', 'astro-language-toggle']} type="button" data-current-flag>
+        <img src={selectedLanguage === 'hr' ? croFlag.src : engFlag.src} alt="" />
+      </button>
+    </div>
+
+    <div class="center-nav">
+      <div class="center-nav-container">
+        {menuNav.map((item) => (
+          <a href={selectedLanguage === 'hr' ? item.hrefHr : item.hrefEn} data-nav-label data-label-hr={item.hr} data-label-en={item.en} data-href-hr={item.hrefHr} data-href-en={item.hrefEn}>
+            {selectedLanguage === 'hr' ? item.hr : item.en}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <div class="menu-container-content" data-fade>
+    <div class="menu-categories-container">
+      <div class="menu-categories" data-desktop-categories>
+        {selected.categories.map((category, index) => (
+          <button type="button" class="astro-menu-category-button" data-category-index={index}>{category.title}</button>
+        ))}
+      </div>
+    </div>
+
+    <div class="menu-content astro-hidden" data-desktop-menu-content></div>
+  </div>
+
+  <div class={isPizza ? 'pizza-dropdown-list' : 'dropdown-list'} data-mobile-dropdowns data-fade>
+    {selected.categories.map((category, index) => (
+      <div class="dropdown" data-dropdown-index={index}>
+        <div class="click-layer"></div>
+        <button class="dropdown-div astro-dropdown-button" type="button" style={isPizza ? 'display: grid' : ''}>
+          <h1>{category.title}</h1>
+          {isPizza ? (
+            <>
+              <h2 style="text-align: end">{selectedLanguage === 'hr' ? 'Velika' : 'Large'}</h2>
+              <h2 style="text-align: end">Jumbo</h2>
+            </>
+          ) : null}
+        </button>
+        <div class="dropdown-content">
+          {category.items.map((item) => (
+            <div class="item-container" style={`opacity: 0; display: none; padding: 3rem 0.5rem; ${isPizza ? 'grid-template-columns: 1fr 1fr;' : ''}`}>
+              <div class="item-info">
+                <h2>{item.name}</h2>
+                {item.quantity || item.description ? <p>{item.quantity ?? item.description}</p> : null}
+              </div>
+              <div class="item-prices">
+                <div class={isPizza ? 'item-price-pizza' : 'item-price'} style={isPizza ? 'margin-right: 2rem' : ''}>
+                  <p>{euro(item.priceEur)}€</p>
+                  {item.anchorPriceEur ? <p2>Sidrena cijena:<br />{anchorLine(item.anchorPriceEur, item.anchorPriceDate)}</p2> : null}
+                </div>
+                {isPizza ? (
+                  item.jumboPriceEur ? (
+                    <div class="item-price-pizza">
+                      <p>{euro(item.jumboPriceEur)}€</p>
+                      {item.jumboAnchorPriceEur ? <p2>Sidrena cijena:<br />{anchorLine(item.jumboAnchorPriceEur, item.jumboAnchorPriceDate)}</p2> : null}
+                    </div>
+                  ) : (
+                    <div class="item-price-pizza" style="visibility: hidden">
+                      <p>0€</p>
+                      <p2>Sidrena cijena:<br />0 €</p2>
+                    </div>
+                  )
+                ) : null}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>

@@ -1,0 +1,8 @@
+---
+import type { MapBlock } from '~/lib/types/blocks';
+const { title, address, embedUrl } = Astro.props as MapBlock;
+const fallbackMap = `https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`;
+---
+<div class="map-container" data-module="fade" data-module-y="0">
+  <iframe src={embedUrl || fallbackMap} title={title} loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>

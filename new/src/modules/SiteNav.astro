@@ -1,0 +1,32 @@
+---
+import type { SiteNavBlock } from '~/lib/types/blocks';
+
+const { logo, items, cta } = Astro.props as SiteNavBlock;
+---
+<nav class="navbar" data-module="siteNav">
+  <div class="left-navbar">
+    {logo?.src ? <img src={logo.src} alt={logo.alt || ''} /> : null}
+  </div>
+
+  <div class="center-navbar">
+    {items.map((item) => <div class="nav-link"><a href={item.href}>{item.label}</a></div>)}
+    {cta ? <a href={cta.href} class="btn">{cta.label}</a> : null}
+  </div>
+</nav>
+
+<div class="navbar-mobile">
+  <button class="navbar-button astro-mobile-menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+    <span class="navbar-button__bar"></span>
+    <span class="navbar-button__bar"></span>
+    <span class="navbar-button__bar"></span>
+  </button>
+</div>
+
+<div class="navbar-mobile-container" style="transform: translateX(100%)">
+  <div class="navbar-mobile-content">
+    {items.map((item) => (
+      <div class="nav-link"><a href={item.href}>{item.label.toUpperCase()}</a></div>
+    ))}
+    {cta ? <a href={cta.href} class="btn">{cta.label}</a> : null}
+  </div>
+</div>

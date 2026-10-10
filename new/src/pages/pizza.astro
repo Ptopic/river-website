@@ -1,0 +1,11 @@
+---
+import MenuPage from '~/modules/MenuPage.astro';
+import { getMenuPageBlock } from '~/lib/content/wordpress';
+import RiverLayout from '~/layouts/RiverLayout.astro';
+import '~/styles/global.css';
+
+const block = await getMenuPageBlock('pizza');
+---
+<RiverLayout title="Pizza | Konoba Pizzeria River">
+  <MenuPage {...block} initialLanguage="hr" />
+</RiverLayout>

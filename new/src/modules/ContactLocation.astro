@@ -1,0 +1,19 @@
+---
+import type { ContactLocationBlock } from '~/lib/types/blocks';
+
+const { heading, address = '', ctas = [], icon } = Astro.props as ContactLocationBlock;
+const [addressLine1, ...addressRest] = address.split(',').map((part) => part.trim()).filter(Boolean);
+const addressLine2 = addressRest.join(', ');
+const primaryCta = ctas[0];
+---
+<div class="contact-section-container">
+  <div class="contact-section-content">
+    <div class="address" data-module="fade" data-module-y="0">
+      {icon?.src ? <img src={icon.src} alt={icon.alt || ''} width="64px" /> : null}
+      <h1 data-fade data-fade-x="-50" data-fade-delay="0.2">{heading}</h1>
+      <p data-fade data-fade-x="-50" data-fade-delay="0.35">{addressLine1}</p>
+      {addressLine2 ? <p data-fade data-fade-x="-50" data-fade-delay="0.45">{addressLine2}</p> : null}
+      {primaryCta ? <a href={primaryCta.href} class="btn" data-fade data-fade-x="-50" data-fade-delay="0.55">{primaryCta.label}</a> : null}
+    </div>
+  </div>
+</div>

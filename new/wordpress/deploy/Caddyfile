@@ -1,0 +1,3 @@
+{$WORDPRESS_DOMAIN} {
+  reverse_proxy wordpress:80
+}

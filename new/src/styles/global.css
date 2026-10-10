@@ -1,0 +1,109 @@
+@import "../index.css";
+@import "../components/Navbar.css";
+@import "../components/Carousel.css";
+@import "../components/Recap.css";
+@import "../components/Info.css";
+@import "../components/ContactSection.css";
+@import "../components/Story.css";
+@import "../components/Pictures.css";
+@import "../components/MapContainer.css";
+@import "../components/Footer.css";
+@import "../pages/Menu.css";
+@import "../pages/Vine.css";
+
+.river-transition-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background700);
+  color: var(--primary);
+  visibility: hidden;
+  pointer-events: none;
+  clip-path: inset(calc(100% * var(--clip-enter, 0)) 0 calc(100% * var(--clip-leave, 0)) 0);
+  will-change: clip-path;
+}
+
+.river-transition-overlay__label {
+  font-family: 'simplifica', sans-serif;
+  font-size: clamp(5rem, 12vw, 14rem);
+  letter-spacing: 1.2rem;
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .river-transition-overlay {
+    display: none;
+  }
+}
+
+.astro-mobile-menu-toggle,
+.astro-language-toggle,
+.astro-menu-category-button,
+.astro-dropdown-button,
+.astro-gallery-button,
+.astro-modal-close {
+  cursor: pointer;
+}
+
+.astro-hidden {
+  display: none !important;
+}
+
+.navbar,
+.navbar-mobile {
+  transition: background 0.1s linear;
+}
+
+.button-container-overlay button.astro-modal-close {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  color: var(--background500);
+  line-height: 1;
+}
+
+.button-container-overlay button.astro-modal-close svg {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
+.pictures-container .border svg,
+.footer-center svg,
+.logos svg {
+  display: block;
+}
+
+.footer-container .left,
+.footer-container .contacts-info,
+.footer-container .footer-center {
+  text-align: left;
+}
+
+.footer-container .footer-center {
+  width: 100%;
+}
+
+.footer-container .footer-center a,
+.footer-container .footer-center a[href^="tel"],
+.footer-container .footer-center a[x-apple-data-detectors],
+.footer-container .footer-center *[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font: inherit !important;
+  letter-spacing: inherit !important;
+}
+
+.footer-container .footer-center svg {
+  color: var(--primary);
+  flex: 0 0 auto;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}

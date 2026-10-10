@@ -1,0 +1,46 @@
+services:
+  db:
+    image: mariadb:11
+    container_name: river-wp-db
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      MARIADB_DATABASE: ${WORDPRESS_DB_NAME}
+      MARIADB_USER: ${WORDPRESS_DB_USER}
+      MARIADB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD}
+    volumes:
+      - river_wp_db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 10s
+      retries: 20
+
+  wordpress:
+    image: wordpress:6.6-php8.3-apache
+    container_name: river-wp
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:${RIVER_WP_PORT:-8092}:80"
+    env_file: .env
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME}
+      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER}
+      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+      WORDPRESS_CONFIG_EXTRA: |
+        define('WP_ENVIRONMENT_TYPE', 'production');
+        define('RIVER_NETLIFY_BUILD_HOOK_URL', getenv('RIVER_NETLIFY_BUILD_HOOK_URL') ?: '');
+        define('RIVER_ASTRO_PREVIEW_URL', getenv('RIVER_ASTRO_PREVIEW_URL') ?: '');
+    volumes:
+      - river_wp_html:/var/www/html
+      - ./wp-content/mu-plugins:/var/www/html/wp-content/mu-plugins:ro
+      - ./wp-content/uploads:/var/www/html/wp-content/uploads
+
+volumes:
+  river_wp_db:
+  river_wp_html:

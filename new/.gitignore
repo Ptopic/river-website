@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.astro/
+.env
+.env.*
+!.env.example
+wordpress/.data/
+wordpress/wp-content/uploads/
+
+
+# Local Netlify folder
+.netlify

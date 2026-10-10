@@ -1,4 +1,12 @@
+[build]
+  base = "new"
+  command = "npm ci && npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
 [[redirects]]
-   from = "/*"
-   to = "/"
-   status = 200
+  from = "/menu"
+  to = "/menu/"
+  status = 200

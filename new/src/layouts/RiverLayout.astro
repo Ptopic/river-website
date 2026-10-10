@@ -1,0 +1,30 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Konoba Pizzeria River in Solin.' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body data-transition="wrapper">
+    <main data-transition="container" data-transition-namespace="page">
+      <slot />
+    </main>
+    <div class="river-transition-overlay" data-river-overlay aria-hidden="true">
+      <div class="river-transition-overlay__label" data-river-overlay-label>River</div>
+    </div>
+    <script>
+      import '~/js/app';
+    </script>
+  </body>
+</html>
