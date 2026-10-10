@@ -8,7 +8,8 @@ export const registry = {
   gallery: () => import('./Gallery') as Promise<{ default: ModuleCtor }>,
   heroCarousel: () => import('./HeroCarousel') as Promise<{ default: ModuleCtor }>,
   menuPage: () => import('./MenuPage') as Promise<{ default: ModuleCtor }>,
-  siteNav: () => import('./SiteNav') as Promise<{ default: ModuleCtor }>
+  siteNav: () => import('./SiteNav') as Promise<{ default: ModuleCtor }>,
+  winePage: () => import('./WinePage') as Promise<{ default: ModuleCtor }>
 };
 
 export type ModuleName = keyof typeof registry;
