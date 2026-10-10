@@ -3,5 +3,5 @@ export const menuEnabled = !['false', 'off', '0'].includes(
 );
 
 export function showMenuLink(href?: string): boolean {
-  return menuEnabled || !/^\/(?:menu|hrana)\/?(?:[?#]|$)/.test(href ?? '');
+  return menuEnabled || !/^\/(?:menu|hrana|food)\/?(?:[?#]|$)/.test(href ?? '');
 }

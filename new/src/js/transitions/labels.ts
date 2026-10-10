@@ -1,6 +1,7 @@
 const ROUTE_LABELS: Record<string, string> = {
   '/': 'River',
   '/menu': 'Menu',
+  '/food': 'Food',
   '/drinks': 'Drinks',
   '/pizza': 'Pizza',
   '/vine': 'Wine'

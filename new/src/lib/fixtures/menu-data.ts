@@ -109,7 +109,7 @@ export const wineEn: MenuCategory[] = [
 ];
 
 export const menuNav: NavItem[] = [
-  { label: 'Food', href: '/menu' },
+  { label: 'Food', href: '/food' },
   { label: 'Drinks', href: '/drinks' },
   { label: 'Pizza', href: '/pizza' },
   { label: 'Wine', href: '/vine' }
