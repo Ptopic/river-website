@@ -8,6 +8,7 @@ import { IoIosClose } from 'react-icons/io';
 import { IoChevronBackCircleOutline } from 'react-icons/io5';
 import '../index.css';
 import './Menu.css';
+import { menuEnabled } from '../menuAvailability';
 
 import engFlag from '../assets/images/eng.jpg';
 import croFlag from '../assets/images/hr.png';
@@ -92,7 +93,7 @@ function Menu() {
 
 					<div className="center-nav">
 						<div className="center-nav-container">
-							{/* <Link to="/menu">Food</Link> */}
+							{menuEnabled && <Link to="/menu">Food</Link>}
 
 							{/* <Link to="/vine">Vine</Link> */}
 

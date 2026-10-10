@@ -1,5 +1,6 @@
 ---
 import type { WineListBlock } from '~/lib/types/blocks';
+import { showMenuLink } from '~/lib/menu-availability';
 import croFlag from '~/assets/images/hr.png';
 import engFlag from '~/assets/images/eng.jpg';
 
@@ -21,7 +22,7 @@ const menuNav = [
   { hr: 'Piće', en: 'Drinks', hrefHr: '/pice', hrefEn: '/drinks' },
   { hr: 'Pizza', en: 'Pizza', hrefHr: '/pizza', hrefEn: '/pizza-en' },
   { hr: 'Vino', en: 'Wine', hrefHr: '/vino', hrefEn: '/wine' }
-];
+].filter((item) => showMenuLink(item.hrefEn));
 ---
 
 <div class="menu-container" data-module="fade" data-module-y="24" data-module-stagger="0.08">

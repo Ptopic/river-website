@@ -10,6 +10,7 @@ import Vine from './Pages/Vine';
 import Drinks from './Pages/Drinks';
 import Pizza from './Pages/Pizza';
 import ErrorPage from './Pages/ErrorPage';
+import { menuEnabled } from './menuAvailability';
 const router = createBrowserRouter([
 	{
 		path: '/',
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
 	},
 	{
 		path: 'menu',
-		element: <Menu />,
+		element: menuEnabled ? <Menu /> : <Navigate to="/" replace />,
 		errorElement: <ErrorPage />,
 	},
 	{

@@ -1,5 +1,6 @@
 ---
 import type { InfoCardsBlock } from '~/lib/types/blocks';
+import { showMenuLink } from '~/lib/menu-availability';
 
 const { cards = [] } = Astro.props as InfoCardsBlock;
 const left = cards[0];
@@ -11,7 +12,7 @@ const right = cards[1];
       <div class="blured-content">
         <h1 data-fade data-fade-x="-50" data-fade-delay="0.2">{left.title}</h1>
         <p data-fade data-fade-x="-50" data-fade-delay="0.35">{left.text}</p>
-        {left.href ? <a href={left.href} data-fade data-fade-x="-50" data-fade-delay="0.5">{left.label}</a> : null}
+        {left.href && showMenuLink(left.href) ? <a href={left.href} data-fade data-fade-x="-50" data-fade-delay="0.5">{left.label}</a> : null}
       </div>
     </div>
   ) : null}
@@ -20,7 +21,7 @@ const right = cards[1];
       <div class="blured-content">
         <h1 data-fade data-fade-x="50" data-fade-delay="0.2">{right.title}</h1>
         <p data-fade data-fade-x="50" data-fade-delay="0.35">{right.text}</p>
-        {right.href ? <a href={right.href} class="btn info" data-fade data-fade-x="50" data-fade-delay="0.5">{right.label}</a> : null}
+        {right.href && showMenuLink(right.href) ? <a href={right.href} class="btn info" data-fade data-fade-x="50" data-fade-delay="0.5">{right.label}</a> : null}
       </div>
     </div>
   ) : null}

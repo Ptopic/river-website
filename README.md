@@ -49,6 +49,10 @@ Notes
 
 <h2>Konoba pizzeria River website</h2>
 
+The food menu is enabled by default. Set `VITE_MENU_ENABLED=false` in Netlify's
+environment variables to hide its buttons and redirect `/menu` home. `off` and
+`0` also disable it; rebuild the site after changing the setting.
+
 👉 Live Demo: <a href=''>Live Demo</a>
 
 <h3>Build with:</h3>

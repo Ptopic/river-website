@@ -40,6 +40,7 @@ Required Netlify environment variables:
 - `WP_API_URL`
 - `PREVIEW_SECRET` only if a future preview route needs an app-level secret; the current WordPress preview URL uses a signed WordPress token.
 - `PUBLIC_GOOGLE_MAPS_EMBED_URL` if the embedded map is used
+- `PUBLIC_MENU_ENABLED=false` to hide food menu links and redirect `/menu` and `/hrana` home. The menu is enabled by default; `off` and `0` also disable it.
 
 Exact WordPress block previews also require the WordPress environment variable
 `RIVER_ASTRO_PREVIEW_URL` to point to the deployed Astro site, for example the

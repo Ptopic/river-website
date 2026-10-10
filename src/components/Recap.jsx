@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion as m } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { menuEnabled } from '../menuAvailability';
 // Icons
 
 import appetizersIcon from '../assets/icons/appetizers.png';
@@ -106,7 +108,7 @@ function Recap() {
 					<p>DRINKS</p>
 				</m.div>
 
-				{/* <m.div
+				{menuEnabled && <m.div
 					className="menu-container"
 					initial="hidden"
 					whileInView="visible"
@@ -125,7 +127,7 @@ function Recap() {
 					<Link to={'/menu'} className="btn">
 						MENU
 					</Link>
-				</m.div> */}
+				</m.div>}
 			</m.div>
 		</div>
 	);

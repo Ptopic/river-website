@@ -3,7 +3,9 @@ import MenuPage from '~/modules/MenuPage.astro';
 import { getMenuPageBlock } from '~/lib/content/wordpress';
 import RiverLayout from '~/layouts/RiverLayout.astro';
 import '~/styles/global.css';
+import { menuEnabled } from '~/lib/menu-availability';
 
+if (!menuEnabled) return Astro.redirect('/');
 const block = await getMenuPageBlock('menu');
 ---
 <RiverLayout title="Hrana | Konoba Pizzeria River">
