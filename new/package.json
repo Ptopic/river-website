@@ -1,0 +1,32 @@
+{
+  "name": "river-wordpress-astro",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host 0.0.0.0",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "test": "tsx --test \"src/**/*.test.ts\"",
+    "routes:check": "node scripts/check-routes.mjs",
+    "content:check": "tsx scripts/check-content-parity.ts",
+    "wp:acf:check": "node scripts/check-acf-structure.mjs",
+    "wp:up": "bash wordpress/bin/wp-local.sh up",
+    "wp:down": "bash wordpress/bin/wp-local.sh down",
+    "wp:logs": "bash wordpress/bin/wp-local.sh logs"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@astrojs/netlify": "^8.2.6",
+    "@astrojs/node": "^11.1.6",
+    "@barba/core": "^2.10.3",
+    "astro": "^7.3.3",
+    "gsap": "^3.15.0",
+    "lenis": "^1.3.26",
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.5"
+  }
+}

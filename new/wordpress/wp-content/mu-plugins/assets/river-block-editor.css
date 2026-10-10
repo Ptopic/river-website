@@ -1,0 +1,58 @@
+.river-editor-block {
+  border: 1px solid #d8c49a;
+  border-radius: 6px;
+  padding: 18px 20px;
+  background: #fff9ed;
+  color: #23180d;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.river-editor-block__eyebrow {
+  margin-bottom: 8px;
+  color: #8a6b35;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.river-editor-block h3 {
+  margin: 0 0 8px;
+  color: #111;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.river-editor-block p {
+  margin: 0 0 8px;
+  color: #23180d;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.river-editor-block span {
+  color: #716252;
+  font-size: 12px;
+}
+
+.editor-styles-wrapper .is-root-container > .wp-block[data-type^='acf/river-'] {
+  max-width: none;
+}
+
+.river-bp-box[data-river-clipped="1"]::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 48px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
+  pointer-events: none;
+}
+
+@media (min-width: 782px) {
+  .interface-interface-skeleton__sidebar,
+  .interface-complementary-area {
+    width: 360px !important;
+    flex-basis: 360px !important;
+  }
+}

@@ -1,0 +1,39 @@
+---
+import type { Block } from '~/lib/types/blocks';
+import SiteNav from '~/modules/SiteNav.astro';
+import HomeHero from '~/modules/HomeHero.astro';
+import CategoryRecap from '~/modules/CategoryRecap.astro';
+import InfoCards from '~/modules/InfoCards.astro';
+import ContactLocation from '~/modules/ContactLocation.astro';
+import Story from '~/modules/Story.astro';
+import SectionHeading from '~/modules/SectionHeading.astro';
+import Gallery from '~/modules/Gallery.astro';
+import MapBlock from '~/modules/MapBlock.astro';
+import SiteFooter from '~/modules/SiteFooter.astro';
+import MenuPage from '~/modules/MenuPage.astro';
+import WineList from '~/modules/WineList.astro';
+
+interface Props {
+  blocks: Block[];
+}
+
+const { blocks } = Astro.props;
+---
+
+{
+  blocks.map((block) => {
+    if (block.type === 'site_nav') return <SiteNav {...block} />;
+    if (block.type === 'home_hero') return <HomeHero {...block} />;
+    if (block.type === 'category_recap') return <CategoryRecap {...block} />;
+    if (block.type === 'info_cards') return <InfoCards {...block} />;
+    if (block.type === 'contact_location') return <ContactLocation {...block} />;
+    if (block.type === 'story') return <Story {...block} />;
+    if (block.type === 'section_heading') return <SectionHeading {...block} />;
+    if (block.type === 'gallery') return <Gallery {...block} />;
+    if (block.type === 'map') return <MapBlock {...block} />;
+    if (block.type === 'site_footer') return <SiteFooter {...block} />;
+    if (block.type === 'menu_page') return <MenuPage {...block} />;
+    if (block.type === 'wine_list') return <WineList {...block} />;
+    return null;
+  })
+}

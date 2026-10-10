@@ -5,11 +5,12 @@ import './index.css';
 
 // Pages
 import Home from './Pages/Home.jsx';
-// import Menu from './Pages/Menu';
+import Menu from './Pages/Menu';
 import Vine from './Pages/Vine';
 import Drinks from './Pages/Drinks';
 import Pizza from './Pages/Pizza';
 import ErrorPage from './Pages/ErrorPage';
+import { menuEnabled } from './menuAvailability';
 const router = createBrowserRouter([
 	{
 		path: '/',
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
 	},
 	{
 		path: 'menu',
-		element: <Navigate to="/" replace />,
+		element: menuEnabled ? <Menu /> : <Navigate to="/" replace />,
 		errorElement: <ErrorPage />,
 	},
 	{

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useSearchParams, useLocation } from 'react-router-dom';
 
 import './Menu.css';
+import { menuEnabled } from '../menuAvailability';
 import './Vine.css';
 import '../index.css';
 import { IoChevronBackCircleOutline } from 'react-icons/io5';
@@ -66,7 +67,7 @@ function Vine() {
 
 				<div className="center-nav">
 					<div className="center-nav-container">
-						{/* <Link to="/menu">Food</Link> */}
+						{menuEnabled && <Link to="/menu">Food</Link>}
 
 						<Link to="/vine">Vine</Link>
 

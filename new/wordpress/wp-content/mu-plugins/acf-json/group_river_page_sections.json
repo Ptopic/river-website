@@ -1,0 +1,804 @@
+{
+  "key": "group_river_page_sections",
+  "title": "River Page Sections",
+  "fields": [
+    {
+      "key": "field_river_sections",
+      "label": "Sections",
+      "name": "sections",
+      "type": "flexible_content",
+      "button_label": "Add River section",
+      "layouts": {
+        "layout_river_site_nav": {
+          "key": "layout_river_site_nav",
+          "name": "site_nav",
+          "label": "Site Navigation",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_river_site_nav_logo",
+              "label": "Logo",
+              "name": "logo",
+              "type": "image",
+              "return_format": "id",
+              "preview_size": "medium",
+              "library": "all"
+            },
+            {
+              "key": "field_river_site_nav_items",
+              "label": "Navigation items",
+              "name": "items",
+              "type": "repeater",
+              "layout": "row",
+              "button_label": "Add navigation item",
+              "collapsed": "field_river_site_nav_item_label",
+              "sub_fields": [
+                {
+                  "key": "field_river_site_nav_item_label",
+                  "label": "Label",
+                  "name": "label",
+                  "type": "text"
+                },
+                {
+                  "key": "field_river_site_nav_item_href",
+                  "label": "URL",
+                  "name": "href",
+                  "type": "url"
+                }
+              ]
+            },
+            {
+              "key": "field_river_site_nav_cta",
+              "label": "CTA",
+              "name": "cta",
+              "type": "group",
+              "layout": "block",
+              "sub_fields": [
+                {
+                  "key": "field_river_site_nav_cta_item_label",
+                  "label": "Label",
+                  "name": "label",
+                  "type": "text"
+                },
+                {
+                  "key": "field_river_site_nav_cta_item_href",
+                  "label": "URL",
+                  "name": "href",
+                  "type": "url"
+                }
+              ]
+            },
+            {
+              "key": "field_river_category_recap_cta",
+              "label": "CTA",
+              "name": "cta",
+              "type": "group",
+              "layout": "block",
+              "sub_fields": [
+                {
+                  "key": "field_river_category_recap_cta_label",
+                  "label": "Label",
+                  "name": "label",
+                  "type": "text"
+                },
+                {
+                  "key": "field_river_category_recap_cta_href",
+                  "label": "URL",
+                  "name": "href",
+                  "type": "url"
+                }
+              ]
+            }
+          ]
+        },
+        "layout_river_home_hero": {
+          "key": "layout_river_home_hero",
+          "name": "home_hero",
+          "label": "Home Hero",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_river_home_hero_eyebrow",
+              "label": "Eyebrow",
+              "name": "eyebrow",
+              "type": "text"
+            },
+            {
+              "key": "field_river_home_hero_title",
+              "label": "Title",
+              "name": "title",
+              "type": "text"
+            },
+            {
+              "key": "field_river_home_hero_body",
+              "label": "Body",
+              "name": "body",
+              "type": "textarea",
+              "rows": 3,
+              "new_lines": ""
+            },
+            {
+              "key": "field_river_home_hero_slides",
+              "label": "Slides",
+              "name": "slides",
+              "type": "repeater",
+              "layout": "row",
+              "button_label": "Add slide",
+              "collapsed": "field_river_home_hero_slide_image",
+              "sub_fields": [
+                {
+                  "key": "field_river_home_hero_slide_image",
+                  "label": "Image",
+                  "name": "image",
+                  "type": "image",
+                  "return_format": "id",
+                  "preview_size": "medium",
+                  "library": "all"
+                }
+              ]
+            }
+          ]
+        },
+        "layout_river_category_recap": {
+          "key": "layout_river_category_recap",
+          "name": "category_recap",
+          "label": "Category Recap",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_river_category_recap_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text"
+            },
+            {
+              "key": "field_river_category_recap_items",
+              "label": "Items",
+              "name": "items",
+              "type": "repeater",
+              "layout": "row",
+              "button_label": "Add item",
+              "collapsed": "field_river_category_recap_item_title",
+              "sub_fields": [
+                {
+                  "key": "field_river_category_recap_item_title",
+                  "label": "Title",
+                  "name": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "field_river_category_recap_item_body",
+                  "label": "Body",
+                  "name": "body",
+                  "type": "textarea",
+                  "rows": 3,
+                  "new_lines": ""
+                },
+                {
+                  "key": "field_river_category_recap_item_href",
+                  "label": "URL",
+                  "name": "href",
+                  "type": "url"
+                },
+                {
+                  "key": "field_river_category_recap_item_image",
+                  "label": "Icon",
+                  "name": "image",
+                  "type": "image",
+                  "return_format": "id",
+                  "preview_size": "medium",
+                  "library": "all"
+                }
+              ]
+            }
+          ]
+        },
+        "layout_river_info_cards": {
+          "key": "layout_river_info_cards",
+          "name": "info_cards",
+          "label": "Info Cards",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_river_info_cards_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text"
+            },
+            {
+              "key": "field_river_info_cards_cards",
+              "label": "Cards",
+              "name": "cards",
+              "type": "repeater",
+              "layout": "row",
+              "button_label": "Add card",
+              "collapsed": "field_river_info_cards_card_title",
+              "sub_fields": [
+                {
+                  "key": "field_river_info_cards_card_title",
+                  "label": "Title",
+                  "name": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "field_river_info_cards_card_text",
+                  "label": "Text",
+                  "name": "text",
+                  "type": "textarea",
+                  "rows": 3,
+                  "new_lines": ""
+                },
+                {
+                  "key": "field_river_info_cards_card_href",
+                  "label": "URL",
+                  "name": "href",
+                  "type": "url"
+                },
+                {
+                  "key": "field_river_info_cards_card_label",
+                  "label": "Button label",
+                  "name": "label",
+                  "type": "text"
+                }
+              ]
+            }
+          ]
+        },
+        "layout_river_contact_location": {
+          "key": "layout_river_contact_location",
+          "name": "contact_location",
+          "label": "Contact Location",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_river_contact_location_icon",
+              "label": "Icon",
+              "name": "icon",
+              "type": "image",
+              "return_format": "id",
+              "preview_size": "medium",
+              "library": "all"
+            },
+            {
+              "key": "field_river_contact_location_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text"
+            },
+            {
+              "key": "field_river_contact_location_body",
+              "label": "Body",
+              "name": "body",
+              "type": "textarea",
+              "rows": 3,
+              "new_lines": ""
+            },
+            {
+              "key": "field_river_contact_location_address",
+              "label": "Address",
+              "name": "address",
+              "type": "text"
+            },
+            {
+              "key": "field_river_contact_location_phone",
+              "label": "Phone",
+              "name": "phone",
+              "type": "text"
+            },
+            {
+              "key": "field_river_contact_location_email",
+              "label": "Email",
+              "name": "email",
+              "type": "email"
+            },
+            {
+              "key": "field_river_contact_location_ctas",
+              "label": "CTAs",
+              "name": "ctas",
+              "type": "repeater",
+              "layout": "row",
+              "button_label": "Add CTA",
+              "collapsed": "field_river_contact_location_cta_label",
+              "sub_fields": [
+                {
+                  "key": "field_river_contact_location_cta_label",
+                  "label": "Label",
+                  "name": "label",
+                  "type": "text"
+                },
+                {
+                  "key": "field_river_contact_location_cta_href",
+                  "label": "URL",
+                  "name": "href",
+                  "type": "url"
+                }
+              ]
+            }
+          ]
+        },
+        "layout_river_story": {
+          "key": "layout_river_story",
+          "name": "story",
+          "label": "Story",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_river_story_eyebrow",
+              "label": "Eyebrow",
+              "name": "eyebrow",
+              "type": "text"
+            },
+            {
+              "key": "field_river_story_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text"
+            },
+            {
+              "key": "field_river_story_body",
+              "label": "Body",
+              "name": "body",
+              "type": "textarea"
+            },
+            {
+              "key": "field_river_story_images",
+              "label": "Images",
+              "name": "images",
+              "type": "repeater",
+              "layout": "row",
+              "button_label": "Add image",
+              "collapsed": "field_river_story_image_image",
+              "sub_fields": [
+                {
+                  "key": "field_river_story_image_image",
+                  "label": "Image",
+                  "name": "image",
+                  "type": "image",
+                  "return_format": "id",
+                  "preview_size": "medium",
+                  "library": "all"
+                }
+              ]
+            }
+          ]
+        },
+        "layout_river_section_heading": {
+          "key": "layout_river_section_heading",
+          "name": "section_heading",
+          "label": "Section Heading",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_river_section_heading_eyebrow",
+              "label": "Eyebrow",
+              "name": "eyebrow",
+              "type": "text"
+            },
+            {
+              "key": "field_river_section_heading_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text"
+            },
+            {
+              "key": "field_river_section_heading_body",
+              "label": "Body",
+              "name": "body",
+              "type": "textarea"
+            }
+          ]
+        },
+        "layout_river_gallery": {
+          "key": "layout_river_gallery",
+          "name": "gallery",
+          "label": "Gallery",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_river_gallery_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text"
+            },
+            {
+              "key": "field_river_gallery_images",
+              "label": "Images",
+              "name": "images",
+              "type": "repeater",
+              "layout": "row",
+              "button_label": "Add image",
+              "collapsed": "field_river_gallery_image_image",
+              "sub_fields": [
+                {
+                  "key": "field_river_gallery_image_image",
+                  "label": "Image",
+                  "name": "image",
+                  "type": "image",
+                  "return_format": "id",
+                  "preview_size": "medium",
+                  "library": "all"
+                }
+              ]
+            }
+          ]
+        },
+        "layout_river_map": {
+          "key": "layout_river_map",
+          "name": "map",
+          "label": "Map",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_river_map_title",
+              "label": "Title",
+              "name": "title",
+              "type": "text"
+            },
+            {
+              "key": "field_river_map_address",
+              "label": "Address",
+              "name": "address",
+              "type": "text"
+            },
+            {
+              "key": "field_river_map_embed_url",
+              "label": "Embed URL",
+              "name": "embedUrl",
+              "type": "url"
+            }
+          ]
+        },
+        "layout_river_site_footer": {
+          "key": "layout_river_site_footer",
+          "name": "site_footer",
+          "label": "Site Footer",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_river_footer_logo",
+              "label": "Logo",
+              "name": "logo",
+              "type": "image",
+              "return_format": "id",
+              "preview_size": "medium",
+              "library": "all"
+            },
+            {
+              "key": "field_river_footer_address",
+              "label": "Address",
+              "name": "address",
+              "type": "text"
+            },
+            {
+              "key": "field_river_footer_phone",
+              "label": "Phone",
+              "name": "phone",
+              "type": "text"
+            },
+            {
+              "key": "field_river_footer_email",
+              "label": "Email",
+              "name": "email",
+              "type": "email"
+            },
+            {
+              "key": "field_river_footer_hours",
+              "label": "Hours",
+              "name": "hours",
+              "type": "repeater",
+              "layout": "row",
+              "button_label": "Add hours row",
+              "collapsed": "field_river_footer_hour_label",
+              "sub_fields": [
+                {
+                  "key": "field_river_footer_hour_label",
+                  "label": "Label",
+                  "name": "label",
+                  "type": "text"
+                },
+                {
+                  "key": "field_river_footer_hour_value",
+                  "label": "Value",
+                  "name": "value",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "key": "field_river_footer_social",
+              "label": "Social links",
+              "name": "socialLinks",
+              "type": "repeater",
+              "layout": "row",
+              "button_label": "Add social link",
+              "collapsed": "field_river_footer_social_link_label",
+              "sub_fields": [
+                {
+                  "key": "field_river_footer_social_link_label",
+                  "label": "Label",
+                  "name": "label",
+                  "type": "text"
+                },
+                {
+                  "key": "field_river_footer_social_link_href",
+                  "label": "URL",
+                  "name": "href",
+                  "type": "url"
+                }
+              ]
+            },
+            {
+              "key": "field_river_footer_support_logos",
+              "label": "Support logos",
+              "name": "supportLogos",
+              "type": "repeater",
+              "layout": "row",
+              "button_label": "Add logo",
+              "collapsed": "field_river_footer_support_logo_image",
+              "sub_fields": [
+                {
+                  "key": "field_river_footer_support_logo_image",
+                  "label": "Logo",
+                  "name": "image",
+                  "type": "image",
+                  "return_format": "id",
+                  "preview_size": "medium",
+                  "library": "all"
+                }
+              ]
+            }
+          ]
+        },
+        "layout_river_menu_page": {
+          "key": "layout_river_menu_page",
+          "name": "menu_page",
+          "label": "Menu Page",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_river_menu_page_title",
+              "label": "Title",
+              "name": "title",
+              "type": "text"
+            },
+            {
+              "key": "field_river_menu_page_active",
+              "label": "Active Menu",
+              "name": "activeMenu",
+              "type": "select",
+              "choices": {
+                "menu": "Menu",
+                "drinks": "Drinks",
+                "pizza": "Pizza"
+              },
+              "default_value": "menu",
+              "ui": 1,
+              "return_format": "value"
+            },
+            {
+              "key": "field_river_menu_page_languages",
+              "label": "Languages",
+              "name": "languages",
+              "type": "repeater",
+              "layout": "row",
+              "button_label": "Add language",
+              "collapsed": "field_river_menu_language_code",
+              "sub_fields": [
+                {
+                  "key": "field_river_menu_language_code",
+                  "label": "Language code",
+                  "name": "code",
+                  "type": "select",
+                  "choices": {
+                    "hr": "HR",
+                    "en": "EN"
+                  },
+                  "default_value": "hr",
+                  "ui": 1,
+                  "return_format": "value"
+                },
+                {
+                  "key": "field_river_menu_language_label",
+                  "label": "Label",
+                  "name": "label",
+                  "type": "text"
+                },
+                {
+                  "key": "field_river_menu_language_categories",
+                  "label": "Categories",
+                  "name": "categories",
+                  "type": "repeater",
+                  "layout": "row",
+                  "button_label": "Add category",
+                  "collapsed": "field_river_menu_category_title",
+                  "sub_fields": [
+                    {
+                      "key": "field_river_menu_category_title",
+                      "label": "Category title",
+                      "name": "title",
+                      "type": "text"
+                    },
+                    {
+                      "key": "field_river_menu_category_items",
+                      "label": "Items",
+                      "name": "items",
+                      "type": "repeater",
+                      "layout": "row",
+                      "button_label": "Add item",
+                      "collapsed": "field_river_menu_item_name",
+                      "sub_fields": [
+                        {
+                          "key": "field_river_menu_item_name",
+                          "label": "Name",
+                          "name": "name",
+                          "type": "text"
+                        },
+                        {
+                          "key": "field_river_menu_item_description",
+                          "label": "Description",
+                          "name": "description",
+                          "type": "textarea",
+                          "rows": 3,
+                          "new_lines": ""
+                        },
+                        {
+                          "key": "field_river_menu_item_quantity",
+                          "label": "Quantity",
+                          "name": "quantity",
+                          "type": "text"
+                        },
+                        {
+                          "key": "field_river_menu_item_price",
+                          "label": "Price EUR",
+                          "name": "priceEur",
+                          "type": "text"
+                        },
+                        {
+                          "key": "field_river_menu_item_jumbo_price",
+                          "label": "Jumbo price EUR",
+                          "name": "jumboPriceEur",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "layout_river_wine_list": {
+          "key": "layout_river_wine_list",
+          "name": "wine_list",
+          "label": "Wine List",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_river_wine_title",
+              "label": "Title",
+              "name": "title",
+              "type": "text"
+            },
+            {
+              "key": "field_river_wine_languages",
+              "label": "Languages",
+              "name": "languages",
+              "type": "repeater",
+              "layout": "row",
+              "button_label": "Add language",
+              "collapsed": "field_river_menu_language_code",
+              "sub_fields": [
+                {
+                  "key": "field_river_menu_language_code",
+                  "label": "Language code",
+                  "name": "code",
+                  "type": "select",
+                  "choices": {
+                    "hr": "HR",
+                    "en": "EN"
+                  },
+                  "default_value": "hr",
+                  "ui": 1,
+                  "return_format": "value"
+                },
+                {
+                  "key": "field_river_menu_language_label",
+                  "label": "Label",
+                  "name": "label",
+                  "type": "text"
+                },
+                {
+                  "key": "field_river_menu_language_categories",
+                  "label": "Categories",
+                  "name": "categories",
+                  "type": "repeater",
+                  "layout": "row",
+                  "button_label": "Add category",
+                  "collapsed": "field_river_menu_category_title",
+                  "sub_fields": [
+                    {
+                      "key": "field_river_menu_category_title",
+                      "label": "Category title",
+                      "name": "title",
+                      "type": "text"
+                    },
+                    {
+                      "key": "field_river_menu_category_items",
+                      "label": "Items",
+                      "name": "items",
+                      "type": "repeater",
+                      "layout": "row",
+                      "button_label": "Add item",
+                      "collapsed": "field_river_menu_item_name",
+                      "sub_fields": [
+                        {
+                          "key": "field_river_menu_item_name",
+                          "label": "Name",
+                          "name": "name",
+                          "type": "text"
+                        },
+                        {
+                          "key": "field_river_menu_item_description",
+                          "label": "Description",
+                          "name": "description",
+                          "type": "textarea",
+                          "rows": 3,
+                          "new_lines": ""
+                        },
+                        {
+                          "key": "field_river_menu_item_quantity",
+                          "label": "Quantity",
+                          "name": "quantity",
+                          "type": "text"
+                        },
+                        {
+                          "key": "field_river_menu_item_price",
+                          "label": "Price EUR",
+                          "name": "priceEur",
+                          "type": "text"
+                        },
+                        {
+                          "key": "field_river_menu_item_jumbo_price",
+                          "label": "Jumbo price EUR",
+                          "name": "jumboPriceEur",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "key": "field_river_seo_title",
+      "label": "SEO Title",
+      "name": "seo_title",
+      "type": "text"
+    },
+    {
+      "key": "field_river_seo_description",
+      "label": "SEO Description",
+      "name": "seo_description",
+      "type": "textarea"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "page"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "active": true
+}

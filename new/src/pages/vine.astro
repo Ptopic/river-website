@@ -1,0 +1,11 @@
+---
+import WineList from '~/modules/WineList.astro';
+import { getWineListBlock } from '~/lib/content/wordpress';
+import RiverLayout from '~/layouts/RiverLayout.astro';
+import '~/styles/global.css';
+
+const block = await getWineListBlock();
+---
+<RiverLayout title="Vine | Konoba Pizzeria River">
+  <WineList {...block} initialLanguage="hr" />
+</RiverLayout>

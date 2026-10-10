@@ -1,0 +1,24 @@
+---
+import type { StoryBlock } from '~/lib/types/blocks';
+
+const { eyebrow, heading, body, images = [] } = Astro.props as StoryBlock;
+---
+<div>
+  <div class="story-container">
+    <div class="left-story" data-module="fade" data-module-y="0">
+      <h1 data-fade data-fade-x="-50" data-fade-delay="1">{eyebrow}</h1>
+      <h2 data-fade data-fade-x="50" data-fade-delay="1.4">{heading}</h2>
+      <span data-fade data-fade-x="-50" data-fade-delay="1.8">...</span>
+      <div class="left-story-text" data-fade data-fade-x="50" data-fade-delay="2.2">
+        <p>{body}</p>
+      </div>
+    </div>
+    <div class="right-story" data-module="fade" data-module-y="0">
+      {images.map((image, index) => (
+        <div class={`right-story-img-container img${index + 1}`} data-fade data-fade-x={index % 2 === 0 ? '-50' : '50'} data-fade-delay={String(0.2 + index * 0.4)}>
+          <img src={image.src} alt={image.alt || ''} />
+        </div>
+      ))}
+    </div>
+  </div>
+</div>

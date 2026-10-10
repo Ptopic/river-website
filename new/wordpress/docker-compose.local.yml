@@ -1,0 +1,29 @@
+services:
+  db:
+    image: mariadb:11
+    environment:
+      MARIADB_DATABASE: river
+      MARIADB_USER: river
+      MARIADB_PASSWORD: river
+      MARIADB_ROOT_PASSWORD: river-root
+    volumes:
+      - ./.data/db:/var/lib/mysql
+
+  wordpress:
+    image: wordpress:6.6-php8.3-apache
+    depends_on:
+      - db
+    ports:
+      - "8080:80"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: river
+      WORDPRESS_DB_USER: river
+      WORDPRESS_DB_PASSWORD: river
+      WORDPRESS_CONFIG_EXTRA: |
+        define('WP_ENVIRONMENT_TYPE', 'local');
+        define('RIVER_NETLIFY_BUILD_HOOK_URL', getenv('RIVER_NETLIFY_BUILD_HOOK_URL') ?: '');
+        define('RIVER_ASTRO_PREVIEW_URL', getenv('RIVER_ASTRO_PREVIEW_URL') ?: '');
+    volumes:
+      - ./wp-content/mu-plugins:/var/www/html/wp-content/mu-plugins
+      - ./wp-content/uploads:/var/www/html/wp-content/uploads

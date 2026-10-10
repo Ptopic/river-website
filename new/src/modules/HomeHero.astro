@@ -1,0 +1,23 @@
+---
+import type { HomeHeroBlock } from '~/lib/types/blocks';
+
+const { eyebrow, title, body, slides = [] } = Astro.props as HomeHeroBlock;
+const visibleSlides = slides.filter((slide) => slide.src);
+const slideCount = Math.max(visibleSlides.length, 1);
+---
+<div class="carousel-wrapper" id="home" data-module="heroCarousel" data-slide-count={slideCount}>
+  <div class="overlay-text" data-module="fade" data-module-y="0" data-module-scale="0" data-module-duration="0.9">
+    <p class="welcome" data-fade data-fade-delay="0.2">{eyebrow}</p>
+    <h1 class="overlay-name" data-fade data-fade-delay="0.6">{title}</h1>
+    <img src="/legacy-assets/divider2.png" alt="" class="divider" data-fade data-fade-delay="1" />
+    <p class="overlay-food" data-fade data-fade-delay="1.4">{body}</p>
+  </div>
+  <div class="carousel-collection astro-carousel-collection">
+    {visibleSlides.map((slide) => (
+      <div class="carousel-item">
+        <div class="overlay"></div>
+        <img src={slide.src} alt={slide.alt || ''} />
+      </div>
+    ))}
+  </div>
+</div>

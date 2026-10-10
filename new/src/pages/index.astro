@@ -1,0 +1,14 @@
+---
+import BlockRenderer from '~/components/BlockRenderer.astro';
+import { getPage } from '~/lib/content/wordpress';
+import RiverLayout from '~/layouts/RiverLayout.astro';
+import '~/styles/global.css';
+
+const page = await getPage('home');
+const title = page.seo?.title ?? page.title;
+const description = page.seo?.description ?? 'Konoba Pizzeria River in Solin.';
+---
+
+<RiverLayout title={title} description={description}>
+  <BlockRenderer blocks={page.blocks} />
+</RiverLayout>

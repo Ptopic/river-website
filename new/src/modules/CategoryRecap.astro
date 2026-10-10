@@ -1,0 +1,29 @@
+---
+import type { CategoryRecapBlock } from '~/lib/types/blocks';
+import { showMenuLink } from '~/lib/menu-availability';
+
+const { items = [], cta } = Astro.props as CategoryRecapBlock;
+const cards = items.map((item) => {
+  const image = item.image ?? ('src' in item && typeof item.src === 'string' ? { src: item.src, alt: 'alt' in item && typeof item.alt === 'string' ? item.alt : '' } : undefined);
+  return { ...item, image, href: showMenuLink(item.href) ? item.href : undefined };
+});
+const menuCta = cta?.href && showMenuLink(cta.href) ? cta : undefined;
+---
+<div class="recap-info-container">
+  <div class="recap-container">
+    <div class="recap-content" data-module="fade" data-module-y="0">
+      {cards.map((item, index) => {
+        const CardTag = item.href ? 'a' : 'div';
+        return <CardTag class="recap-card" href={item.href} data-fade data-fade-y="-100" data-fade-delay={String(0.4 + index * 0.4)}>
+          {item.image?.src ? <img src={item.image.src} alt={item.image.alt || ''} /> : null}
+          <p>{item.title}</p>
+        </CardTag>;
+      })}
+      {menuCta ? (
+        <div class="menu-container" data-fade data-fade-y="-100" data-fade-delay="2">
+          <a href={menuCta.href} class="btn">{menuCta.label}</a>
+        </div>
+      ) : null}
+    </div>
+  </div>
+</div>
