@@ -91,12 +91,14 @@ add_action('init', function () {
         '_river_jumbo_price_eur',
         '_river_jumbo_anchor_price_eur',
         '_river_jumbo_anchor_price_date',
+        '_river_promo_active',
+        '_river_promo_name_hr',
     ] as $meta_key) {
         register_post_meta(RIVER_MENU_ITEM_POST_TYPE, $meta_key, [
             'single' => true,
-            'type' => 'string',
+            'type' => $meta_key === '_river_promo_active' ? 'boolean' : 'string',
             'show_in_rest' => true,
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => $meta_key === '_river_promo_active' ? 'rest_sanitize_boolean' : 'sanitize_text_field',
             'auth_callback' => function () {
                 return current_user_can('edit_posts');
             },
@@ -110,11 +112,13 @@ function river_ensure_menu_group_terms()
         $term = get_term_by('slug', $slug, RIVER_MENU_SECTION_TAXONOMY);
         if ($term && !is_wp_error($term)) {
             $term_id = (int) $term->term_id;
-            wp_update_term($term_id, RIVER_MENU_SECTION_TAXONOMY, [
-                'name' => $group['admin_label'],
-                'slug' => $slug,
-                'parent' => 0,
-            ]);
+            if ($term->name !== $group['admin_label'] || $term->slug !== $slug || (int) $term->parent !== 0) {
+                wp_update_term($term_id, RIVER_MENU_SECTION_TAXONOMY, [
+                    'name' => $group['admin_label'],
+                    'slug' => $slug,
+                    'parent' => 0,
+                ]);
+            }
         } else {
             $created = wp_insert_term($group['admin_label'], RIVER_MENU_SECTION_TAXONOMY, [
                 'slug' => $slug,
@@ -170,6 +174,8 @@ function river_render_menu_item_metabox($post)
         '_river_jumbo_price_eur' => 'Jumbo price EUR',
         '_river_jumbo_anchor_price_eur' => 'Jumbo sidrena cijena EUR',
         '_river_jumbo_anchor_price_date' => 'Jumbo sidrena cijena date',
+        '_river_promo_active' => 'Posebni oblik prodaje',
+        '_river_promo_name_hr' => 'Naziv posebnog oblika (HR)',
     ];
 
     echo '<table class="form-table"><tbody>';
@@ -180,7 +186,11 @@ function river_render_menu_item_metabox($post)
             $value = river_normalize_anchor_date($value);
         }
         echo '<tr><th><label for="' . esc_attr($key) . '">' . esc_html($label) . '</label></th><td>';
-        echo '<input class="regular-text" type="' . esc_attr($type) . '" id="' . esc_attr($key) . '" name="' . esc_attr($key) . '" value="' . esc_attr($value) . '" />';
+        if ($key === '_river_promo_active') {
+            echo '<input type="checkbox" id="_river_promo_active" name="_river_promo_active" value="1"' . checked($value, '1', false) . ' />';
+        } else {
+            echo '<input class="regular-text" type="' . esc_attr($type) . '" id="' . esc_attr($key) . '" name="' . esc_attr($key) . '" value="' . esc_attr($value) . '" />';
+        }
         echo '</td></tr>';
     }
     echo '</tbody></table>';
@@ -258,8 +268,12 @@ add_action('save_post_' . RIVER_MENU_ITEM_POST_TYPE, function ($post_id) {
         '_river_jumbo_price_eur',
         '_river_jumbo_anchor_price_eur',
         '_river_jumbo_anchor_price_date',
+        '_river_promo_active',
+        '_river_promo_name_hr',
     ] as $key) {
-        $value = isset($_POST[$key]) ? sanitize_text_field((string) $_POST[$key]) : '';
+        $value = $key === '_river_promo_active'
+            ? (isset($_POST[$key]) ? '1' : '0')
+            : (isset($_POST[$key]) ? sanitize_text_field((string) $_POST[$key]) : '');
         if (str_ends_with($key, '_date')) {
             $value = river_normalize_anchor_date($value);
         }

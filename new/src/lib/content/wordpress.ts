@@ -6,6 +6,31 @@ const astroEnv = (import.meta as ImportMeta & { env?: Record<string, string | un
 const API_URL = process.env.WP_API_URL ?? astroEnv?.WP_API_URL;
 const USE_FIXTURES = (process.env.USE_FIXTURE_CONTENT ?? astroEnv?.USE_FIXTURE_CONTENT) === 'true';
 
+export const priceListConfigured = !USE_FIXTURES && Boolean(API_URL);
+
+export interface PriceListVersion {
+  filename: string;
+  published_at: string;
+  download_url: string;
+}
+
+export interface PriceListManifest {
+  current: PriceListVersion | null;
+  archive: PriceListVersion[];
+  available: boolean;
+}
+
+export async function getPriceListManifest(): Promise<PriceListManifest | null> {
+  if (!priceListConfigured) return null;
+  const response = await fetch(wpRestUrl('/wp-json/river/v1/price-list'), { cache: 'no-store' });
+  if (!response.ok) throw new Error(`WordPress price list fetch failed: ${response.status}`);
+  const manifest = (await response.json()) as PriceListManifest;
+  if (!Array.isArray(manifest.archive) || typeof manifest.available !== 'boolean') {
+    throw new Error('WordPress price list manifest is invalid.');
+  }
+  return manifest;
+}
+
 type AcfSection = { acf_fc_layout?: string; type?: string } & Record<string, unknown>;
 
 interface WpPage {

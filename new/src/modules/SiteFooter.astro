@@ -1,5 +1,6 @@
 ---
 import type { SiteFooterBlock } from '~/lib/types/blocks';
+import PriceListLinks from '~/components/PriceListLinks.astro';
 const { logo, address, phone, email, hours = [], socialLinks = [], supportLogos = [] } = Astro.props as SiteFooterBlock;
 const currentYear = new Date().getFullYear();
 const [emailLocal = '', emailDomain = ''] = email.split('@');
@@ -51,6 +52,7 @@ const [emailLocal = '', emailDomain = ''] = email.split('@');
     </div>
   </div>
 </div>
+<PriceListLinks />
 <div class="copyright-bar">Copyright @ {currentYear} River</div>
 
 <style>

@@ -1,5 +1,6 @@
 ---
 import type { WineListBlock } from '~/lib/types/blocks';
+import PriceListLinks from '~/components/PriceListLinks.astro';
 import { showMenuLink } from '~/lib/menu-availability';
 import croFlag from '~/assets/images/hr.png';
 import engFlag from '~/assets/images/eng.jpg';
@@ -55,7 +56,6 @@ const menuNav = [
     </div>
   </div>
 </div>
-
 <div class="menu-container" data-module="winePage fade" data-module-y="24" data-module-stagger="0.08">
   <div class="menu-top-bar" data-fade>
   <div class="top-bar">
@@ -117,3 +117,4 @@ const menuNav = [
     </div>
   </div>
 </div>
+<PriceListLinks />

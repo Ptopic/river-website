@@ -1,0 +1,58 @@
+---
+import RiverLayout from '~/layouts/RiverLayout.astro';
+import { getPriceListManifest } from '~/lib/content/wordpress';
+import '~/styles/global.css';
+
+export const prerender = false;
+Astro.response.headers.set('Cache-Control', 'no-store');
+
+let manifest = null;
+try {
+  manifest = await getPriceListManifest();
+} catch {
+  manifest = null;
+}
+const formatDate = (value: string) => new Intl.DateTimeFormat('hr-HR', {
+  dateStyle: 'medium', timeStyle: 'short', timeZone: 'Europe/Zagreb'
+}).format(new Date(value));
+---
+<RiverLayout title="Digitalni cjenik | Konoba Pizzeria River">
+  <div class="price-list-page">
+    <header>
+      <a href="/" data-no-transition>River</a>
+      <h1>Digitalni cjenik</h1>
+    </header>
+    {manifest?.current ? (
+      <p><a class="download" href="/cjenik/preuzmi" download data-no-transition>Preuzmi trenutačni CSV cjenik</a></p>
+    ) : (
+      <p>Trenutačni CSV cjenik nije dostupan.</p>
+    )}
+    {manifest?.archive.length ? (
+      <section aria-labelledby="archive-title">
+        <h2 id="archive-title">Arhiva</h2>
+        <ul>
+          {manifest.archive.map((version) => (
+            <li>
+              <span>{formatDate(version.published_at)}</span>
+              <a href={version.download_url} download data-no-transition>Preuzmi CSV</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ) : null}
+  </div>
+</RiverLayout>
+
+<style>
+  .price-list-page { min-height: 100vh; padding: 3rem max(2rem, calc((100vw - 80rem) / 2)); background: var(--background500); color: white; font: 1.6rem 'oscine', sans-serif; letter-spacing: 0; }
+  header { padding-bottom: 2.5rem; border-bottom: 1px solid var(--background300); }
+  header a { color: inherit; }
+  h1 { margin: 1rem 0 0; font-size: 3rem; }
+  h2 { font-size: 2.2rem; }
+  p { margin: 2rem 0; }
+  a { color: var(--primary); text-underline-offset: 0.2em; }
+  .download { display: inline-block; padding: 0.8rem 1rem; border: 1px solid currentColor; }
+  ul { list-style: none; padding: 0; }
+  li { display: flex; justify-content: space-between; gap: 1rem; padding: 1.5rem 0; border-bottom: 1px solid var(--background300); }
+  @media (max-width: 35rem) { li { flex-direction: column; gap: 0.35rem; } }
+</style>
