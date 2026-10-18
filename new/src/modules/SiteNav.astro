@@ -5,6 +5,9 @@ import { showMenuLink } from '~/lib/menu-availability';
 const { logo, items, cta } = Astro.props as SiteNavBlock;
 const visibleItems = items.filter((item) => showMenuLink(item.href));
 const visibleCta = cta && showMenuLink(cta.href) ? cta : undefined;
+const isPriceListHref = (href: string) => /^\/cjenik\/?(?:[?#]|$)/.test(href.trim());
+const hasPriceListLink = visibleItems.some((item) => isPriceListHref(item.href))
+  || Boolean(visibleCta && isPriceListHref(visibleCta.href));
 ---
 <nav class="navbar" data-module="siteNav">
   <div class="left-navbar">
@@ -12,8 +15,9 @@ const visibleCta = cta && showMenuLink(cta.href) ? cta : undefined;
   </div>
 
   <div class="center-navbar">
-    {visibleItems.map((item) => <div class="nav-link"><a href={item.href}>{item.label}</a></div>)}
-    {visibleCta ? <a href={visibleCta.href} class="btn">{visibleCta.label}</a> : null}
+    {visibleItems.map((item) => <div class="nav-link"><a href={item.href} data-no-transition={isPriceListHref(item.href) || undefined}>{item.label}</a></div>)}
+    {!hasPriceListLink && <div class="nav-link"><a href="/cjenik" data-no-transition>Digitalni cjenik</a></div>}
+    {visibleCta ? <a href={visibleCta.href} class="btn" data-no-transition={isPriceListHref(visibleCta.href) || undefined}>{visibleCta.label}</a> : null}
   </div>
 </nav>
 
@@ -28,8 +32,9 @@ const visibleCta = cta && showMenuLink(cta.href) ? cta : undefined;
 <div class="navbar-mobile-container" style="transform: translateX(100%)">
   <div class="navbar-mobile-content">
     {visibleItems.map((item) => (
-      <div class="nav-link"><a href={item.href}>{item.label.toUpperCase()}</a></div>
+      <div class="nav-link"><a href={item.href} data-no-transition={isPriceListHref(item.href) || undefined}>{item.label.toUpperCase()}</a></div>
     ))}
-    {visibleCta ? <a href={visibleCta.href} class="btn">{visibleCta.label}</a> : null}
+    {!hasPriceListLink && <div class="nav-link"><a href="/cjenik" data-no-transition>DIGITALNI CJENIK</a></div>}
+    {visibleCta ? <a href={visibleCta.href} class="btn" data-no-transition={isPriceListHref(visibleCta.href) || undefined}>{visibleCta.label}</a> : null}
   </div>
 </div>

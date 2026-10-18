@@ -43,7 +43,7 @@
 }
 
 .nav-link {
-    margin: 0 3rem;
+    margin: 0 2rem;
 }
 
 .right-navbar {
@@ -68,7 +68,7 @@
 
 /* Phone */
 
-@media (max-width: 500px) {
+@media (max-width: 1100px) {
     .navbar {
         display: none;
     }
@@ -154,7 +154,7 @@
         z-index: 1000;
         top: 0;
         right: 0;
-        width: 70%;
+        width: min(80%, 32rem);
         height: 100dvh;
         transition: .3s all cubic-bezier(.42, 0, .40, .96);
     }
